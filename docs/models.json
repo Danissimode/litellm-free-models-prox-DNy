@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08T15:14:14.872830+00:00",
+  "updated": "2026-05-08T15:18:35.312099+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -193,14 +193,20 @@
           "limits": "varies per model"
         },
         {
+          "id": "canopylabs/orpheus-arabic-saudi",
+          "name": "canopylabs/orpheus-arabic-saudi",
+          "context": 4000,
+          "limits": "varies per model"
+        },
+        {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
           "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model"
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model"
         },
@@ -217,24 +223,6 @@
           "limits": "varies per model"
         },
         {
-          "id": "canopylabs/orpheus-v1-english",
-          "name": "canopylabs/orpheus-v1-english",
-          "context": 4000,
-          "limits": "varies per model"
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model"
-        },
-        {
-          "id": "canopylabs/orpheus-arabic-saudi",
-          "name": "canopylabs/orpheus-arabic-saudi",
-          "context": 4000,
-          "limits": "varies per model"
-        },
-        {
           "id": "llama-3.3-70b-versatile",
           "name": "llama-3.3-70b-versatile",
           "context": 131072,
@@ -247,8 +235,20 @@
           "limits": "varies per model"
         },
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
+          "id": "canopylabs/orpheus-v1-english",
+          "name": "canopylabs/orpheus-v1-english",
+          "context": 4000,
+          "limits": "varies per model"
+        },
+        {
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
+          "limits": "varies per model"
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
           "context": 131072,
           "limits": "varies per model"
         }
@@ -260,8 +260,8 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
+          "id": "qwen-3-235b-a22b-instruct-2507",
+          "name": "qwen-3-235b-a22b-instruct-2507",
           "context": null,
           "limits": "1M tokens/day"
         },
@@ -278,8 +278,8 @@
           "limits": "1M tokens/day"
         },
         {
-          "id": "qwen-3-235b-a22b-instruct-2507",
-          "name": "qwen-3-235b-a22b-instruct-2507",
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
           "context": null,
           "limits": "1M tokens/day"
         }
@@ -2097,6 +2097,12 @@
         {
           "id": "nvidia/riva-translate-4b-instruct-v1.1",
           "name": "nvidia/riva-translate-4b-instruct-v1.1",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "nvidia/vila",
+          "name": "nvidia/vila",
           "context": null,
           "limits": "40 req/min"
         },
