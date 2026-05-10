@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-10T16:16:46.587180+00:00",
+  "updated": "2026-05-10T17:18:02.184978+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -37,14 +37,14 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model"
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
         }
@@ -266,6 +266,12 @@
         {
           "id": "meta/llama-3.1-8b-instruct",
           "name": "meta/llama-3.1-8b-instruct",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "meta/llama-3.2-11b-vision-instruct",
+          "name": "meta/llama-3.2-11b-vision-instruct",
           "context": null,
           "limits": "40 req/min"
         },
@@ -667,6 +673,19 @@
           "name": "qwen-coder-large",
           "context": 262144,
           "limits": "free tier — token from enter.pollinations.ai"
+        }
+      ],
+      "error": null
+    },
+    "llm7": {
+      "name": "LLM7",
+      "url": "https://llm7.io",
+      "models": [
+        {
+          "id": "gpt-oss-20b",
+          "name": "gpt-oss-20b",
+          "context": null,
+          "limits": "anonymous · 30 req/min with token"
         }
       ],
       "error": null
