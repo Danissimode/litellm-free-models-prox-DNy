@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-11T17:37:42.578054+00:00",
+  "updated": "2026-05-11T18:33:32.248611+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -120,18 +120,6 @@
           ]
         },
         {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -173,27 +161,22 @@
           "limits": "varies per model"
         },
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "response_schema",
+            "vision"
           ]
-        }
-      ],
-      "error": null
-    },
-    "cerebras": {
-      "name": "Cerebras",
-      "url": "https://cloud.cerebras.ai",
-      "models": [
+        },
         {
-          "id": "llama3.1-8b",
-          "name": "llama3.1-8b",
-          "context": 128000,
-          "limits": "1M tokens/day",
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice"
@@ -611,20 +594,14 @@
           "limits": "free credits/month"
         },
         {
-          "id": "zai-org/GLM-5",
-          "name": "zai-org/GLM-5",
+          "id": "meta-llama/Llama-3.2-1B-Instruct",
+          "name": "meta-llama/Llama-3.2-1B-Instruct",
           "context": null,
           "limits": "free credits/month"
         },
         {
           "id": "meta-llama/Llama-3.3-70B-Instruct",
           "name": "meta-llama/Llama-3.3-70B-Instruct",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
-          "id": "meta-llama/Llama-3.2-1B-Instruct",
-          "name": "meta-llama/Llama-3.2-1B-Instruct",
           "context": null,
           "limits": "free credits/month"
         },
@@ -671,6 +648,12 @@
           "limits": "free credits/month"
         },
         {
+          "id": "zai-org/GLM-5",
+          "name": "zai-org/GLM-5",
+          "context": null,
+          "limits": "free credits/month"
+        },
+        {
           "id": "katanemo/Arch-Router-1.5B",
           "name": "katanemo/Arch-Router-1.5B",
           "context": null,
@@ -683,14 +666,14 @@
           "limits": "free credits/month"
         },
         {
-          "id": "google/gemma-3-27b-it",
-          "name": "google/gemma-3-27b-it",
+          "id": "deepseek-ai/DeepSeek-V3",
+          "name": "deepseek-ai/DeepSeek-V3",
           "context": null,
           "limits": "free credits/month"
         },
         {
-          "id": "deepseek-ai/DeepSeek-V3",
-          "name": "deepseek-ai/DeepSeek-V3",
+          "id": "google/gemma-3-27b-it",
+          "name": "google/gemma-3-27b-it",
           "context": null,
           "limits": "free credits/month"
         },
@@ -715,12 +698,6 @@
         {
           "id": "Sao10K/L3-8B-Stheno-v3.2",
           "name": "Sao10K/L3-8B-Stheno-v3.2",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
-          "id": "meta-llama/Llama-Guard-4-12B",
-          "name": "meta-llama/Llama-Guard-4-12B",
           "context": null,
           "limits": "free credits/month"
         }
