@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-10T23:15:48.587182+00:00",
+  "updated": "2026-05-11T00:21:20.589315+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -327,12 +327,6 @@
           "limits": "40 req/min"
         },
         {
-          "id": "mistralai/magistral-small-2506",
-          "name": "mistralai/magistral-small-2506",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "mistralai/mistral-large-3-675b-instruct-2512",
           "name": "mistralai/mistral-large-3-675b-instruct-2512",
           "context": null,
@@ -454,12 +448,6 @@
       "url": "https://huggingface.co",
       "models": [
         {
-          "id": "deepseek-ai/DeepSeek-V4-Pro",
-          "name": "deepseek-ai/DeepSeek-V4-Pro",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
           "id": "deepseek-ai/DeepSeek-V4-Flash",
           "name": "deepseek-ai/DeepSeek-V4-Flash",
           "context": null,
@@ -534,12 +522,6 @@
         {
           "id": "CohereLabs/c4ai-command-a-03-2025",
           "name": "CohereLabs/c4ai-command-a-03-2025",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
-          "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-          "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "context": null,
           "limits": "free credits/month"
         },
@@ -664,12 +646,6 @@
       "name": "Cloudflare AI",
       "url": "https://developers.cloudflare.com/workers-ai/",
       "models": [
-        {
-          "id": "@cf/moonshotai/kimi-k2.5",
-          "name": "@cf/moonshotai/kimi-k2.5",
-          "context": null,
-          "limits": "10k neurons/day"
-        },
         {
           "id": "@cf/moonshotai/kimi-k2.6",
           "name": "@cf/moonshotai/kimi-k2.6",
