@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-12T19:31:31.653332+00:00",
+  "updated": "2026-05-12T20:30:33.465698+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -116,6 +116,18 @@
       "url": "https://console.groq.com",
       "models": [
         {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
+        },
+        {
           "id": "llama-3.3-70b-versatile",
           "name": "llama-3.3-70b-versatile",
           "context": 131072,
@@ -126,14 +138,13 @@
           ]
         },
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice",
-            "reasoning"
+            "tool_choice"
           ]
         },
         {
@@ -149,13 +160,20 @@
           ]
         },
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "reasoning"
           ]
         },
         {
@@ -169,24 +187,6 @@
             "response_schema",
             "reasoning"
           ]
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
         }
       ],
       "error": null
@@ -210,6 +210,12 @@
         {
           "id": "google/gemma-3n-e4b-it",
           "name": "google/gemma-3n-e4b-it",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "meta/llama-3.2-11b-vision-instruct",
+          "name": "meta/llama-3.2-11b-vision-instruct",
           "context": null,
           "limits": "40 req/min"
         },
@@ -845,6 +851,12 @@
         {
           "id": "@cf/meta/llama-3.2-3b-instruct",
           "name": "@cf/meta/llama-3.2-3b-instruct",
+          "context": null,
+          "limits": "10k neurons/day"
+        },
+        {
+          "id": "@cf/moonshotai/kimi-k2.5",
+          "name": "@cf/moonshotai/kimi-k2.5",
           "context": null,
           "limits": "10k neurons/day"
         },
