@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-12T09:52:56.905076+00:00",
+  "updated": "2026-05-12T10:46:49.170491+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -116,14 +116,10 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
         },
         {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
@@ -138,21 +134,13 @@
           ]
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
+            "tool_choice"
           ]
         },
         {
@@ -167,6 +155,18 @@
           ]
         },
         {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
+        },
+        {
           "id": "llama-3.1-8b-instant",
           "name": "llama-3.1-8b-instant",
           "context": 131072,
@@ -177,8 +177,8 @@
           ]
         },
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -398,6 +398,19 @@
           "name": "upstage/solar-10.7b-instruct",
           "context": null,
           "limits": "40 req/min"
+        }
+      ],
+      "error": null
+    },
+    "huggingface": {
+      "name": "HuggingFace",
+      "url": "https://huggingface.co",
+      "models": [
+        {
+          "id": "katanemo/Arch-Router-1.5B",
+          "name": "katanemo/Arch-Router-1.5B",
+          "context": null,
+          "limits": "free credits/month"
         }
       ],
       "error": null
