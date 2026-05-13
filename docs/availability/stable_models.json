@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-13T17:40:09.750352+00:00",
+  "updated": "2026-05-13T18:33:55.542589+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -107,6 +107,12 @@
           "name": "OpenAI: gpt-oss-120b (free)",
           "context": 131072,
           "limits": "20 req/min · 50 req/day"
+        },
+        {
+          "id": "z-ai/glm-4.5-air:free",
+          "name": "Z.ai: GLM 4.5 Air (free)",
+          "context": 131072,
+          "limits": "20 req/min · 50 req/day"
         }
       ],
       "error": null
@@ -116,23 +122,32 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
         },
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
+            "response_schema",
+            "vision"
+          ]
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
             "reasoning"
           ]
         },
@@ -159,34 +174,25 @@
           ]
         },
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
-            "response_schema",
             "reasoning"
           ]
         },
         {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
+            "tool_choice"
           ]
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
         }
       ],
       "error": null
@@ -210,6 +216,18 @@
         {
           "id": "google/gemma-3n-e4b-it",
           "name": "google/gemma-3n-e4b-it",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "meta/llama-3.2-11b-vision-instruct",
+          "name": "meta/llama-3.2-11b-vision-instruct",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "meta/llama-3.2-3b-instruct",
+          "name": "meta/llama-3.2-3b-instruct",
           "context": null,
           "limits": "40 req/min"
         },
@@ -849,12 +867,6 @@
           "limits": "10k neurons/day"
         },
         {
-          "id": "@cf/meta/llama-guard-3-8b",
-          "name": "@cf/meta/llama-guard-3-8b",
-          "context": null,
-          "limits": "10k neurons/day"
-        },
-        {
           "id": "@cf/meta/llama-2-7b-chat-fp16",
           "name": "@cf/meta/llama-2-7b-chat-fp16",
           "context": 3072,
@@ -935,6 +947,12 @@
         {
           "id": "@cf/qwen/qwen2.5-coder-32b-instruct",
           "name": "@cf/qwen/qwen2.5-coder-32b-instruct",
+          "context": null,
+          "limits": "10k neurons/day"
+        },
+        {
+          "id": "@hf/nousresearch/hermes-2-pro-mistral-7b",
+          "name": "@hf/nousresearch/hermes-2-pro-mistral-7b",
           "context": null,
           "limits": "10k neurons/day"
         },
