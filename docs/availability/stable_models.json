@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-15T03:01:30.354737+00:00",
+  "updated": "2026-05-15T05:15:17.882461+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -116,6 +116,38 @@
       "url": "https://console.groq.com",
       "models": [
         {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
           "id": "allam-2-7b",
           "name": "allam-2-7b",
           "context": 4096,
@@ -134,35 +166,14 @@
           ]
         },
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
-            "response_schema",
             "reasoning"
-          ]
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
           ]
         },
         {
@@ -175,17 +186,6 @@
             "tool_choice",
             "response_schema",
             "vision"
-          ]
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
           ]
         }
       ],
@@ -231,12 +231,6 @@
       "url": "https://build.nvidia.com",
       "models": [
         {
-          "id": "google/gemma-3-4b-it",
-          "name": "google/gemma-3-4b-it",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "google/gemma-3n-e2b-it",
           "name": "google/gemma-3n-e2b-it",
           "context": null,
@@ -245,12 +239,6 @@
         {
           "id": "google/gemma-3n-e4b-it",
           "name": "google/gemma-3n-e4b-it",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "meta/llama-3.2-11b-vision-instruct",
-          "name": "meta/llama-3.2-11b-vision-instruct",
           "context": null,
           "limits": "40 req/min"
         },
