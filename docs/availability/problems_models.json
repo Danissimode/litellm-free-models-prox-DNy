@@ -1,16 +1,10 @@
 {
-  "updated": "2026-05-15T14:46:46.321859+00:00",
+  "updated": "2026-05-15T15:39:45.554798+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
       "url": "https://openrouter.ai",
       "models": [
-        {
-          "id": "inclusionai/ring-2.6-1t:free",
-          "name": "inclusionAI: Ring-2.6-1T (free)",
-          "context": 262144,
-          "limits": "20 req/min · 50 req/day"
-        },
         {
           "id": "baidu/cobuddy:free",
           "name": "Baidu Qianfan: CoBuddy (free)",
@@ -351,12 +345,6 @@
           "limits": "40 req/min"
         },
         {
-          "id": "meta/llama-3.2-11b-vision-instruct",
-          "name": "meta/llama-3.2-11b-vision-instruct",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "meta/llama-3.2-1b-instruct",
           "name": "meta/llama-3.2-1b-instruct",
           "context": null,
@@ -592,12 +580,6 @@
           "limits": "free credits/month"
         },
         {
-          "id": "meta-llama/Meta-Llama-3-8B-Instruct",
-          "name": "meta-llama/Meta-Llama-3-8B-Instruct",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
           "id": "deepseek-ai/DeepSeek-R1",
           "name": "deepseek-ai/DeepSeek-R1",
           "context": null,
@@ -606,6 +588,12 @@
         {
           "id": "Qwen/Qwen3-8B",
           "name": "Qwen/Qwen3-8B",
+          "context": null,
+          "limits": "free credits/month"
+        },
+        {
+          "id": "meta-llama/Meta-Llama-3-8B-Instruct",
+          "name": "meta-llama/Meta-Llama-3-8B-Instruct",
           "context": null,
           "limits": "free credits/month"
         },
