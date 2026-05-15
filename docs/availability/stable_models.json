@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-15T22:17:19.035703+00:00",
+  "updated": "2026-05-15T23:17:41.390048+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -104,27 +104,6 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
           "id": "llama-3.1-8b-instant",
           "name": "llama-3.1-8b-instant",
           "context": 131072,
@@ -132,24 +111,6 @@
           "capabilities": [
             "function_calling",
             "tool_choice"
-          ]
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
           ]
         },
         {
@@ -175,6 +136,45 @@
             "response_schema",
             "reasoning"
           ]
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
         }
       ],
       "error": null
@@ -183,6 +183,22 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
+        {
+          "id": "qwen-3-235b-a22b-instruct-2507",
+          "name": "qwen-3-235b-a22b-instruct-2507",
+          "context": null,
+          "limits": "1M tokens/day"
+        },
+        {
+          "id": "llama3.1-8b",
+          "name": "llama3.1-8b",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
         {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
@@ -194,15 +210,27 @@
             "response_schema",
             "reasoning"
           ]
-        },
+        }
+      ],
+      "error": null
+    },
+    "gemini": {
+      "name": "Gemini",
+      "url": "https://aistudio.google.com",
+      "models": [
         {
-          "id": "llama3.1-8b",
-          "name": "llama3.1-8b",
-          "context": 128000,
-          "limits": "1M tokens/day",
+          "id": "gemini-2.5-flash",
+          "name": "Gemini 2.5 Flash",
+          "context": 1048576,
+          "limits": "varies — see AI Studio",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "response_schema",
+            "vision",
+            "system_messages",
+            "reasoning",
+            "prompt_caching"
           ]
         }
       ],
@@ -222,6 +250,12 @@
             "tool_choice",
             "reasoning"
           ]
+        },
+        {
+          "id": "DeepSeek-V3.2",
+          "name": "DeepSeek-V3.2",
+          "context": 32768,
+          "limits": "free tier"
         }
       ],
       "error": null
@@ -1101,6 +1135,12 @@
           "limits": "free tier — token from enter.pollinations.ai"
         },
         {
+          "id": "kimi-k2.6",
+          "name": "kimi-k2.6",
+          "context": 262000,
+          "limits": "free tier — token from enter.pollinations.ai"
+        },
+        {
           "id": "nova-fast",
           "name": "nova-fast",
           "context": 128000,
@@ -1110,6 +1150,12 @@
           "id": "nova",
           "name": "nova",
           "context": 1048576,
+          "limits": "free tier — token from enter.pollinations.ai"
+        },
+        {
+          "id": "glm",
+          "name": "glm",
+          "context": 198000,
           "limits": "free tier — token from enter.pollinations.ai"
         },
         {

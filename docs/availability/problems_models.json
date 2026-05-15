@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-15T22:17:19.035703+00:00",
+  "updated": "2026-05-15T23:17:41.390048+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -49,16 +49,34 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model"
-        },
-        {
           "id": "groq/compound",
           "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
+        },
+        {
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
+          "limits": "varies per model"
+        }
+      ],
+      "error": null
+    },
+    "cerebras": {
+      "name": "Cerebras",
+      "url": "https://cloud.cerebras.ai",
+      "models": [
+        {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
         }
       ],
       "error": null
@@ -67,21 +85,6 @@
       "name": "Gemini",
       "url": "https://aistudio.google.com",
       "models": [
-        {
-          "id": "gemini-2.5-flash",
-          "name": "Gemini 2.5 Flash",
-          "context": 1048576,
-          "limits": "varies — see AI Studio",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision",
-            "system_messages",
-            "reasoning",
-            "prompt_caching"
-          ]
-        },
         {
           "id": "gemma-4-31b-it",
           "name": "Gemma 4 31B IT",
@@ -574,14 +577,14 @@
           "limits": "free credits/month"
         },
         {
-          "id": "Qwen/Qwen3-Coder-Next",
-          "name": "Qwen/Qwen3-Coder-Next",
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": null,
           "limits": "free credits/month"
         },
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "Qwen/Qwen3-Coder-Next",
+          "name": "Qwen/Qwen3-Coder-Next",
           "context": null,
           "limits": "free credits/month"
         },
@@ -1132,6 +1135,12 @@
           "limits": "free credits/month"
         },
         {
+          "id": "Qwen/Qwen3-4B-Thinking-2507",
+          "name": "Qwen/Qwen3-4B-Thinking-2507",
+          "context": null,
+          "limits": "free credits/month"
+        },
+        {
           "id": "baidu/ERNIE-4.5-300B-A47B-Base-PT",
           "name": "baidu/ERNIE-4.5-300B-A47B-Base-PT",
           "context": null,
@@ -1144,14 +1153,8 @@
           "limits": "free credits/month"
         },
         {
-          "id": "Qwen/Qwen3-4B-Thinking-2507",
-          "name": "Qwen/Qwen3-4B-Thinking-2507",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
-          "id": "zai-org/GLM-4.5-Air",
-          "name": "zai-org/GLM-4.5-Air",
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
           "context": null,
           "limits": "free credits/month"
         },
@@ -1162,20 +1165,8 @@
           "limits": "free credits/month"
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
-          "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-          "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-          "context": null,
-          "limits": "free credits/month"
-        },
-        {
-          "id": "deepcogito/cogito-671b-v2.1",
-          "name": "deepcogito/cogito-671b-v2.1",
+          "id": "zai-org/GLM-4.5-Air",
+          "name": "zai-org/GLM-4.5-Air",
           "context": null,
           "limits": "free credits/month"
         },
@@ -1186,14 +1177,14 @@
           "limits": "free credits/month"
         },
         {
-          "id": "deepseek-ai/DeepSeek-V3.1",
-          "name": "deepseek-ai/DeepSeek-V3.1",
+          "id": "deepcogito/cogito-671b-v2.1",
+          "name": "deepcogito/cogito-671b-v2.1",
           "context": null,
           "limits": "free credits/month"
         },
         {
-          "id": "deepcogito/cogito-671b-v2.1-FP8",
-          "name": "deepcogito/cogito-671b-v2.1-FP8",
+          "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+          "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
           "context": null,
           "limits": "free credits/month"
         },
@@ -1204,14 +1195,26 @@
           "limits": "free credits/month"
         },
         {
-          "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
-          "name": "Qwen/Qwen3-Next-80B-A3B-Thinking",
+          "id": "deepcogito/cogito-671b-v2.1-FP8",
+          "name": "deepcogito/cogito-671b-v2.1-FP8",
+          "context": null,
+          "limits": "free credits/month"
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-V3.1",
+          "name": "deepseek-ai/DeepSeek-V3.1",
           "context": null,
           "limits": "free credits/month"
         },
         {
           "id": "EssentialAI/rnj-1-instruct",
           "name": "EssentialAI/rnj-1-instruct",
+          "context": null,
+          "limits": "free credits/month"
+        },
+        {
+          "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
+          "name": "Qwen/Qwen3-Next-80B-A3B-Thinking",
           "context": null,
           "limits": "free credits/month"
         },
@@ -1306,6 +1309,25 @@
           "name": "qwen-vision",
           "context": 131072,
           "limits": "free tier — token from enter.pollinations.ai"
+        }
+      ],
+      "error": null
+    },
+    "llm7": {
+      "name": "LLM7",
+      "url": "https://llm7.io",
+      "models": [
+        {
+          "id": "codestral-latest",
+          "name": "codestral-latest",
+          "context": 32000,
+          "limits": "anonymous · 30 req/min with token"
+        },
+        {
+          "id": "GLM-4.6V-Flash",
+          "name": "GLM-4.6V-Flash",
+          "context": null,
+          "limits": "anonymous · 30 req/min with token"
         }
       ],
       "error": null
