@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-16T14:26:21.245360+00:00",
+  "updated": "2026-05-16T15:20:19.374179+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -104,13 +104,24 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
+            "response_schema",
             "reasoning"
           ]
         },
@@ -139,24 +150,13 @@
           ]
         },
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
-            "response_schema",
             "reasoning"
           ]
         },
@@ -167,8 +167,8 @@
           "limits": "varies per model"
         },
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -183,12 +183,6 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
-        {
-          "id": "qwen-3-235b-a22b-instruct-2507",
-          "name": "qwen-3-235b-a22b-instruct-2507",
-          "context": null,
-          "limits": "1M tokens/day"
-        },
         {
           "id": "llama3.1-8b",
           "name": "llama3.1-8b",
@@ -221,6 +215,12 @@
             "tool_choice",
             "reasoning"
           ]
+        },
+        {
+          "id": "qwen-3-235b-a22b-instruct-2507",
+          "name": "qwen-3-235b-a22b-instruct-2507",
+          "context": null,
+          "limits": "1M tokens/day"
         }
       ],
       "error": null
@@ -261,12 +261,6 @@
             "tool_choice",
             "reasoning"
           ]
-        },
-        {
-          "id": "DeepSeek-V3.2",
-          "name": "DeepSeek-V3.2",
-          "context": 32768,
-          "limits": "free tier"
         }
       ],
       "error": null
