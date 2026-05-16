@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-16T21:14:49.080270+00:00",
+  "updated": "2026-05-16T22:14:03.372663+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -104,32 +104,6 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -165,6 +139,32 @@
           ]
         },
         {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
           "context": 131072,
@@ -195,6 +195,16 @@
           ]
         },
         {
+          "id": "llama3.1-8b",
+          "name": "llama3.1-8b",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
           "id": "qwen-3-235b-a22b-instruct-2507",
           "name": "qwen-3-235b-a22b-instruct-2507",
           "context": null,
@@ -210,16 +220,6 @@
             "tool_choice",
             "response_schema",
             "reasoning"
-          ]
-        },
-        {
-          "id": "llama3.1-8b",
-          "name": "llama3.1-8b",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
           ]
         }
       ],
