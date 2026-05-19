@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-19T14:01:57.732145+00:00",
+  "updated": "2026-05-19T16:05:25.426382+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -162,6 +162,17 @@
       "name": "SambaNova",
       "url": "https://cloud.sambanova.ai",
       "models": [
+        {
+          "id": "DeepSeek-V3.1",
+          "name": "DeepSeek-V3.1",
+          "context": 131072,
+          "limits": "free tier",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
+        },
         {
           "id": "DeepSeek-V3.2",
           "name": "DeepSeek-V3.2",
@@ -455,6 +466,18 @@
           "limits": "1 req/s · 1B tok/month"
         },
         {
+          "id": "mistral-small-2603",
+          "name": "mistral-small-2603",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month"
+        },
+        {
+          "id": "mistral-vibe-cli-fast",
+          "name": "mistral-small-2603",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month"
+        },
+        {
           "id": "mistral-large-2411",
           "name": "mistral-large-2411",
           "context": 128000,
@@ -491,12 +514,6 @@
       "name": "Pollinations",
       "url": "https://pollinations.ai",
       "models": [
-        {
-          "id": "gemini-search",
-          "name": "gemini-search",
-          "context": 1048576,
-          "limits": "free tier — token from enter.pollinations.ai"
-        },
         {
           "id": "perplexity-fast",
           "name": "perplexity-fast",
