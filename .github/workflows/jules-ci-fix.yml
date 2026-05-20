@@ -1,0 +1,33 @@
+name: Jules CI Auto-Fix
+
+on:
+  workflow_run:
+    workflows: ["SonarQube"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  fix-ci:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: self-hosted
+    steps:
+      - name: Create Jules fix session
+        uses: google-labs-code/jules-action@v1
+        with:
+          jules_api_key: ${{ secrets.JULES_API_KEY }}
+          starting_branch: main
+          prompt: |
+            The CI pipeline just FAILED on main branch.
+            Failed workflow: ${{ github.event.workflow_run.name }}
+
+            Your job:
+            1. Check the build/lint/test output to understand what failed
+            2. Fix the root cause (not just suppress the error)
+            3. Keep changes minimal and focused on the CI fix
+            4. Run the same checks locally to verify the fix
+            5. Create a PR with title: "fix(ci): [what you fixed]"
+
+            Do NOT:
+            - Make unrelated changes
+            - Suppress lint rules or skip tests
+            - Change CI configuration unless it is genuinely broken
