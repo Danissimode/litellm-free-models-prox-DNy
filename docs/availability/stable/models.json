@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T19:42:48.766611+00:00",
+  "updated": "2026-05-20T20:36:01.345192+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -134,15 +134,25 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
             "response_schema",
-            "reasoning"
+            "vision"
+          ]
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
           ]
         },
         {
@@ -158,30 +168,6 @@
           ]
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
-        },
-        {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model"
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -193,14 +179,10 @@
           ]
         },
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
+          "limits": "varies per model"
         },
         {
           "id": "llama-3.1-8b-instant",
@@ -217,6 +199,24 @@
           "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
         }
       ],
       "error": null
@@ -225,6 +225,12 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
+        {
+          "id": "qwen-3-235b-a22b-instruct-2507",
+          "name": "qwen-3-235b-a22b-instruct-2507",
+          "context": null,
+          "limits": "1M tokens/day"
+        },
         {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
@@ -257,12 +263,6 @@
             "function_calling",
             "tool_choice"
           ]
-        },
-        {
-          "id": "qwen-3-235b-a22b-instruct-2507",
-          "name": "qwen-3-235b-a22b-instruct-2507",
-          "context": null,
-          "limits": "1M tokens/day"
         }
       ],
       "error": null
@@ -469,6 +469,18 @@
           "id": "google/gemma-3-27b-it",
           "name": "Gemma 3 27B It",
           "context": 65536,
+          "limits": "free"
+        },
+        {
+          "id": "rime-labs/rime-mist-v3",
+          "name": "Rime Labs Mist v3",
+          "context": 448,
+          "limits": "free"
+        },
+        {
+          "id": "rime-labs/rime-mist-v3-omni",
+          "name": "Rime Labs Mist v3 Omni",
+          "context": 448,
           "limits": "free"
         }
       ],
