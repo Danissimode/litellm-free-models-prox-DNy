@@ -1,0 +1,32 @@
+name: Jules Issue Label Trigger
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  implement:
+    if: github.event.label.name == 'needs-jules' && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
+    runs-on: self-hosted
+    timeout-minutes: 45
+    steps:
+      - name: Open Jules implementation session
+        uses: google-labs-code/jules-action@v1
+        with:
+          jules_api_key: ${{ secrets.JULES_API_KEY }}
+          starting_branch: main
+          prompt: |
+            Implement the change described in GitHub issue
+            #${{ github.event.issue.number }}: "${{ github.event.issue.title }}".
+
+            Full issue body:
+            ${{ github.event.issue.body }}
+
+            Open ONE draft PR titled "${{ github.event.issue.title }}"
+            with "Closes #${{ github.event.issue.number }}" in the body.
+
+            Hard rules:
+            - Stay strictly within scope of the issue.
+            - Add tests where the codebase already has tests for the touched area.
+            - Keep the PR small enough to review in under 15 minutes.
+            - Do NOT refactor unrelated code, bump dependencies, or touch CI workflows.
