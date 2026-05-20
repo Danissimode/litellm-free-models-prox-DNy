@@ -1,0 +1,38 @@
+name: Jules Weekly Security Scan
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: self-hosted
+    timeout-minutes: 30
+    steps:
+      - name: Open Jules security audit session
+        uses: google-labs-code/jules-action@v1
+        with:
+          jules_api_key: ${{ secrets.JULES_API_KEY }}
+          starting_branch: main
+          prompt: |
+            Run a focused security audit of this repository.
+
+            Scope:
+            - OWASP top-10 patterns (injection, auth bypass, XSS, SSRF, IDOR,
+              security misconfiguration, sensitive data exposure)
+            - Hardcoded secrets, API keys, tokens (also in test fixtures)
+            - Unsafe deserialisation, unsanitised user input fed to fetch/exec/eval
+            - Auth/session token handling in middleware and API routes
+            - Cookie flags (HttpOnly, Secure, SameSite) on session cookies
+            - CORS allowlists with unbounded wildcards
+
+            Open ONE draft PR titled "fix(security): weekly audit".
+            For each issue found, include:
+            - Severity (P0/P1/P2/P3)
+            - File path + line
+            - Why it is exploitable
+            - Suggested fix (concrete code, not advice)
+
+            Do NOT bump dependencies, refactor unrelated code, or touch CI files.
+            Create at most one PR.
