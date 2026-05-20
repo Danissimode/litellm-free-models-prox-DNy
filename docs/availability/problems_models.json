@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T15:02:05.495748+00:00",
+  "updated": "2026-05-20T17:01:25.796337+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -135,10 +135,19 @@
           ]
         },
         {
-          "id": "gemini-3.1-flash-lite",
-          "name": "Gemini 3.1 Flash Lite",
+          "id": "gemini-3.5-flash",
+          "name": "Gemini 3.5 Flash",
           "context": 1048576,
-          "limits": "varies — see AI Studio"
+          "limits": "varies — see AI Studio",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision",
+            "system_messages",
+            "reasoning",
+            "prompt_caching"
+          ]
         }
       ],
       "error": null
