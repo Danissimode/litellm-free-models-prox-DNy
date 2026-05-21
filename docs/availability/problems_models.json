@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T14:10:34.095971+00:00",
+  "updated": "2026-05-21T16:04:46.578535+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -162,70 +162,6 @@
             "system_messages",
             "reasoning",
             "prompt_caching"
-          ]
-        }
-      ],
-      "error": null
-    },
-    "sambanova": {
-      "name": "SambaNova",
-      "url": "https://cloud.sambanova.ai",
-      "models": [
-        {
-          "id": "DeepSeek-V3.1",
-          "name": "DeepSeek-V3.1",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "DeepSeek-V3.2",
-          "name": "DeepSeek-V3.2",
-          "context": 32768,
-          "limits": "free tier"
-        },
-        {
-          "id": "Llama-4-Maverick-17B-128E-Instruct",
-          "name": "Llama-4-Maverick-17B-128E-Instruct",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
-        },
-        {
-          "id": "Meta-Llama-3.3-70B-Instruct",
-          "name": "Meta-Llama-3.3-70B-Instruct",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema"
-          ]
-        },
-        {
-          "id": "gemma-3-12b-it",
-          "name": "gemma-3-12b-it",
-          "context": 131072,
-          "limits": "free tier"
-        },
-        {
-          "id": "gpt-oss-120b",
-          "name": "gpt-oss-120b",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
           ]
         }
       ],
