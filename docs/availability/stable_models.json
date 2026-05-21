@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T19:32:46.782756+00:00",
+  "updated": "2026-05-21T20:32:14.861259+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -104,8 +104,18 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -128,16 +138,10 @@
           ]
         },
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ]
+          "limits": "varies per model"
         },
         {
           "id": "qwen/qwen3-32b",
@@ -151,14 +155,22 @@
           ]
         },
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "response_schema",
+            "reasoning"
           ]
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
         },
         {
           "id": "llama-3.1-8b-instant",
@@ -169,18 +181,6 @@
             "function_calling",
             "tool_choice"
           ]
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
-        },
-        {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model"
         }
       ],
       "error": null
