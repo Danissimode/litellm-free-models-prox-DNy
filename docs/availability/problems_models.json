@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T18:17:09.086036+00:00",
+  "updated": "2026-05-23T19:25:55.002756+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -49,14 +49,14 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model"
         }
@@ -491,19 +491,6 @@
             "tool_choice",
             "response_schema"
           ]
-        }
-      ],
-      "error": null
-    },
-    "cloudflare": {
-      "name": "Cloudflare AI",
-      "url": "https://developers.cloudflare.com/workers-ai/",
-      "models": [
-        {
-          "id": "@cf/moonshotai/kimi-k2.6",
-          "name": "@cf/moonshotai/kimi-k2.6",
-          "context": null,
-          "limits": "10k neurons/day"
         }
       ],
       "error": null
