@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T00:24:13.292051+00:00",
+  "updated": "2026-05-23T01:33:08.634679+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -296,12 +296,6 @@
           "limits": "40 req/min"
         },
         {
-          "id": "meta/llama-3.2-11b-vision-instruct",
-          "name": "meta/llama-3.2-11b-vision-instruct",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "meta/llama-3.2-1b-instruct",
           "name": "meta/llama-3.2-1b-instruct",
           "context": null,
@@ -322,6 +316,12 @@
         {
           "id": "minimaxai/minimax-m2.7",
           "name": "minimaxai/minimax-m2.7",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "mistralai/mistral-7b-instruct-v0.3",
+          "name": "mistralai/mistral-7b-instruct-v0.3",
           "context": null,
           "limits": "40 req/min"
         },
