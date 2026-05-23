@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T23:21:56.794033+00:00",
+  "updated": "2026-05-23T00:24:13.292051+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -182,28 +182,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "canopylabs/orpheus-arabic-saudi",
-          "name": "canopylabs/orpheus-arabic-saudi",
-          "context": 4000,
-          "limits": "varies per model"
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
-            "response_schema",
             "reasoning"
           ]
-        },
-        {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model"
         },
         {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
@@ -218,41 +205,10 @@
           ]
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
           "limits": "varies per model"
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
         },
         {
           "id": "canopylabs/orpheus-v1-english",
@@ -273,9 +229,53 @@
           ]
         },
         {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
           "id": "groq/compound",
           "name": "groq/compound",
           "context": 131072,
+          "limits": "varies per model"
+        },
+        {
+          "id": "canopylabs/orpheus-arabic-saudi",
+          "name": "canopylabs/orpheus-arabic-saudi",
+          "context": 4000,
           "limits": "varies per model"
         }
       ],
@@ -303,6 +303,16 @@
           "limits": "1M tokens/day"
         },
         {
+          "id": "llama3.1-8b",
+          "name": "llama3.1-8b",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
           "context": 131072,
@@ -312,16 +322,6 @@
             "tool_choice",
             "response_schema",
             "reasoning"
-          ]
-        },
-        {
-          "id": "llama3.1-8b",
-          "name": "llama3.1-8b",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
           ]
         }
       ],
@@ -544,8 +544,77 @@
     "sambanova": {
       "name": "SambaNova",
       "url": "https://cloud.sambanova.ai",
-      "models": [],
-      "error": "GET https://api.sambanova.ai/v1/models → IncompleteRead(0 bytes read, 1501 more expected)"
+      "models": [
+        {
+          "id": "DeepSeek-V3.1",
+          "name": "DeepSeek-V3.1",
+          "context": 131072,
+          "limits": "free tier",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "DeepSeek-V3.2",
+          "name": "DeepSeek-V3.2",
+          "context": 32768,
+          "limits": "free tier"
+        },
+        {
+          "id": "Llama-4-Maverick-17B-128E-Instruct",
+          "name": "Llama-4-Maverick-17B-128E-Instruct",
+          "context": 131072,
+          "limits": "free tier",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ]
+        },
+        {
+          "id": "Meta-Llama-3.3-70B-Instruct",
+          "name": "Meta-Llama-3.3-70B-Instruct",
+          "context": 131072,
+          "limits": "free tier",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema"
+          ]
+        },
+        {
+          "id": "MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "context": 196608,
+          "limits": "free tier",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "gemma-3-12b-it",
+          "name": "gemma-3-12b-it",
+          "context": 131072,
+          "limits": "free tier"
+        },
+        {
+          "id": "gpt-oss-120b",
+          "name": "gpt-oss-120b",
+          "context": 131072,
+          "limits": "free tier",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
+        }
+      ],
+      "error": null
     },
     "cohere": {
       "name": "Cohere",
