@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T16:19:05.675988+00:00",
+  "updated": "2026-05-24T17:19:49.442715+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -49,14 +49,14 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model"
         }
@@ -68,12 +68,6 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
-          "id": "qwen-3-235b-a22b-instruct-2507",
-          "name": "qwen-3-235b-a22b-instruct-2507",
-          "context": null,
-          "limits": "1M tokens/day"
-        },
-        {
           "id": "zai-glm-4.7",
           "name": "zai-glm-4.7",
           "context": 128000,
@@ -83,6 +77,12 @@
             "tool_choice",
             "reasoning"
           ]
+        },
+        {
+          "id": "qwen-3-235b-a22b-instruct-2507",
+          "name": "qwen-3-235b-a22b-instruct-2507",
+          "context": null,
+          "limits": "1M tokens/day"
         }
       ],
       "error": null
@@ -145,6 +145,21 @@
         {
           "id": "gemini-3-flash-preview",
           "name": "Gemini 3 Flash Preview",
+          "context": 1048576,
+          "limits": "varies — see AI Studio",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision",
+            "system_messages",
+            "reasoning",
+            "prompt_caching"
+          ]
+        },
+        {
+          "id": "gemini-3.1-flash-lite-preview",
+          "name": "Gemini 3.1 Flash Lite Preview",
           "context": 1048576,
           "limits": "varies — see AI Studio",
           "capabilities": [
@@ -361,6 +376,12 @@
         {
           "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
           "name": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "nvidia/nemotron-nano-12b-v2-vl",
+          "name": "nvidia/nemotron-nano-12b-v2-vl",
           "context": null,
           "limits": "40 req/min"
         },
