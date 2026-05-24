@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T07:01:28.069481+00:00",
+  "updated": "2026-05-24T08:48:19.459392+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -49,14 +49,14 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model"
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
         }
@@ -311,12 +311,6 @@
         {
           "id": "mistralai/ministral-14b-instruct-2512",
           "name": "mistralai/ministral-14b-instruct-2512",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "mistralai/mistral-7b-instruct-v0.3",
-          "name": "mistralai/mistral-7b-instruct-v0.3",
           "context": null,
           "limits": "40 req/min"
         },
