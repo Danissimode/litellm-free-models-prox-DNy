@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T13:29:50.667757+00:00",
+  "updated": "2026-05-24T14:29:05.634693+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -179,59 +179,6 @@
       ],
       "error": null
     },
-    "sambanova": {
-      "name": "SambaNova",
-      "url": "https://cloud.sambanova.ai",
-      "models": [
-        {
-          "id": "DeepSeek-V3.1",
-          "name": "DeepSeek-V3.1",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "DeepSeek-V3.2",
-          "name": "DeepSeek-V3.2",
-          "context": 32768,
-          "limits": "free tier"
-        },
-        {
-          "id": "Llama-4-Maverick-17B-128E-Instruct",
-          "name": "Llama-4-Maverick-17B-128E-Instruct",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
-        },
-        {
-          "id": "gemma-3-12b-it",
-          "name": "gemma-3-12b-it",
-          "context": 131072,
-          "limits": "free tier"
-        },
-        {
-          "id": "gpt-oss-120b",
-          "name": "gpt-oss-120b",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ]
-        }
-      ],
-      "error": null
-    },
     "nvidia": {
       "name": "NVIDIA NIM",
       "url": "https://build.nvidia.com",
@@ -311,6 +258,12 @@
         {
           "id": "mistralai/ministral-14b-instruct-2512",
           "name": "mistralai/ministral-14b-instruct-2512",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "mistralai/mistral-7b-instruct-v0.3",
+          "name": "mistralai/mistral-7b-instruct-v0.3",
           "context": null,
           "limits": "40 req/min"
         },
