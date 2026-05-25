@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T11:19:46.820018+00:00",
+  "updated": "2026-05-25T13:02:15.680903+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -49,14 +49,14 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model"
         }
@@ -194,12 +194,6 @@
       "name": "SambaNova",
       "url": "https://cloud.sambanova.ai",
       "models": [
-        {
-          "id": "DeepSeek-V3.2",
-          "name": "DeepSeek-V3.2",
-          "context": 32768,
-          "limits": "free tier"
-        },
         {
           "id": "Llama-4-Maverick-17B-128E-Instruct",
           "name": "Llama-4-Maverick-17B-128E-Instruct",
