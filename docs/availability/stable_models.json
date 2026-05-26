@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T12:52:31.498118+00:00",
+  "updated": "2026-05-26T13:59:43.440863+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -98,53 +98,8 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ]
-        },
-        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -161,8 +116,53 @@
           "limits": "varies per model"
         },
         {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
+        },
+        {
           "id": "llama-3.3-70b-versatile",
           "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ]
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -178,14 +178,13 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
-          "id": "gpt-oss-120b",
-          "name": "gpt-oss-120b",
-          "context": 131072,
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
           "limits": "1M tokens/day",
           "capabilities": [
             "function_calling",
             "tool_choice",
-            "response_schema",
             "reasoning"
           ]
         },
@@ -200,13 +199,14 @@
           ]
         },
         {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
+          "id": "gpt-oss-120b",
+          "name": "gpt-oss-120b",
+          "context": 131072,
           "limits": "1M tokens/day",
           "capabilities": [
             "function_calling",
             "tool_choice",
+            "response_schema",
             "reasoning"
           ]
         }
@@ -424,12 +424,6 @@
           "limits": "40 req/min"
         },
         {
-          "id": "nvidia/nemotron-nano-12b-v2-vl",
-          "name": "nvidia/nemotron-nano-12b-v2-vl",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "nvidia/nvidia-nemotron-nano-9b-v2",
           "name": "nvidia/nvidia-nemotron-nano-9b-v2",
           "context": null,
@@ -438,6 +432,18 @@
         {
           "id": "nvidia/riva-translate-4b-instruct-v1.1",
           "name": "nvidia/riva-translate-4b-instruct-v1.1",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": null,
+          "limits": "40 req/min"
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": null,
           "limits": "40 req/min"
         },

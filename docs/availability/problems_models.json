@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T12:52:31.498118+00:00",
+  "updated": "2026-05-26T13:59:43.440863+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -49,14 +49,14 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model"
         }
@@ -362,14 +362,8 @@
           "limits": "40 req/min"
         },
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "nvidia/nemotron-nano-12b-v2-vl",
+          "name": "nvidia/nemotron-nano-12b-v2-vl",
           "context": null,
           "limits": "40 req/min"
         },
