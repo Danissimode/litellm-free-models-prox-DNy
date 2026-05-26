@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T15:14:33.411261+00:00",
+  "updated": "2026-05-26T17:04:05.406892+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -98,14 +98,25 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
-            "reasoning"
+            "response_schema",
+            "vision"
+          ]
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
           ]
         },
         {
@@ -118,6 +129,27 @@
             "tool_choice",
             "response_schema",
             "reasoning"
+          ]
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
           ]
         },
         {
@@ -137,38 +169,6 @@
           "name": "allam-2-7b",
           "context": 4096,
           "limits": "varies per model"
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
         }
       ],
       "error": null
@@ -177,6 +177,18 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
+        {
+          "id": "gpt-oss-120b",
+          "name": "gpt-oss-120b",
+          "context": 131072,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
+        },
         {
           "id": "llama3.1-8b",
           "name": "llama3.1-8b",
@@ -195,18 +207,6 @@
           "capabilities": [
             "function_calling",
             "tool_choice",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "gpt-oss-120b",
-          "name": "gpt-oss-120b",
-          "context": 131072,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
             "reasoning"
           ]
         }
@@ -588,10 +588,40 @@
           ]
         },
         {
+          "id": "mistral-small-2603",
+          "name": "mistral-small-2603",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month"
+        },
+        {
+          "id": "mistral-small-latest",
+          "name": "mistral-small-2603",
+          "context": 131072,
+          "limits": "1 req/s · 1B tok/month",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ]
+        },
+        {
           "id": "mistral-vibe-cli-fast",
           "name": "mistral-small-2603",
           "context": null,
           "limits": "1 req/s · 1B tok/month"
+        },
+        {
+          "id": "magistral-small-latest",
+          "name": "mistral-small-2603",
+          "context": 40000,
+          "limits": "1 req/s · 1B tok/month",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ]
         },
         {
           "id": "magistral-medium-2509",

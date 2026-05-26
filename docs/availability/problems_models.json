@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T15:14:33.411261+00:00",
+  "updated": "2026-05-26T17:04:05.406892+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -437,36 +437,6 @@
           "name": "mistral-medium-2508",
           "context": null,
           "limits": "1 req/s · 1B tok/month"
-        },
-        {
-          "id": "mistral-small-2603",
-          "name": "mistral-small-2603",
-          "context": null,
-          "limits": "1 req/s · 1B tok/month"
-        },
-        {
-          "id": "mistral-small-latest",
-          "name": "mistral-small-2603",
-          "context": 131072,
-          "limits": "1 req/s · 1B tok/month",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
-        },
-        {
-          "id": "magistral-small-latest",
-          "name": "mistral-small-2603",
-          "context": 40000,
-          "limits": "1 req/s · 1B tok/month",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ]
         },
         {
           "id": "mistral-large-2411",
