@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T15:02:26.374328+00:00",
+  "updated": "2026-05-27T17:01:10.225330+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -53,19 +53,6 @@
           "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model"
-        }
-      ],
-      "error": null
-    },
-    "cerebras": {
-      "name": "Cerebras",
-      "url": "https://cloud.cerebras.ai",
-      "models": [
-        {
-          "id": "qwen-3-235b-a22b-instruct-2507",
-          "name": "qwen-3-235b-a22b-instruct-2507",
-          "context": null,
-          "limits": "1M tokens/day"
         }
       ],
       "error": null
@@ -232,18 +219,6 @@
         {
           "id": "deepseek-ai/deepseek-v4-flash",
           "name": "deepseek-ai/deepseek-v4-flash",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "deepseek-ai/deepseek-v4-flash",
-          "name": "deepseek-ai/deepseek-v4-flash",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "deepseek-ai/deepseek-v4-pro",
-          "name": "deepseek-ai/deepseek-v4-pro",
           "context": null,
           "limits": "40 req/min"
         },
@@ -444,6 +419,12 @@
       "name": "Pollinations",
       "url": "https://pollinations.ai",
       "models": [
+        {
+          "id": "grok-4.3",
+          "name": "grok-4.3",
+          "context": 262144,
+          "limits": "free tier — token from enter.pollinations.ai"
+        },
         {
           "id": "minimax",
           "name": "minimax",

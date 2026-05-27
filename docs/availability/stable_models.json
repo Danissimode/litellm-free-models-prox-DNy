@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T15:02:26.374328+00:00",
+  "updated": "2026-05-27T17:01:10.225330+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -98,26 +98,13 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
+            "tool_choice"
           ]
         },
         {
@@ -149,8 +136,8 @@
           ]
         },
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -161,13 +148,26 @@
           ]
         },
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "reasoning"
+          ]
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
           ]
         }
       ],
@@ -178,13 +178,14 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
-          "id": "llama3.1-8b",
-          "name": "llama3.1-8b",
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
           "context": 128000,
           "limits": "1M tokens/day",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "reasoning"
           ]
         },
         {
@@ -196,17 +197,6 @@
             "function_calling",
             "tool_choice",
             "response_schema",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
             "reasoning"
           ]
         }
@@ -400,18 +390,6 @@
           "limits": "40 req/min"
         },
         {
-          "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-          "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "nvidia/nemotron-3-super-120b-a12b",
-          "name": "nvidia/nemotron-3-super-120b-a12b",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "nvidia/nemotron-3-super-120b-a12b",
           "name": "nvidia/nemotron-3-super-120b-a12b",
           "context": null,
@@ -444,18 +422,6 @@
         {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
           "context": null,
           "limits": "40 req/min"
         },
@@ -1170,8 +1136,26 @@
           "limits": "free tier — token from enter.pollinations.ai"
         },
         {
+          "id": "gemma",
+          "name": "gemma",
+          "context": 262144,
+          "limits": "free tier — token from enter.pollinations.ai"
+        },
+        {
+          "id": "deepseek-pro",
+          "name": "deepseek-pro",
+          "context": 1048576,
+          "limits": "free tier — token from enter.pollinations.ai"
+        },
+        {
           "id": "grok",
           "name": "grok",
+          "context": 262144,
+          "limits": "free tier — token from enter.pollinations.ai"
+        },
+        {
+          "id": "grok-large",
+          "name": "grok-large",
           "context": 262144,
           "limits": "free tier — token from enter.pollinations.ai"
         },

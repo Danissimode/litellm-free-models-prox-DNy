@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T15:02:26.374328+00:00",
+  "updated": "2026-05-27T17:01:10.225330+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -128,6 +128,56 @@
       "url": "https://console.groq.com",
       "models": [
         {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
+          "limits": "varies per model"
+        },
+        {
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
+          "limits": "varies per model"
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ]
+        },
+        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
           "context": 131072,
@@ -151,40 +201,6 @@
           ]
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model"
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ]
-        },
-        {
           "id": "openai/gpt-oss-20b",
           "name": "openai/gpt-oss-20b",
           "context": 131072,
@@ -195,22 +211,6 @@
             "response_schema",
             "reasoning"
           ]
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model"
         }
       ],
       "error": null
@@ -220,19 +220,14 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
-          "id": "qwen-3-235b-a22b-instruct-2507",
-          "name": "qwen-3-235b-a22b-instruct-2507",
-          "context": null,
-          "limits": "1M tokens/day"
-        },
-        {
-          "id": "llama3.1-8b",
-          "name": "llama3.1-8b",
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
           "context": 128000,
           "limits": "1M tokens/day",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "reasoning"
           ]
         },
         {
@@ -244,17 +239,6 @@
             "function_calling",
             "tool_choice",
             "response_schema",
-            "reasoning"
-          ]
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
             "reasoning"
           ]
         }
@@ -493,18 +477,6 @@
           "limits": "40 req/min"
         },
         {
-          "id": "deepseek-ai/deepseek-v4-flash",
-          "name": "deepseek-ai/deepseek-v4-flash",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "deepseek-ai/deepseek-v4-pro",
-          "name": "deepseek-ai/deepseek-v4-pro",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "deepseek-ai/deepseek-v4-pro",
           "name": "deepseek-ai/deepseek-v4-pro",
           "context": null,
@@ -721,18 +693,6 @@
           "limits": "40 req/min"
         },
         {
-          "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-          "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "nvidia/nemotron-3-super-120b-a12b",
-          "name": "nvidia/nemotron-3-super-120b-a12b",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
           "id": "nvidia/nemotron-3-super-120b-a12b",
           "name": "nvidia/nemotron-3-super-120b-a12b",
           "context": null,
@@ -771,18 +731,6 @@
         {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": null,
-          "limits": "40 req/min"
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
           "context": null,
           "limits": "40 req/min"
         },
@@ -1560,12 +1508,6 @@
       "url": "https://pollinations.ai",
       "models": [
         {
-          "id": "gpt-5.5",
-          "name": "gpt-5.5",
-          "context": 1000000,
-          "limits": "free tier — token from enter.pollinations.ai"
-        },
-        {
           "id": "qwen-coder",
           "name": "qwen-coder",
           "context": 262144,
@@ -1622,12 +1564,6 @@
         {
           "id": "midijourney",
           "name": "midijourney",
-          "context": null,
-          "limits": "free tier — token from enter.pollinations.ai"
-        },
-        {
-          "id": "midijourney-large",
-          "name": "midijourney-large",
           "context": null,
           "limits": "free tier — token from enter.pollinations.ai"
         },
