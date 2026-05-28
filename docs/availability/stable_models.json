@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T20:44:56.866284+00:00",
+  "updated": "2026-05-28T21:36:13.824152+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -98,26 +98,6 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ]
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -141,12 +121,6 @@
           ]
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model"
-        },
-        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
           "context": 131072,
@@ -157,6 +131,32 @@
             "response_schema",
             "reasoning"
           ]
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ]
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model"
         },
         {
           "id": "openai/gpt-oss-20b",
@@ -1248,12 +1248,6 @@
           "id": "gpt-oss-20b",
           "name": "gpt-oss-20b",
           "context": null,
-          "limits": "anonymous · 30 req/min with token"
-        },
-        {
-          "id": "codestral-latest",
-          "name": "codestral-latest",
-          "context": 32000,
           "limits": "anonymous · 30 req/min with token"
         }
       ],
