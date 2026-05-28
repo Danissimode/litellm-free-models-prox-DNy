@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T22:30:53.975364+00:00",
+  "updated": "2026-05-28T23:27:33.546887+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -98,15 +98,13 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
+            "tool_choice"
           ]
         },
         {
@@ -145,18 +143,20 @@
           ]
         },
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "response_schema",
+            "vision"
           ]
         },
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -1250,12 +1250,6 @@
       "name": "LLM7",
       "url": "https://llm7.io",
       "models": [
-        {
-          "id": "kimi-k2.6",
-          "name": "kimi-k2.6",
-          "context": 240000,
-          "limits": "anonymous · 30 req/min with token"
-        },
         {
           "id": "gpt-oss-20b",
           "name": "gpt-oss-20b",
