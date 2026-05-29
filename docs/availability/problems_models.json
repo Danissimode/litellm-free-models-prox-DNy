@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T22:29:36.441834+00:00",
+  "updated": "2026-05-29T23:27:02.214877+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -190,40 +190,6 @@
       ],
       "error": null
     },
-    "sambanova": {
-      "name": "SambaNova",
-      "url": "https://cloud.sambanova.ai",
-      "models": [
-        {
-          "id": "DeepSeek-V3.2",
-          "name": "DeepSeek-V3.2",
-          "context": 32768,
-          "limits": "free tier",
-          "params_b": null
-        },
-        {
-          "id": "Llama-4-Maverick-17B-128E-Instruct",
-          "name": "Llama-4-Maverick-17B-128E-Instruct",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ],
-          "params_b": 17.0
-        },
-        {
-          "id": "gemma-3-12b-it",
-          "name": "gemma-3-12b-it",
-          "context": 131072,
-          "limits": "free tier",
-          "params_b": 12.0
-        }
-      ],
-      "error": null
-    },
     "nvidia": {
       "name": "NVIDIA NIM",
       "url": "https://build.nvidia.com",
@@ -353,13 +319,6 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": null
-        },
-        {
-          "id": "mistralai/mixtral-8x7b-instruct-v0.1",
-          "name": "mistralai/mixtral-8x7b-instruct-v0.1",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 56.0
         },
         {
           "id": "moonshotai/kimi-k2.6",
