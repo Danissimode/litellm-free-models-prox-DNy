@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T14:04:45.918421+00:00",
+  "updated": "2026-05-29T16:16:20.295483+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -462,17 +462,6 @@
           "name": "mistral-medium-2508",
           "context": null,
           "limits": "1 req/s · 1B tok/month",
-          "params_b": null
-        },
-        {
-          "id": "mistral-medium",
-          "name": "mistral-medium-2508",
-          "context": 32000,
-          "limits": "1 req/s · 1B tok/month",
-          "capabilities": [
-            "tool_choice",
-            "response_schema"
-          ],
           "params_b": null
         },
         {
