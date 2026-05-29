@@ -16,11 +16,6 @@ from pathlib import Path
 OUT_DIR = Path(__file__).parent / "docs"
 OUT_DIR.mkdir(exist_ok=True)
 
-CHEAHJS_URL = (
-    "https://raw.githubusercontent.com/cheahjs/free-llm-api-resources"
-    "/refs/heads/main/README.md"
-)
-
 
 # ── Model metadata ──────────────────────────────────────────────────────────
 
@@ -384,16 +379,6 @@ def enrich_with_litellm(results, db):
             enriched += 1
     if enriched:
         print(f"  Enriched {enriched} models from litellm DB")
-
-
-# ── Community cross-reference ─────────────────────────────────────────────────
-
-def fetch_cheahjs():
-    try:
-        return _get(CHEAHJS_URL)
-    except Exception as e:
-        print(f"[community] {e}")
-        return ""
 
 
 # ── Model utilities ───────────────────────────────────────────────────────────
@@ -1521,9 +1506,6 @@ def render_availability(provider_list, results, availability):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    print("Fetching community cross-reference...")
-    # (used for Cohere fallback — already in sync_models.py logic)
-
     results = {}  # provider_key → list of model dicts
     errors = {}
 
