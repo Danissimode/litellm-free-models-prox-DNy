@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T18:01:55.766323+00:00",
+  "updated": "2026-05-29T19:46:26.967663+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -55,36 +55,17 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
           "id": "groq/compound-mini",
           "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
-        }
-      ],
-      "error": null
-    },
-    "cerebras": {
-      "name": "Cerebras",
-      "url": "https://cloud.cerebras.ai",
-      "models": [
+        },
         {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
+          "limits": "varies per model",
           "params_b": null
         }
       ],
@@ -416,6 +397,13 @@
           "params_b": 12.0
         },
         {
+          "id": "nvidia/nvidia-nemotron-nano-9b-v2",
+          "name": "nvidia/nvidia-nemotron-nano-9b-v2",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 9.0
+        },
+        {
           "id": "qwen/qwen3-coder-480b-a35b-instruct",
           "name": "qwen/qwen3-coder-480b-a35b-instruct",
           "context": null,
@@ -457,20 +445,6 @@
       "name": "Mistral",
       "url": "https://console.mistral.ai",
       "models": [
-        {
-          "id": "mistral-medium-2508",
-          "name": "mistral-medium-2508",
-          "context": null,
-          "limits": "1 req/s · 1B tok/month",
-          "params_b": null
-        },
-        {
-          "id": "mistral-vibe-cli-with-tools",
-          "name": "mistral-medium-2508",
-          "context": null,
-          "limits": "1 req/s · 1B tok/month",
-          "params_b": null
-        },
         {
           "id": "mistral-large-2411",
           "name": "mistral-large-2411",
@@ -524,6 +498,13 @@
           "context": 240000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": null
+        },
+        {
+          "id": "gpt-oss-20b",
+          "name": "gpt-oss-20b",
+          "context": null,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": 20.0
         },
         {
           "id": "codestral-latest",
