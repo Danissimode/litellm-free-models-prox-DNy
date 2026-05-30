@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30T03:01:12.263934+00:00",
+  "updated": "2026-05-30T05:05:10.910141+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -510,6 +510,13 @@
           "context": 32000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": null
+        },
+        {
+          "id": "ministral-8b-2512",
+          "name": "ministral-8b-2512",
+          "context": 32000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": 8.0
         },
         {
           "id": "GLM-4.6V-Flash",
