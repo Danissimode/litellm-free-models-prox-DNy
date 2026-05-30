@@ -12,6 +12,7 @@ import urllib.error
 from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
+import concurrent.futures
 
 OUT_DIR = Path(__file__).parent / "docs"
 OUT_DIR.mkdir(exist_ok=True)
@@ -1530,20 +1531,32 @@ def main():
     results = {}  # provider_key → list of model dicts
     errors = {}
 
-    for p in PROVIDERS:
+    def fetch_provider(p):
         key = os.environ.get(p["env"], "")
         if not key and not p.get("anonymous_ok"):
             print(f"  [{p['label']}] no API key, skipping")
-            continue
-        print(f"  [{p['label']}] fetching...", end=" ", flush=True)
+            return p["key"], None, None
         try:
+            print(f"  [{p['label']}] fetching...")
             models = p["fetch"](key)
-            results[p["key"]] = models
-            print(f"{len(models)} models")
+            return p["key"], models, None
         except Exception as e:
-            errors[p["key"]] = e
-            results[p["key"]] = []
-            print(f"ERROR: {e}")
+            return p["key"], [], e
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(fetch_provider, p) for p in PROVIDERS]
+        for p, future in zip(PROVIDERS, futures):
+            try:
+                pkey, models, err = future.result()
+                if models is not None:
+                    results[pkey] = models
+                    if err:
+                        errors[pkey] = err
+                        print(f"  [{p['label']}] ERROR: {err}")
+                    else:
+                        print(f"  [{p['label']}] {len(models)} models")
+            except Exception as e:
+                print(f"  [{p['label']}] Future failed: {e}")
 
     # Cache availability.json for use in self-correcting, filtered, and view rendering.
     avail_path = OUT_DIR / "availability.json"
