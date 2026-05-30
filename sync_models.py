@@ -723,16 +723,28 @@ def sync():
     to_delete = []
     to_add = []
 
-    for provider in PROVIDERS:
+    def fetch_provider_models(provider):
         api_key = os.environ.get(provider["env_key"], "")
         if not api_key and not provider.get("anonymous_ok"):
-            continue
+            return provider, None
 
         if provider["name"] == "Cohere":
             models = fetch_cohere(api_key, community.get("cohere"))
         else:
             models = provider["fetch"](api_key)
 
+        return provider, models
+
+    fetched_results = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(fetch_provider_models, p) for p in PROVIDERS]
+        # To maintain deterministic behavior and avoid race conditions with existing_set,
+        # we process the results sequentially after they are fetched.
+        for future in futures:
+            provider, models = future.result()
+            fetched_results.append((provider, models))
+
+    for provider, models in fetched_results:
         if models is None:
             continue
 
