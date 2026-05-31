@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T20:22:22.450663+00:00",
+  "updated": "2026-05-31T21:18:55.308911+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -486,48 +486,6 @@
           "name": "polly",
           "context": null,
           "limits": "free tier — token from enter.pollinations.ai",
-          "params_b": null
-        }
-      ],
-      "error": null
-    },
-    "llm7": {
-      "name": "LLM7",
-      "url": "https://llm7.io",
-      "models": [
-        {
-          "id": "qwen3-235b",
-          "name": "qwen3-235b",
-          "context": 240000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 235.0
-        },
-        {
-          "id": "kimi-k2.6",
-          "name": "kimi-k2.6",
-          "context": 240000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "codestral-latest",
-          "name": "codestral-latest",
-          "context": 32000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "ministral-8b-2512",
-          "name": "ministral-8b-2512",
-          "context": 32000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 8.0
-        },
-        {
-          "id": "GLM-4.6V-Flash",
-          "name": "GLM-4.6V-Flash",
-          "context": null,
-          "limits": "anonymous · 30 req/min with token",
           "params_b": null
         }
       ],

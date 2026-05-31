@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T20:22:22.450663+00:00",
+  "updated": "2026-05-31T21:18:55.308911+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -139,28 +139,11 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
           "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 120.0
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
+          "params_b": 7.0
         },
         {
           "id": "groq/compound-mini",
@@ -183,13 +166,6 @@
           "params_b": 20.0
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model",
-          "params_b": 7.0
-        },
-        {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
           "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
@@ -203,16 +179,17 @@
           "params_b": 17.0
         },
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
+            "response_schema",
             "reasoning"
           ],
-          "params_b": 32.0
+          "params_b": 120.0
         },
         {
           "id": "groq/compound",
@@ -231,6 +208,29 @@
             "tool_choice"
           ],
           "params_b": 70.0
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
         }
       ],
       "error": null
@@ -239,6 +239,18 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
+        {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
+        },
         {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
@@ -251,18 +263,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
         }
       ],
       "error": null
@@ -1740,44 +1740,8 @@
     "llm7": {
       "name": "LLM7",
       "url": "https://llm7.io",
-      "models": [
-        {
-          "id": "qwen3-235b",
-          "name": "qwen3-235b",
-          "context": 240000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 235.0
-        },
-        {
-          "id": "kimi-k2.6",
-          "name": "kimi-k2.6",
-          "context": 240000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "codestral-latest",
-          "name": "codestral-latest",
-          "context": 32000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "ministral-8b-2512",
-          "name": "ministral-8b-2512",
-          "context": 32000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 8.0
-        },
-        {
-          "id": "GLM-4.6V-Flash",
-          "name": "GLM-4.6V-Flash",
-          "context": null,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        }
-      ],
-      "error": null
+      "models": [],
+      "error": "GET https://api.llm7.io/v1/models → The read operation timed out"
     },
     "zai": {
       "name": "Z.ai (GLM)",
