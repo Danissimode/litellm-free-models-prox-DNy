@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T22:48:16.305464+00:00",
+  "updated": "2026-06-01T23:29:22.009848+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -55,18 +55,6 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
-        },
-        {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
           "context": 131072,
@@ -78,6 +66,18 @@
             "reasoning"
           ],
           "params_b": 120.0
+        },
+        {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
         }
       ],
       "error": null
@@ -495,6 +495,13 @@
           "params_b": null
         },
         {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
           "id": "CohereLabs/tiny-aya-earth",
           "name": "CohereLabs/tiny-aya-earth",
           "context": null,
@@ -509,13 +516,6 @@
           "params_b": 70.0
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
           "name": "moonshotai/Kimi-K2-Instruct-0905",
           "context": null,
@@ -523,18 +523,18 @@
           "params_b": null
         },
         {
-          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 424.0
-        },
-        {
           "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
           "name": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
           "context": null,
           "limits": "free credits/month",
           "params_b": 32.0
+        },
+        {
+          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 424.0
         },
         {
           "id": "allenai/Olmo-3-7B-Instruct",
@@ -627,6 +627,13 @@
       "name": "Pollinations",
       "url": "https://pollinations.ai",
       "models": [
+        {
+          "id": "deepseek",
+          "name": "deepseek",
+          "context": 1048576,
+          "limits": "free tier — token from enter.pollinations.ai",
+          "params_b": null
+        },
         {
           "id": "grok-4.3",
           "name": "grok-4.3",
