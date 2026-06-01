@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T22:00:00.080920+00:00",
+  "updated": "2026-06-01T22:48:16.305464+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -55,6 +55,18 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
+        },
+        {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
           "context": 131072,
@@ -66,18 +78,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
         }
       ],
       "error": null
@@ -474,11 +474,11 @@
           "params_b": 235.0
         },
         {
-          "id": "google/gemma-3n-E4B-it",
-          "name": "google/gemma-3n-E4B-it",
+          "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "context": null,
           "limits": "free credits/month",
-          "params_b": null
+          "params_b": 17.0
         },
         {
           "id": "MiniMaxAI/MiniMax-M2",
@@ -488,8 +488,8 @@
           "params_b": null
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
+          "id": "google/gemma-3n-E4B-it",
+          "name": "google/gemma-3n-E4B-it",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -507,6 +507,13 @@
           "context": null,
           "limits": "free credits/month",
           "params_b": 70.0
+        },
+        {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
         },
         {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
