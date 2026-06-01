@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T16:06:20.103276+00:00",
+  "updated": "2026-06-01T18:52:53.511905+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -34,15 +34,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -55,18 +55,6 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
-        },
-        {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
           "context": 131072,
@@ -78,6 +66,18 @@
             "reasoning"
           ],
           "params_b": 120.0
+        },
+        {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
         }
       ],
       "error": null
@@ -397,13 +397,6 @@
           "params_b": 49.0
         },
         {
-          "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-          "name": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 49.0
-        },
-        {
           "id": "nvidia/nemotron-nano-12b-v2-vl",
           "name": "nvidia/nemotron-nano-12b-v2-vl",
           "context": null,
@@ -488,13 +481,6 @@
           "params_b": 70.0
         },
         {
-          "id": "allenai/Olmo-3-7B-Instruct",
-          "name": "allenai/Olmo-3-7B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 7.0
-        },
-        {
           "id": "CohereLabs/tiny-aya-earth",
           "name": "CohereLabs/tiny-aya-earth",
           "context": null,
@@ -502,22 +488,15 @@
           "params_b": null
         },
         {
-          "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
-          "name": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 32.0
-        },
-        {
-          "id": "CohereLabs/c4ai-command-a-03-2025",
-          "name": "CohereLabs/c4ai-command-a-03-2025",
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
         },
         {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
+          "id": "CohereLabs/c4ai-command-a-03-2025",
+          "name": "CohereLabs/c4ai-command-a-03-2025",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -537,11 +516,25 @@
           "params_b": 80.0
         },
         {
+          "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+          "name": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 32.0
+        },
+        {
           "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
           "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
+        },
+        {
+          "id": "allenai/Olmo-3-7B-Instruct",
+          "name": "allenai/Olmo-3-7B-Instruct",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 7.0
         },
         {
           "id": "moonshotai/Kimi-K2-Thinking",
