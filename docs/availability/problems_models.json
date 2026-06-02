@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T01:46:23.261045+00:00",
+  "updated": "2026-06-02T03:02:57.655709+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -327,6 +327,13 @@
           "params_b": 17.0
         },
         {
+          "id": "meta/llama-guard-4-12b",
+          "name": "meta/llama-guard-4-12b",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 12.0
+        },
+        {
           "id": "microsoft/phi-4-mini-instruct",
           "name": "microsoft/phi-4-mini-instruct",
           "context": null,
@@ -481,15 +488,15 @@
           "params_b": 17.0
         },
         {
-          "id": "MiniMaxAI/MiniMax-M2",
-          "name": "MiniMaxAI/MiniMax-M2",
+          "id": "google/gemma-3n-E4B-it",
+          "name": "google/gemma-3n-E4B-it",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
         },
         {
-          "id": "google/gemma-3n-E4B-it",
-          "name": "google/gemma-3n-E4B-it",
+          "id": "MiniMaxAI/MiniMax-M2",
+          "name": "MiniMaxAI/MiniMax-M2",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
