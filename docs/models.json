@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T09:21:47.740221+00:00",
+  "updated": "2026-06-02T11:26:18.771140+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -139,15 +139,52 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 20.0
+        },
+        {
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
+          "params_b": 17.0
+        },
+        {
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -166,19 +203,6 @@
           "params_b": 120.0
         },
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 20.0
-        },
-        {
           "id": "llama-3.3-70b-versatile",
           "name": "llama-3.3-70b-versatile",
           "context": 131072,
@@ -188,6 +212,13 @@
             "tool_choice"
           ],
           "params_b": 70.0
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model",
+          "params_b": 7.0
         },
         {
           "id": "qwen/qwen3-32b",
@@ -200,37 +231,6 @@
             "reasoning"
           ],
           "params_b": 32.0
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ],
-          "params_b": 17.0
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model",
-          "params_b": 7.0
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
         }
       ],
       "error": null
@@ -966,18 +966,18 @@
           "params_b": null
         },
         {
-          "id": "swiss-ai/Apertus-70B-Instruct-2509",
-          "name": "swiss-ai/Apertus-70B-Instruct-2509",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 70.0
-        },
-        {
           "id": "CohereLabs/tiny-aya-earth",
           "name": "CohereLabs/tiny-aya-earth",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
+        },
+        {
+          "id": "swiss-ai/Apertus-70B-Instruct-2509",
+          "name": "swiss-ai/Apertus-70B-Instruct-2509",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 70.0
         },
         {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
@@ -994,6 +994,13 @@
           "params_b": 32.0
         },
         {
+          "id": "allenai/Olmo-3-7B-Instruct",
+          "name": "allenai/Olmo-3-7B-Instruct",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 7.0
+        },
+        {
           "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
           "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
           "context": null,
@@ -1006,13 +1013,6 @@
           "context": null,
           "limits": "free credits/month",
           "params_b": null
-        },
-        {
-          "id": "allenai/Olmo-3-7B-Instruct",
-          "name": "allenai/Olmo-3-7B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 7.0
         },
         {
           "id": "CohereLabs/c4ai-command-a-03-2025",
@@ -1173,6 +1173,20 @@
           "params_b": null
         },
         {
+          "id": "mistral-code-latest",
+          "name": "codestral-2508",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
+          "id": "mistral-code-fim-latest",
+          "name": "codestral-2508",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
           "id": "devstral-2512",
           "name": "devstral-2512",
           "context": 256000,
@@ -1206,6 +1220,13 @@
             "tool_choice",
             "response_schema"
           ],
+          "params_b": null
+        },
+        {
+          "id": "mistral-code-agent-latest",
+          "name": "devstral-2512",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
           "params_b": null
         },
         {
