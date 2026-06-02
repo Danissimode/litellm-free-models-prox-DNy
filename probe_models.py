@@ -329,13 +329,13 @@ def percentile(values, pct):
     return s[k]
 
 
-def aggregate(probes_path):
+def aggregate_and_rotate(probes_path, keep_days=30):
     now = datetime.now(timezone.utc)
     cutoff_7d = now - timedelta(days=7)
-    cutoff_30d = now - timedelta(days=30)
+    cutoff_keep = now - timedelta(days=keep_days)
 
     # Per (provider, model) collect:
-    #   samples_7d, ok_7d, rate_limited_7d, samples_30d, ok_30d
+    #   samples_7d, ok_7d, rate_limited_7d, samples_keep, ok_keep
     #   latencies_7d (ok only), hourly_counts[24] = [ok, total]
     #   last_ts, last_status
     bucket = defaultdict(
@@ -356,6 +356,9 @@ def aggregate(probes_path):
     if not probes_path.exists():
         return {}
 
+    keep_lines = []
+    archive_lines = defaultdict(list)  # "YYYY-MM" → [lines]
+
     with probes_path.open() as f:
         for line in f:
             ts_idx = line.find('"ts": "')
@@ -366,8 +369,12 @@ def aggregate(probes_path):
                 ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
             except Exception:
                 continue
-            if ts < cutoff_30d:
+
+            if ts < cutoff_keep:
+                archive_lines[ts.strftime("%Y-%m")].append(line)
                 continue
+
+            keep_lines.append(line)
 
             try:
                 row = json.loads(line)
@@ -397,6 +404,20 @@ def aggregate(probes_path):
             if b["last_ts"] is None or ts > b["last_ts"]:
                 b["last_ts"] = ts
                 b["last_status"] = status
+
+    # Perform rotation writes if needed
+    if archive_lines:
+        ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+        for ym, lines in archive_lines.items():
+            path = ARCHIVE_DIR / f"{ym}.jsonl.gz"
+            existing = b""
+            if path.exists():
+                with gzip.open(path, "rb") as g:
+                    existing = g.read()
+            with gzip.open(path, "wb") as g:
+                g.write(existing)
+                g.write("".join(lines).encode())
+        probes_path.write_text("".join(keep_lines))
 
     out = defaultdict(dict)
     for (provider, model), b in bucket.items():
@@ -428,44 +449,6 @@ def aggregate(probes_path):
             "last_status": b["last_status"],
         }
     return dict(out)
-
-
-# ── Rotation ─────────────────────────────────────────────────────────────────
-
-
-def rotate_old(probes_path, keep_days=30):
-    if not probes_path.exists():
-        return
-    cutoff = datetime.now(timezone.utc) - timedelta(days=keep_days)
-    keep_lines = []
-    archive_lines = defaultdict(list)  # "YYYY-MM" → [lines]
-    with probes_path.open() as f:
-        for line in f:
-            ts_idx = line.find('"ts": "')
-            if ts_idx == -1:
-                continue
-            ts_str = line[ts_idx + 7 : line.find('"', ts_idx + 7)]
-            try:
-                ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
-            except Exception:
-                continue
-            if ts >= cutoff:
-                keep_lines.append(line)
-            else:
-                archive_lines[ts.strftime("%Y-%m")].append(line)
-    if not archive_lines:
-        return
-    ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
-    for ym, lines in archive_lines.items():
-        path = ARCHIVE_DIR / f"{ym}.jsonl.gz"
-        existing = b""
-        if path.exists():
-            with gzip.open(path, "rb") as g:
-                existing = g.read()
-        with gzip.open(path, "wb") as g:
-            g.write(existing)
-            g.write("".join(lines).encode())
-    probes_path.write_text("".join(keep_lines))
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
@@ -568,11 +551,9 @@ def main():
 
     out_f.close()
 
-    # Rotate older entries off the live file.
-    rotate_old(PROBES_JSONL, keep_days=30)
+    # Rotate older entries off the live file and regenerate aggregate.
+    avail = aggregate_and_rotate(PROBES_JSONL, keep_days=30)
 
-    # Regenerate aggregate.
-    avail = aggregate(PROBES_JSONL)
     AVAIL_JSON.write_text(
         json.dumps(
             {
