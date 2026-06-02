@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T15:19:06.400261+00:00",
+  "updated": "2026-06-02T17:29:50.739072+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -34,15 +34,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -481,13 +481,6 @@
           "params_b": 235.0
         },
         {
-          "id": "google/gemma-3n-E4B-it",
-          "name": "google/gemma-3n-E4B-it",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "context": null,
@@ -502,8 +495,8 @@
           "params_b": null
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
+          "id": "google/gemma-3n-E4B-it",
+          "name": "google/gemma-3n-E4B-it",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -523,6 +516,13 @@
           "params_b": 70.0
         },
         {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
           "name": "moonshotai/Kimi-K2-Instruct-0905",
           "context": null,
@@ -537,11 +537,11 @@
           "params_b": 32.0
         },
         {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
+          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
           "context": null,
           "limits": "free credits/month",
-          "params_b": null
+          "params_b": 424.0
         },
         {
           "id": "allenai/Olmo-3-7B-Instruct",
@@ -558,11 +558,11 @@
           "params_b": null
         },
         {
-          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
           "context": null,
           "limits": "free credits/month",
-          "params_b": 424.0
+          "params_b": null
         },
         {
           "id": "deepseek-ai/DeepSeek-V3.1",
