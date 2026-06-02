@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T19:08:05.103756+00:00",
+  "updated": "2026-06-02T20:59:43.565955+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -55,6 +55,18 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
+        },
+        {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
           "context": 131072,
@@ -66,18 +78,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
         }
       ],
       "error": null
@@ -86,13 +86,6 @@
       "name": "Gemini",
       "url": "https://aistudio.google.com",
       "models": [
-        {
-          "id": "gemma-4-26b-a4b-it",
-          "name": "Gemma 4 26B A4B IT",
-          "context": 262144,
-          "limits": "varies — see AI Studio",
-          "params_b": 26.0
-        },
         {
           "id": "gemma-4-31b-it",
           "name": "Gemma 4 31B IT",
@@ -509,18 +502,18 @@
           "params_b": null
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "swiss-ai/Apertus-70B-Instruct-2509",
           "name": "swiss-ai/Apertus-70B-Instruct-2509",
           "context": null,
           "limits": "free credits/month",
           "params_b": 70.0
+        },
+        {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
         },
         {
           "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
@@ -537,13 +530,6 @@
           "params_b": 7.0
         },
         {
-          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 424.0
-        },
-        {
           "id": "CohereLabs/c4ai-command-a-03-2025",
           "name": "CohereLabs/c4ai-command-a-03-2025",
           "context": null,
@@ -556,6 +542,13 @@
           "context": null,
           "limits": "free credits/month",
           "params_b": null
+        },
+        {
+          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 424.0
         },
         {
           "id": "deepseek-ai/DeepSeek-V3.1",
