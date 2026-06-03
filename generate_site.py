@@ -985,6 +985,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   tr:last-child td {{ border-bottom: none; }}
   tr:hover td {{ background: rgba(56,189,248,.04); }}
   .model-id {{
+    background: none; border: none; padding: 0; text-align: left; width: 100%;
     font-family: ui-monospace, "JetBrains Mono", "Fira Code", monospace;
     font-size: .82rem; color: var(--accent);
     cursor: pointer; display: block;
@@ -1058,7 +1059,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   .change-row.added .change-marker {{ color: #4ade80; }}
   .change-row.removed .change-marker {{ color: #f87171; }}
   .change-marker {{ font-weight: 700; flex-shrink: 0; width: 1rem; text-align: center; }}
-  .change-id {{ color: var(--text); cursor: pointer; word-break: break-all; }}
+  .change-id {{
+    background: none; border: none; padding: 0; text-align: left; font-family: inherit; font-size: inherit;
+    color: var(--text); cursor: pointer; word-break: break-all; }}
   .change-id:hover {{ text-decoration: underline; color: var(--accent); }}
   .changes-empty {{
     text-align: center; padding: 2rem; color: var(--muted); font-size: .9rem;
@@ -1521,7 +1524,7 @@ def render_provider(p, models, error=None, delta=None):
             tag_labels = escape(" ".join(label for label, _ in tag_list))
             rows += (
                 f'<tr data-search="{search_val}" data-ctx="{ctx_raw}" data-tags="{tag_labels}">'
-                f'<td><span class="model-id" data-id="{escape(mid)}">{escape(mid)}</span></td>'
+                f'<td><button type="button" class="model-id" data-id="{escape(mid)}">{escape(mid)}</button></td>'
                 f'<td class="model-name">{escape(name)}</td>'
                 f'<td class="ctx">{escape(ctx)}</td>'
                 f"<td>{tags_html}</td>"
@@ -1580,7 +1583,7 @@ def render_cross_provider(groups, provider_map):
             rows += (
                 f'<tr data-search="{search_val}" data-ctx="{ctx_raw}" data-tags="{tag_labels}">'
                 f'<td><span class="provider-chip" style="background:{pcolor}"></span> {escape(e["provider"])}</td>'
-                f'<td><span class="model-id" data-id="{escape(e["model_id"])}">{escape(e["model_id"])}</span></td>'
+                f'<td><button type="button" class="model-id" data-id="{escape(e["model_id"])}">{escape(e["model_id"])}</button></td>'
                 f'<td class="ctx">{escape(ctx)}</td>'
                 f"<td>{tags_html}</td>"
                 f'<td class="limits">{escape(e.get("limits") or "")}</td>'
@@ -1626,14 +1629,14 @@ def render_changes(history, provider_color_map):
             rows += (
                 f'<div class="change-row added">'
                 f'<span class="change-marker">+</span>'
-                f'<span class="change-id" data-id="{escape(mid)}">{escape(mid)}</span>'
+                f'<button type="button" class="change-id" data-id="{escape(mid)}">{escape(mid)}</button>'
                 f"</div>"
             )
         for mid in removed:
             rows += (
                 f'<div class="change-row removed">'
                 f'<span class="change-marker">−</span>'
-                f'<span class="change-id" data-id="{escape(mid)}">{escape(mid)}</span>'
+                f'<button type="button" class="change-id" data-id="{escape(mid)}">{escape(mid)}</button>'
                 f"</div>"
             )
         summary_parts = []
@@ -1768,7 +1771,7 @@ def render_availability(provider_list, results, availability):
             rows_html += (
                 f'<div class="av-row" data-uptime="{uptime_data}" '
                 f'data-search="{search_val}" data-ctx="{ctx_raw}" data-tags="{tag_labels}">'
-                f'<span class="model-id" data-id="{escape(mid)}">{escape(mid)}</span>'
+                f'<button type="button" class="model-id" data-id="{escape(mid)}">{escape(mid)}</button>'
                 f"{badge}{heatmap}"
                 f'<span class="av-meta">{escape(meta)}</span>'
                 f"</div>"
