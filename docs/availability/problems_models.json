@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03T22:03:29.230029+00:00",
+  "updated": "2026-06-03T23:30:32.252066+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -397,13 +397,6 @@
           "params_b": 49.0
         },
         {
-          "id": "nvidia/nemotron-nano-12b-v2-vl",
-          "name": "nvidia/nemotron-nano-12b-v2-vl",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 12.0
-        },
-        {
           "id": "nvidia/nvidia-nemotron-nano-9b-v2",
           "name": "nvidia/nvidia-nemotron-nano-9b-v2",
           "context": null,
@@ -467,13 +460,6 @@
           "params_b": null
         },
         {
-          "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-          "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 235.0
-        },
-        {
           "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "context": null,
@@ -481,11 +467,25 @@
           "params_b": 17.0
         },
         {
+          "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+          "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 235.0
+        },
+        {
           "id": "zai-org/GLM-4.5",
           "name": "zai-org/GLM-4.5",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
+        },
+        {
+          "id": "swiss-ai/Apertus-70B-Instruct-2509",
+          "name": "swiss-ai/Apertus-70B-Instruct-2509",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 70.0
         },
         {
           "id": "CohereLabs/c4ai-command-a-03-2025",
@@ -502,18 +502,18 @@
           "params_b": null
         },
         {
-          "id": "swiss-ai/Apertus-70B-Instruct-2509",
-          "name": "swiss-ai/Apertus-70B-Instruct-2509",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 70.0
-        },
-        {
           "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
           "name": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
           "context": null,
           "limits": "free credits/month",
           "params_b": 32.0
+        },
+        {
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
         },
         {
           "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
@@ -530,8 +530,8 @@
           "params_b": 7.0
         },
         {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
+          "id": "google/gemma-3n-E4B-it",
+          "name": "google/gemma-3n-E4B-it",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -560,13 +560,6 @@
         {
           "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
           "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
-          "id": "google/gemma-3n-E4B-it",
-          "name": "google/gemma-3n-E4B-it",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
