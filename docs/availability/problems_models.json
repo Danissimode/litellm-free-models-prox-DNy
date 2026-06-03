@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03T07:34:32.175969+00:00",
+  "updated": "2026-06-03T09:31:34.347702+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -530,13 +530,6 @@
           "params_b": 7.0
         },
         {
-          "id": "google/gemma-3n-E4B-it",
-          "name": "google/gemma-3n-E4B-it",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
           "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
           "context": null,
@@ -546,6 +539,13 @@
         {
           "id": "CohereLabs/c4ai-command-a-03-2025",
           "name": "CohereLabs/c4ai-command-a-03-2025",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -565,18 +565,18 @@
           "params_b": null
         },
         {
+          "id": "google/gemma-3n-E4B-it",
+          "name": "google/gemma-3n-E4B-it",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
           "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
           "name": "Qwen/Qwen3-Next-80B-A3B-Thinking",
           "context": null,
           "limits": "free credits/month",
           "params_b": 80.0
-        },
-        {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
         },
         {
           "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
@@ -638,13 +638,6 @@
           "id": "grok-4.3",
           "name": "grok-4.3",
           "context": 262144,
-          "limits": "free tier — token from enter.pollinations.ai",
-          "params_b": null
-        },
-        {
-          "id": "midijourney",
-          "name": "midijourney",
-          "context": null,
           "limits": "free tier — token from enter.pollinations.ai",
           "params_b": null
         },
