@@ -299,11 +299,27 @@ def load_recent_statuses(path, lookback_runs=WATCH_LIST_FAILS, max_lines=200_000
 
     for line in tail_lines:
         try:
-            row = json.loads(line)
+            provider_idx = line.find('"provider": "')
+            if provider_idx == -1: continue
+            provider_start = provider_idx + 13
+            provider_end = line.find('"', provider_start)
+            provider = line[provider_start:provider_end]
+
+            model_idx = line.find('"model": "')
+            if model_idx == -1: continue
+            model_start = model_idx + 10
+            model_end = line.find('"', model_start)
+            model = line[model_start:model_end]
+
+            status_idx = line.find('"status": "')
+            if status_idx == -1: continue
+            status_start = status_idx + 11
+            status_end = line.find('"', status_start)
+            status = line[status_start:status_end]
         except Exception:
             continue
-        key = (row.get("provider"), row.get("model"))
-        recent[key].append(row.get("status"))
+        key = (provider, model)
+        recent[key].append(status)
     # Trim each deque to lookback_runs (newest at right)
     trimmed = {}
     for k, q in recent.items():
@@ -377,13 +393,41 @@ def aggregate_and_rotate(probes_path, keep_days=30):
             keep_lines.append(line)
 
             try:
-                row = json.loads(line)
+                provider_idx = line.find('"provider": "')
+                if provider_idx == -1: continue
+                provider_start = provider_idx + 13
+                provider_end = line.find('"', provider_start)
+                provider = line[provider_start:provider_end]
+
+                model_idx = line.find('"model": "')
+                if model_idx == -1: continue
+                model_start = model_idx + 10
+                model_end = line.find('"', model_start)
+                model = line[model_start:model_end]
+
+                status_idx = line.find('"status": "')
+                if status_idx == -1: continue
+                status_start = status_idx + 11
+                status_end = line.find('"', status_start)
+                status = line[status_start:status_end]
+
+                latency_ms = None
+                latency_idx = line.find('"latency_ms": ')
+                if latency_idx != -1:
+                    latency_start = latency_idx + 14
+                    latency_end = line.find(',', latency_start)
+                    if latency_end == -1:
+                        latency_end = line.find('}', latency_start)
+                    if latency_end != -1:
+                        try:
+                            latency_ms = int(line[latency_start:latency_end])
+                        except ValueError:
+                            pass
             except Exception:
                 continue
 
-            key = (row.get("provider"), row.get("model"))
+            key = (provider, model)
             b = bucket[key]
-            status = row.get("status")
             b["samples_30d"] += 1
             if status == "ok":
                 b["ok_30d"] += 1
@@ -391,8 +435,8 @@ def aggregate_and_rotate(probes_path, keep_days=30):
                 b["samples_7d"] += 1
                 if status == "ok":
                     b["ok_7d"] += 1
-                    if row.get("latency_ms") is not None:
-                        b["latencies"].append(row["latency_ms"])
+                    if latency_ms is not None:
+                        b["latencies"].append(latency_ms)
                 if status == "rate_limited":
                     b["rl_7d"] += 1
                 if status and status != "ok":
@@ -410,12 +454,7 @@ def aggregate_and_rotate(probes_path, keep_days=30):
         ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
         for ym, lines in archive_lines.items():
             path = ARCHIVE_DIR / f"{ym}.jsonl.gz"
-            existing = b""
-            if path.exists():
-                with gzip.open(path, "rb") as g:
-                    existing = g.read()
-            with gzip.open(path, "wb") as g:
-                g.write(existing)
+            with gzip.open(path, "ab") as g:
                 g.write("".join(lines).encode())
         probes_path.write_text("".join(keep_lines))
 
