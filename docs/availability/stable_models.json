@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T12:56:15.327189+00:00",
+  "updated": "2026-06-04T14:01:57.462771+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -90,6 +90,13 @@
           "params_b": 30.0
         },
         {
+          "id": "nvidia/nemotron-nano-12b-v2-vl:free",
+          "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
+          "context": 128000,
+          "limits": "20 req/min · 50 req/day",
+          "params_b": 12.0
+        },
+        {
           "id": "nvidia/nemotron-nano-9b-v2:free",
           "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
           "context": 128000,
@@ -122,17 +129,15 @@
           "params_b": 8.0
         },
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
+            "tool_choice"
           ],
-          "params_b": 20.0
+          "params_b": 70.0
         },
         {
           "id": "qwen/qwen3-32b",
@@ -167,6 +172,19 @@
           "params_b": 17.0
         },
         {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 20.0
+        },
+        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
           "context": 131072,
@@ -178,17 +196,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
         }
       ],
       "error": null
@@ -361,13 +368,6 @@
         {
           "id": "nvidia/llama-3.1-nemoguard-8b-topic-control",
           "name": "nvidia/llama-3.1-nemoguard-8b-topic-control",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 8.0
-        },
-        {
-          "id": "nvidia/llama-3.1-nemotron-nano-8b-v1",
-          "name": "nvidia/llama-3.1-nemotron-nano-8b-v1",
           "context": null,
           "limits": "40 req/min",
           "params_b": 8.0
@@ -922,6 +922,48 @@
           "params_b": null
         },
         {
+          "id": "mistral-medium-3-5",
+          "name": "mistral-medium-3-5",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
+          "id": "mistral-medium-3.5",
+          "name": "mistral-medium-3-5",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
+          "id": "mistral-medium-3",
+          "name": "mistral-medium-3-5",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
+          "id": "mistral-medium-2604",
+          "name": "mistral-medium-3-5",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
+          "id": "mistral-medium-c21211-r0-75",
+          "name": "mistral-medium-3-5",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
+          "id": "mistral-vibe-cli-latest",
+          "name": "mistral-medium-3-5",
+          "context": null,
+          "limits": "1 req/s · 1B tok/month",
+          "params_b": null
+        },
+        {
           "id": "voxtral-mini-2507",
           "name": "voxtral-mini-2507",
           "context": null,
@@ -1149,13 +1191,6 @@
           "id": "grok",
           "name": "grok",
           "context": 262144,
-          "limits": "free tier — token from enter.pollinations.ai",
-          "params_b": null
-        },
-        {
-          "id": "kimi-k2.6",
-          "name": "kimi-k2.6",
-          "context": 262000,
           "limits": "free tier — token from enter.pollinations.ai",
           "params_b": null
         },
