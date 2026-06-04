@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T18:41:38.626141+00:00",
+  "updated": "2026-06-04T19:40:36.683666+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -369,6 +369,13 @@
           "params_b": null
         },
         {
+          "id": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+          "name": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 8.0
+        },
+        {
           "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
           "name": "nvidia/llama-3.3-nemotron-super-49b-v1",
           "context": null,
@@ -460,18 +467,18 @@
           "params_b": null
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "context": null,
           "limits": "free credits/month",
           "params_b": 17.0
+        },
+        {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
         },
         {
           "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
@@ -483,6 +490,20 @@
         {
           "id": "CohereLabs/tiny-aya-earth",
           "name": "CohereLabs/tiny-aya-earth",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
+          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 424.0
+        },
+        {
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -516,13 +537,6 @@
           "params_b": 7.0
         },
         {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
           "name": "moonshotai/Kimi-K2-Instruct-0905",
           "context": null,
@@ -535,13 +549,6 @@
           "context": null,
           "limits": "free credits/month",
           "params_b": 80.0
-        },
-        {
-          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 424.0
         },
         {
           "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
