@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T01:50:42.360738+00:00",
+  "updated": "2026-06-04T03:02:52.900210+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -41,15 +41,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -62,6 +62,18 @@
       "url": "https://cloud.cerebras.ai",
       "models": [
         {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
+        },
+        {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
           "context": 131072,
@@ -73,18 +85,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
         }
       ],
       "error": null
@@ -509,13 +509,6 @@
           "params_b": 17.0
         },
         {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "google/gemma-3n-E4B-it",
           "name": "google/gemma-3n-E4B-it",
           "context": null,
@@ -528,6 +521,13 @@
           "context": null,
           "limits": "free credits/month",
           "params_b": 424.0
+        },
+        {
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
         },
         {
           "id": "deepseek-ai/DeepSeek-V3.1",
