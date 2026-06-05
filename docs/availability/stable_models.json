@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T15:02:47.145534+00:00",
+  "updated": "2026-06-05T16:46:10.336928+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -11,6 +11,13 @@
           "context": 128000,
           "limits": "20 req/min · 50 req/day",
           "params_b": null
+        },
+        {
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "NVIDIA: Nemotron 3 Ultra (free)",
+          "context": 1000000,
+          "limits": "20 req/min · 50 req/day",
+          "params_b": 550.0
         },
         {
           "id": "openrouter/owl-alpha",
@@ -150,30 +157,6 @@
           "params_b": 32.0
         },
         {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ],
-          "params_b": 17.0
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
-        },
-        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
           "context": 131072,
@@ -192,6 +175,30 @@
           "context": 4096,
           "limits": "varies per model",
           "params_b": 7.0
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 70.0
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
+          "params_b": 17.0
         },
         {
           "id": "llama-3.1-8b-instant",

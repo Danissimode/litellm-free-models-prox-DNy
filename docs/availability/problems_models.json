@@ -1,17 +1,10 @@
 {
-  "updated": "2026-06-05T15:02:47.145534+00:00",
+  "updated": "2026-06-05T16:46:10.336928+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
       "url": "https://openrouter.ai",
       "models": [
-        {
-          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
-          "name": "NVIDIA: Nemotron 3 Ultra (free)",
-          "context": 1000000,
-          "limits": "20 req/min · 50 req/day",
-          "params_b": 550.0
-        },
         {
           "id": "moonshotai/kimi-k2.6:free",
           "name": "MoonshotAI: Kimi K2.6 (free)",
@@ -41,15 +34,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -467,25 +460,18 @@
           "params_b": 17.0
         },
         {
-          "id": "allenai/Olmo-3-7B-Instruct",
-          "name": "allenai/Olmo-3-7B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 7.0
-        },
-        {
-          "id": "CohereLabs/tiny-aya-earth",
-          "name": "CohereLabs/tiny-aya-earth",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
           "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
           "context": null,
           "limits": "free credits/month",
           "params_b": 235.0
+        },
+        {
+          "id": "allenai/Olmo-3-7B-Instruct",
+          "name": "allenai/Olmo-3-7B-Instruct",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 7.0
         },
         {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
@@ -495,8 +481,8 @@
           "params_b": null
         },
         {
-          "id": "google/gemma-3n-E4B-it",
-          "name": "google/gemma-3n-E4B-it",
+          "id": "CohereLabs/tiny-aya-earth",
+          "name": "CohereLabs/tiny-aya-earth",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -523,8 +509,22 @@
           "params_b": 32.0
         },
         {
+          "id": "google/gemma-3n-E4B-it",
+          "name": "google/gemma-3n-E4B-it",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
           "id": "deepseek-ai/DeepSeek-V3.1",
           "name": "deepseek-ai/DeepSeek-V3.1",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -560,13 +560,6 @@
         {
           "id": "MiniMaxAI/MiniMax-M2",
           "name": "MiniMaxAI/MiniMax-M2",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -623,7 +616,7 @@
         {
           "id": "grok-4.3",
           "name": "grok-4.3",
-          "context": 262144,
+          "context": 1048576,
           "limits": "free tier — token from enter.pollinations.ai",
           "params_b": null
         },
@@ -661,13 +654,6 @@
           "context": 240000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": 235.0
-        },
-        {
-          "id": "kimi-k2.6",
-          "name": "kimi-k2.6",
-          "context": 240000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
         },
         {
           "id": "codestral-latest",
