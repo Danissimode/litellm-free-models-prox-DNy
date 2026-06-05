@@ -22,7 +22,7 @@ jobs:
         id: check
         run: |
           python3 - <<'PYEOF'
-          import urllib.request, re, json, os, sys
+          import urllib.request, re, json, os
 
           README_URL = (
               "https://raw.githubusercontent.com/cheahjs/free-llm-api-resources"
