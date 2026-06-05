@@ -2,15 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-08T13:54:28.955178+00:00",
-      "provider": "nvidia",
-      "provider_label": "NVIDIA NIM",
-      "added": [
-        "nvidia/vila"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-08T13:54:28.955178+00:00",
       "provider": "huggingface",
       "provider_label": "HuggingFace",
       "added": [],
@@ -7566,6 +7557,17 @@
         "XiaomiMiMo/MiMo-V2-Flash"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-05T12:54:09.007092+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "CohereLabs/c4ai-command-r7b-12-2024",
+        "XiaomiMiMo/MiMo-V2-Flash",
+        "meta-llama/Llama-4-Scout-17B-16E-Instruct"
+      ]
     }
   ]
 }
