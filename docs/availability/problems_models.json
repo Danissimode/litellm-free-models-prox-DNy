@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T23:24:37.527529+00:00",
+  "updated": "2026-06-06T00:26:51.902819+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -518,13 +518,6 @@
           "params_b": null
         },
         {
-          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 424.0
-        },
-        {
           "id": "EssentialAI/rnj-1-instruct",
           "name": "EssentialAI/rnj-1-instruct",
           "context": null,
@@ -539,13 +532,6 @@
           "params_b": 70.0
         },
         {
-          "id": "deepseek-ai/DeepSeek-V3.1",
-          "name": "deepseek-ai/DeepSeek-V3.1",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
           "name": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
           "context": null,
@@ -553,11 +539,25 @@
           "params_b": 32.0
         },
         {
+          "id": "deepseek-ai/DeepSeek-V3.1",
+          "name": "deepseek-ai/DeepSeek-V3.1",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
           "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
           "name": "Qwen/Qwen3-Next-80B-A3B-Thinking",
           "context": null,
           "limits": "free credits/month",
           "params_b": 80.0
+        },
+        {
+          "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 424.0
         },
         {
           "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
