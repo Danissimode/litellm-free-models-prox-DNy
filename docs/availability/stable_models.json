@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T21:20:37.247442+00:00",
+  "updated": "2026-06-06T22:20:34.717402+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -125,8 +125,8 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
@@ -135,7 +135,7 @@
             "response_schema",
             "reasoning"
           ],
-          "params_b": 120.0
+          "params_b": 20.0
         },
         {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
@@ -151,19 +151,6 @@
           "params_b": 17.0
         },
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 20.0
-        },
-        {
           "id": "llama-3.3-70b-versatile",
           "name": "llama-3.3-70b-versatile",
           "context": 131072,
@@ -173,18 +160,6 @@
             "tool_choice"
           ],
           "params_b": 70.0
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
         },
         {
           "id": "llama-3.1-8b-instant",
@@ -203,6 +178,31 @@
           "context": 4096,
           "limits": "varies per model",
           "params_b": 7.0
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 120.0
         }
       ],
       "error": null
@@ -826,8 +826,14 @@
         {
           "id": "ministral-8b-latest",
           "name": "ministral-8b-2512",
-          "context": null,
+          "context": 262144,
           "limits": "1 req/s · 1B tok/month",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
           "params_b": 8.0
         },
         {
