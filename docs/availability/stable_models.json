@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T05:14:52.289697+00:00",
+  "updated": "2026-06-06T06:59:26.958166+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -118,17 +118,17 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
             "response_schema",
-            "reasoning"
+            "vision"
           ],
-          "params_b": 120.0
+          "params_b": 17.0
         },
         {
           "id": "llama-3.1-8b-instant",
@@ -153,29 +153,17 @@
           "params_b": 70.0
         },
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
             "response_schema",
-            "vision"
+            "reasoning"
           ],
-          "params_b": 17.0
+          "params_b": 120.0
         },
         {
           "id": "openai/gpt-oss-20b",
@@ -196,6 +184,18 @@
           "context": 4096,
           "limits": "varies per model",
           "params_b": 7.0
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
         }
       ],
       "error": null
