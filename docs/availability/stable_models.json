@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T12:22:26.488521+00:00",
+  "updated": "2026-06-06T13:30:12.157356+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -11,6 +11,13 @@
           "context": 128000,
           "limits": "20 req/min · 50 req/day",
           "params_b": null
+        },
+        {
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "NVIDIA: Nemotron 3 Ultra (free)",
+          "context": 1000000,
+          "limits": "20 req/min · 50 req/day",
+          "params_b": 550.0
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -118,15 +125,17 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "response_schema",
+            "vision"
           ],
-          "params_b": 8.0
+          "params_b": 17.0
         },
         {
           "id": "llama-3.3-70b-versatile",
@@ -160,19 +169,6 @@
           "params_b": 120.0
         },
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 20.0
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -185,17 +181,28 @@
           "params_b": 32.0
         },
         {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
             "response_schema",
-            "vision"
+            "reasoning"
           ],
-          "params_b": 17.0
+          "params_b": 20.0
         }
       ],
       "error": null
