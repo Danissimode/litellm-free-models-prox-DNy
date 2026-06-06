@@ -1243,7 +1243,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </main>
 </div>
 
-<button class="filters-toggle" id="filters-toggle" aria-label="Toggle filters">
+<button class="filters-toggle" id="filters-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Toggle filters">
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:.45rem"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
   Filters
 </button>
@@ -1327,7 +1327,9 @@ document.querySelectorAll('.model-id').forEach(el => {{
 
 document.querySelectorAll('.collapse-btn').forEach(btn => {{
   btn.addEventListener('click', () => {{
-    btn.closest('.provider-card').classList.toggle('collapsed');
+    const card = btn.closest('.provider-card');
+    card.classList.toggle('collapsed');
+    btn.setAttribute('aria-expanded', !card.classList.contains('collapsed'));
   }});
 }});
 
@@ -1395,13 +1397,27 @@ window.addEventListener('popstate', () => {{
 (function() {{
   const toggle = document.getElementById('filters-toggle');
   const scrim = document.getElementById('scrim');
+
+  function updateToggleState() {{
+    if (toggle) {{
+      toggle.setAttribute('aria-expanded', document.body.classList.contains('sidebar-open'));
+    }}
+  }}
+
   if (toggle) toggle.addEventListener('click', (e) => {{
     e.stopPropagation();
     document.body.classList.toggle('sidebar-open');
+    updateToggleState();
   }});
-  if (scrim) scrim.addEventListener('click', () => document.body.classList.remove('sidebar-open'));
+  if (scrim) scrim.addEventListener('click', () => {{
+    document.body.classList.remove('sidebar-open');
+    updateToggleState();
+  }});
   document.addEventListener('keydown', (e) => {{
-    if (e.key === 'Escape') document.body.classList.remove('sidebar-open');
+    if (e.key === 'Escape') {{
+      document.body.classList.remove('sidebar-open');
+      updateToggleState();
+    }}
   }});
 }})();
 
@@ -1491,7 +1507,7 @@ def render_provider(p, models, error=None, delta=None):
         status = f'<span class="status-indicator status-err" title="Error: {escape(str(error))}">&#9679;</span>'
     else:
         status = '<span class="status-indicator status-ok" title="API responding">&#9679;</span>'
-    collapse_btn = f'<button class="collapse-btn" aria-label="Toggle models list">{CHEVRON_SVG}</button>'
+    collapse_btn = f'<button class="collapse-btn" aria-expanded="true" aria-label="Toggle models list">{CHEVRON_SVG}</button>'
 
     header = (
         f'<div class="provider-header">'
