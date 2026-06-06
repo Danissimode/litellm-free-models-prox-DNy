@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T15:25:22.114621+00:00",
+  "updated": "2026-06-06T16:22:04.446336+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -125,6 +125,13 @@
       "url": "https://console.groq.com",
       "models": [
         {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model",
+          "params_b": 7.0
+        },
+        {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
           "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
@@ -151,30 +158,6 @@
           "params_b": 20.0
         },
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 120.0
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -185,6 +168,17 @@
             "reasoning"
           ],
           "params_b": 32.0
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
         },
         {
           "id": "llama-3.3-70b-versatile",
@@ -198,11 +192,17 @@
           "params_b": 70.0
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
           "limits": "varies per model",
-          "params_b": 7.0
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 120.0
         }
       ],
       "error": null
@@ -283,18 +283,6 @@
       "name": "SambaNova",
       "url": "https://cloud.sambanova.ai",
       "models": [
-        {
-          "id": "DeepSeek-V3.1",
-          "name": "DeepSeek-V3.1",
-          "context": 131072,
-          "limits": "free tier",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
-        },
         {
           "id": "Meta-Llama-3.3-70B-Instruct",
           "name": "Meta-Llama-3.3-70B-Instruct",
