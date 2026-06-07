@@ -1,24 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-11T16:51:02.335843+00:00",
-      "provider": "openrouter",
-      "provider_label": "OpenRouter",
-      "added": [
-        "arcee-ai/trinity-large-thinking:free"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-11T16:51:02.335843+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "CohereLabs/command-a-translate-08-2025"
-      ],
-      "removed": []
-    },
-    {
       "timestamp": "2026-05-11T17:37:42.591236+00:00",
       "provider": "gemini",
       "provider_label": "Gemini",
@@ -7957,6 +7939,48 @@
         "zai-org/GLM-4.7-Flash"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-07T01:41:37.029597+00:00",
+      "provider": "sambanova",
+      "provider_label": "SambaNova",
+      "added": [
+        "DeepSeek-V3.1",
+        "DeepSeek-V3.2",
+        "Llama-4-Maverick-17B-128E-Instruct",
+        "Meta-Llama-3.3-70B-Instruct",
+        "gemma-3-12b-it",
+        "gemma-4-31B-it",
+        "gpt-oss-120b"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-07T01:41:37.029597+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "CohereLabs/c4ai-command-a-03-2025",
+        "CohereLabs/tiny-aya-earth",
+        "EssentialAI/rnj-1-instruct",
+        "MiniMaxAI/MiniMax-M2",
+        "Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "Qwen/Qwen3-Next-80B-A3B-Thinking",
+        "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+        "allenai/Olmo-3-7B-Instruct",
+        "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
+        "deepseek-ai/DeepSeek-V3.1",
+        "deepseek-ai/DeepSeek-V3.1-Terminus",
+        "deepseek-ai/DeepSeek-V3.2-Exp",
+        "google/gemma-3n-E4B-it",
+        "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "moonshotai/Kimi-K2-Instruct-0905",
+        "moonshotai/Kimi-K2-Thinking",
+        "swiss-ai/Apertus-70B-Instruct-2509",
+        "zai-org/GLM-4.5",
+        "zai-org/GLM-4.7-Flash"
+      ]
     }
   ]
 }
