@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T13:30:59.729692+00:00",
+  "updated": "2026-06-07T14:34:15.532714+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -166,6 +166,25 @@
           "params_b": 20.0
         },
         {
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
+        },
+        {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
           "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
@@ -177,6 +196,37 @@
             "vision"
           ],
           "params_b": 17.0
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 120.0
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
         },
         {
           "id": "allam-2-7b",
@@ -195,56 +245,6 @@
             "tool_choice"
           ],
           "params_b": 70.0
-        },
-        {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 120.0
-        },
-        {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
         }
       ],
       "error": null
@@ -951,13 +951,6 @@
           "params_b": null
         },
         {
-          "id": "allenai/Olmo-3-7B-Instruct",
-          "name": "allenai/Olmo-3-7B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 7.0
-        },
-        {
           "id": "CohereLabs/c4ai-command-a-03-2025",
           "name": "CohereLabs/c4ai-command-a-03-2025",
           "context": null,
@@ -965,11 +958,25 @@
           "params_b": null
         },
         {
+          "id": "allenai/Olmo-3-7B-Instruct",
+          "name": "allenai/Olmo-3-7B-Instruct",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 7.0
+        },
+        {
           "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
           "context": null,
           "limits": "free credits/month",
           "params_b": 17.0
+        },
+        {
+          "id": "CohereLabs/tiny-aya-earth",
+          "name": "CohereLabs/tiny-aya-earth",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
         },
         {
           "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
@@ -981,13 +988,6 @@
         {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
           "name": "moonshotai/Kimi-K2-Instruct-0905",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
-          "id": "CohereLabs/tiny-aya-earth",
-          "name": "CohereLabs/tiny-aya-earth",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -1014,11 +1014,25 @@
           "params_b": null
         },
         {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
           "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
           "name": "Qwen/Qwen3-Next-80B-A3B-Thinking",
           "context": null,
           "limits": "free credits/month",
           "params_b": 80.0
+        },
+        {
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
         },
         {
           "id": "google/gemma-3n-E4B-it",
@@ -1035,29 +1049,8 @@
           "params_b": null
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
           "id": "deepseek-ai/DeepSeek-V3.2-Exp",
           "name": "deepseek-ai/DeepSeek-V3.2-Exp",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
-          "id": "MiniMaxAI/MiniMax-M2",
-          "name": "MiniMaxAI/MiniMax-M2",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
-          "id": "moonshotai/Kimi-K2-Thinking",
-          "name": "moonshotai/Kimi-K2-Thinking",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -1070,8 +1063,15 @@
           "params_b": 424.0
         },
         {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
+          "id": "MiniMaxAI/MiniMax-M2",
+          "name": "MiniMaxAI/MiniMax-M2",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
+          "id": "moonshotai/Kimi-K2-Thinking",
+          "name": "moonshotai/Kimi-K2-Thinking",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
