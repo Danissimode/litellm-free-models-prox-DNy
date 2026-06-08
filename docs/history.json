@@ -1,26 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-11T21:27:03.676701+00:00",
-      "provider": "gemini",
-      "provider_label": "Gemini",
-      "added": [],
-      "removed": [
-        "gemini-3-flash-preview-agent",
-        "gemini-3.1-flash-image-preview-agent",
-        "gemini-3.1-flash-lite-preview-agent"
-      ]
-    },
-    {
-      "timestamp": "2026-05-11T23:17:43.173645+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [],
-      "removed": [
-        "katanemo/Arch-Router-1.5B"
-      ]
-    },
-    {
       "timestamp": "2026-05-12T00:22:22.877126+00:00",
       "provider": "nvidia",
       "provider_label": "NVIDIA NIM",
@@ -8049,6 +8029,24 @@
         "swiss-ai/Apertus-70B-Instruct-2509",
         "zai-org/GLM-4.5",
         "zai-org/GLM-4.7-Flash"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-08T03:02:51.378634+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "Qwen/Qwen3-235B-A22B-Thinking-2507"
+      ]
+    },
+    {
+      "timestamp": "2026-06-08T03:02:51.378634+00:00",
+      "provider": "pollinations",
+      "provider_label": "Pollinations",
+      "added": [
+        "perplexity-fast"
       ],
       "removed": []
     }

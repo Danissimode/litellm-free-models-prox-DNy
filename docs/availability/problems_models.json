@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T01:44:15.801286+00:00",
+  "updated": "2026-06-08T03:02:51.372594+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -167,13 +167,6 @@
             "vision"
           ],
           "params_b": 17.0
-        },
-        {
-          "id": "gemma-3-12b-it",
-          "name": "gemma-3-12b-it",
-          "context": 131072,
-          "limits": "free tier",
-          "params_b": 12.0
         },
         {
           "id": "gemma-4-31B-it",
@@ -475,13 +468,6 @@
           "params_b": null
         },
         {
-          "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-          "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 235.0
-        },
-        {
           "id": "moonshotai/Kimi-K2-Instruct-0905",
           "name": "moonshotai/Kimi-K2-Instruct-0905",
           "context": null,
@@ -498,13 +484,6 @@
         {
           "id": "google/gemma-3n-E4B-it",
           "name": "google/gemma-3n-E4B-it",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": null
-        },
-        {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -568,6 +547,13 @@
         {
           "id": "moonshotai/Kimi-K2-Thinking",
           "name": "moonshotai/Kimi-K2-Thinking",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
