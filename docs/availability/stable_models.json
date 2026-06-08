@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T15:04:54.130225+00:00",
+  "updated": "2026-06-08T17:02:46.690419+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -118,39 +118,17 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
             "response_schema",
-            "vision"
+            "reasoning"
           ],
-          "params_b": 17.0
+          "params_b": 120.0
         },
         {
           "id": "allam-2-7b",
@@ -173,19 +151,6 @@
           "params_b": 20.0
         },
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 120.0
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -196,6 +161,41 @@
             "reasoning"
           ],
           "params_b": 32.0
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 70.0
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
+          "params_b": 17.0
         }
       ],
       "error": null
@@ -384,13 +384,6 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": 12.0
-        },
-        {
-          "id": "mistralai/ministral-14b-instruct-2512",
-          "name": "mistralai/ministral-14b-instruct-2512",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 14.0
         },
         {
           "id": "moonshotai/kimi-k2.6",
@@ -1081,13 +1074,6 @@
           "params_b": 1.0
         },
         {
-          "id": "@cf/moonshotai/kimi-k2.6",
-          "name": "@cf/moonshotai/kimi-k2.6",
-          "context": null,
-          "limits": "10k neurons/day",
-          "params_b": null
-        },
-        {
           "id": "@cf/zai-org/glm-4.7-flash",
           "name": "@cf/zai-org/glm-4.7-flash",
           "context": null,
@@ -1323,20 +1309,6 @@
           "name": "qwen-safety",
           "context": null,
           "limits": "free tier — token from enter.pollinations.ai",
-          "params_b": null
-        }
-      ],
-      "error": null
-    },
-    "llm7": {
-      "name": "LLM7",
-      "url": "https://llm7.io",
-      "models": [
-        {
-          "id": "mistral-small-3.2",
-          "name": "mistral-small-3.2",
-          "context": null,
-          "limits": "anonymous · 30 req/min with token",
           "params_b": null
         }
       ],

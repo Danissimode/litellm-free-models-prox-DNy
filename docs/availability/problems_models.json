@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T15:04:54.130225+00:00",
+  "updated": "2026-06-08T17:02:46.690419+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -300,6 +300,13 @@
           "params_b": null
         },
         {
+          "id": "mistralai/ministral-14b-instruct-2512",
+          "name": "mistralai/ministral-14b-instruct-2512",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 14.0
+        },
+        {
           "id": "mistralai/mistral-7b-instruct-v0.3",
           "name": "mistralai/mistral-7b-instruct-v0.3",
           "context": null,
@@ -428,6 +435,20 @@
       ],
       "error": null
     },
+    "cloudflare": {
+      "name": "Cloudflare AI",
+      "url": "https://developers.cloudflare.com/workers-ai/",
+      "models": [
+        {
+          "id": "@cf/moonshotai/kimi-k2.6",
+          "name": "@cf/moonshotai/kimi-k2.6",
+          "context": null,
+          "limits": "10k neurons/day",
+          "params_b": null
+        }
+      ],
+      "error": null
+    },
     "pollinations": {
       "name": "Pollinations",
       "url": "https://pollinations.ai",
@@ -473,41 +494,6 @@
           "context": null,
           "limits": "free tier — token from enter.pollinations.ai",
           "params_b": null
-        }
-      ],
-      "error": null
-    },
-    "llm7": {
-      "name": "LLM7",
-      "url": "https://llm7.io",
-      "models": [
-        {
-          "id": "qwen3-235b",
-          "name": "qwen3-235b",
-          "context": 240000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 235.0
-        },
-        {
-          "id": "codestral-latest",
-          "name": "codestral-latest",
-          "context": 32000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "GLM-4.6V-Flash",
-          "name": "GLM-4.6V-Flash",
-          "context": null,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "devstral-small-2:24b",
-          "name": "devstral-small-2:24b",
-          "context": null,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 24.0
         }
       ],
       "error": null

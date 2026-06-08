@@ -1,28 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-12T08:55:24.075532+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "CohereLabs/command-a-translate-08-2025",
-        "zai-org/GLM-4.7-Flash"
-      ],
-      "removed": [
-        "XiaomiMiMo/MiMo-V2-Flash",
-        "zai-org/GLM-4.6-FP8"
-      ]
-    },
-    {
-      "timestamp": "2026-05-12T09:52:56.918413+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "zai-org/GLM-4.6-FP8"
-      ],
-      "removed": []
-    },
-    {
       "timestamp": "2026-05-12T10:46:49.183909+00:00",
       "provider": "huggingface",
       "provider_label": "HuggingFace",
@@ -8061,6 +8039,28 @@
       "added": [],
       "removed": [
         "perplexity-fast"
+      ]
+    },
+    {
+      "timestamp": "2026-06-08T17:02:46.696168+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [
+        "zai-org/GLM-4.6-FP8"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-08T17:02:46.696168+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [],
+      "removed": [
+        "GLM-4.6V-Flash",
+        "codestral-latest",
+        "devstral-small-2:24b",
+        "mistral-small-3.2",
+        "qwen3-235b"
       ]
     }
   ]
