@@ -1,19 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-12T00:22:22.877126+00:00",
-      "provider": "nvidia",
-      "provider_label": "NVIDIA NIM",
-      "added": [],
-      "removed": [
-        "google/gemma-3-27b-it",
-        "minimaxai/minimax-m2.5",
-        "moonshotai/kimi-k2-instruct",
-        "moonshotai/kimi-k2-thinking",
-        "qwen/qwen2.5-coder-32b-instruct"
-      ]
-    },
-    {
       "timestamp": "2026-05-12T01:33:03.012434+00:00",
       "provider": "huggingface",
       "provider_label": "HuggingFace",
@@ -8049,6 +8036,15 @@
         "perplexity-fast"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-08T07:33:17.056158+00:00",
+      "provider": "pollinations",
+      "provider_label": "Pollinations",
+      "added": [],
+      "removed": [
+        "perplexity-fast"
+      ]
     }
   ]
 }
