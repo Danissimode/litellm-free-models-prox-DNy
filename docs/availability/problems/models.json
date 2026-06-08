@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T21:32:11.990265+00:00",
+  "updated": "2026-06-08T22:29:57.593124+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -160,15 +160,11 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
+          "params_b": null
         },
         {
           "id": "llama-3.3-70b-versatile",
@@ -182,6 +178,17 @@
           "params_b": 70.0
         },
         {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
           "id": "groq/compound",
           "name": "groq/compound",
           "context": 131072,
@@ -189,17 +196,17 @@
           "params_b": null
         },
         {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice",
             "response_schema",
-            "vision"
+            "reasoning"
           ],
-          "params_b": 17.0
+          "params_b": 120.0
         },
         {
           "id": "qwen/qwen3-32b",
@@ -214,11 +221,17 @@
           "params_b": 32.0
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
           "context": 131072,
           "limits": "varies per model",
-          "params_b": null
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
+          "params_b": 17.0
         },
         {
           "id": "allam-2-7b",
@@ -239,19 +252,6 @@
             "reasoning"
           ],
           "params_b": 20.0
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 120.0
         }
       ],
       "error": null
@@ -949,85 +949,7 @@
     "huggingface": {
       "name": "HuggingFace",
       "url": "https://huggingface.co",
-      "models": [
-        {
-          "id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
-          "name": "Qwen/Qwen3-VL-30B-A3B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 30.0
-        },
-        {
-          "id": "Qwen/Qwen3-4B-Thinking-2507",
-          "name": "Qwen/Qwen3-4B-Thinking-2507",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 4.0
-        },
-        {
-          "id": "Qwen/Qwen2.5-72B-Instruct",
-          "name": "Qwen/Qwen2.5-72B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 72.0
-        },
-        {
-          "id": "Qwen/Qwen2.5-VL-72B-Instruct",
-          "name": "Qwen/Qwen2.5-VL-72B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 72.0
-        },
-        {
-          "id": "Sao10K/L3-8B-Stheno-v3.2",
-          "name": "Sao10K/L3-8B-Stheno-v3.2",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 8.0
-        },
-        {
-          "id": "utter-project/EuroLLM-22B-Instruct-2512",
-          "name": "utter-project/EuroLLM-22B-Instruct-2512",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 22.0
-        },
-        {
-          "id": "meta-llama/Llama-3.1-70B-Instruct",
-          "name": "meta-llama/Llama-3.1-70B-Instruct",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 70.0
-        },
-        {
-          "id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
-          "name": "Qwen/Qwen3-VL-235B-A22B-Thinking",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 235.0
-        },
-        {
-          "id": "zai-org/AutoGLM-Phone-9B-Multilingual",
-          "name": "zai-org/AutoGLM-Phone-9B-Multilingual",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 9.0
-        },
-        {
-          "id": "aisingapore/Gemma-SEA-LION-v4-27B-IT",
-          "name": "aisingapore/Gemma-SEA-LION-v4-27B-IT",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 27.0
-        },
-        {
-          "id": "swiss-ai/Apertus-8B-Instruct-2509",
-          "name": "swiss-ai/Apertus-8B-Instruct-2509",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 8.0
-        }
-      ],
+      "models": [],
       "error": null
     },
     "mistral": {
