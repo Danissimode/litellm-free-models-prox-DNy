@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T09:30:29.787684+00:00",
+  "updated": "2026-06-08T11:33:22.686572+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -447,18 +447,18 @@
           "params_b": null
         },
         {
-          "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-          "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 17.0
-        },
-        {
           "id": "CohereLabs/c4ai-command-a-03-2025",
           "name": "CohereLabs/c4ai-command-a-03-2025",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
+        },
+        {
+          "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "name": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": 17.0
         },
         {
           "id": "allenai/Olmo-3-7B-Instruct",
@@ -482,25 +482,25 @@
           "params_b": null
         },
         {
+          "id": "google/gemma-3n-E4B-it",
+          "name": "google/gemma-3n-E4B-it",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
+          "id": "zai-org/GLM-4.5",
+          "name": "zai-org/GLM-4.5",
+          "context": null,
+          "limits": "free credits/month",
+          "params_b": null
+        },
+        {
           "id": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
           "name": "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
           "context": null,
           "limits": "free credits/month",
           "params_b": 424.0
-        },
-        {
-          "id": "swiss-ai/Apertus-70B-Instruct-2509",
-          "name": "swiss-ai/Apertus-70B-Instruct-2509",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 70.0
-        },
-        {
-          "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
-          "name": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 32.0
         },
         {
           "id": "deepseek-ai/DeepSeek-V3.1",
@@ -517,15 +517,15 @@
           "params_b": 80.0
         },
         {
-          "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
-          "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
+          "id": "EssentialAI/rnj-1-instruct",
+          "name": "EssentialAI/rnj-1-instruct",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
         },
         {
-          "id": "EssentialAI/rnj-1-instruct",
-          "name": "EssentialAI/rnj-1-instruct",
+          "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
+          "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
           "context": null,
           "limits": "free credits/month",
           "params_b": null
@@ -545,11 +545,11 @@
           "params_b": null
         },
         {
-          "id": "zai-org/GLM-4.5",
-          "name": "zai-org/GLM-4.5",
+          "id": "swiss-ai/Apertus-70B-Instruct-2509",
+          "name": "swiss-ai/Apertus-70B-Instruct-2509",
           "context": null,
           "limits": "free credits/month",
-          "params_b": null
+          "params_b": 70.0
         },
         {
           "id": "moonshotai/Kimi-K2-Thinking",
@@ -559,11 +559,11 @@
           "params_b": null
         },
         {
-          "id": "google/gemma-3n-E4B-it",
-          "name": "google/gemma-3n-E4B-it",
+          "id": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+          "name": "aisingapore/Qwen-SEA-LION-v4-32B-IT",
           "context": null,
           "limits": "free credits/month",
-          "params_b": null
+          "params_b": 32.0
         }
       ],
       "error": null
@@ -627,13 +627,6 @@
           "context": 240000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": 235.0
-        },
-        {
-          "id": "mistral-small-3.2",
-          "name": "mistral-small-3.2",
-          "context": null,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
         },
         {
           "id": "codestral-latest",
