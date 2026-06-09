@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T23:24:25.041412+00:00",
+  "updated": "2026-06-09T00:24:05.195431+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -430,20 +430,6 @@
           "name": "z-ai/glm-5.1",
           "context": null,
           "limits": "40 req/min",
-          "params_b": null
-        }
-      ],
-      "error": null
-    },
-    "cloudflare": {
-      "name": "Cloudflare AI",
-      "url": "https://developers.cloudflare.com/workers-ai/",
-      "models": [
-        {
-          "id": "@cf/moonshotai/kimi-k2.6",
-          "name": "@cf/moonshotai/kimi-k2.6",
-          "context": null,
-          "limits": "10k neurons/day",
           "params_b": null
         }
       ],
