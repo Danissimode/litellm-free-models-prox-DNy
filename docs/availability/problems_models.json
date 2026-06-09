@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T18:39:28.256327+00:00",
+  "updated": "2026-06-09T19:39:16.553410+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -55,15 +55,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -300,6 +300,13 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": 1.0
+        },
+        {
+          "id": "meta/llama-3.2-3b-instruct",
+          "name": "meta/llama-3.2-3b-instruct",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 3.0
         },
         {
           "id": "meta/llama-3.2-90b-vision-instruct",
