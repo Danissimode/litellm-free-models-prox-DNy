@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T16:06:31.863948+00:00",
+  "updated": "2026-06-09T17:37:55.669702+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -11,6 +11,13 @@
           "context": 262144,
           "limits": "20 req/min · 50 req/day",
           "params_b": null
+        },
+        {
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "NVIDIA: Nemotron 3 Ultra (free)",
+          "context": 1000000,
+          "limits": "20 req/min · 50 req/day",
+          "params_b": 550.0
         },
         {
           "id": "openrouter/owl-alpha",

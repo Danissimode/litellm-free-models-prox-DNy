@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T16:06:31.863948+00:00",
+  "updated": "2026-06-09T17:37:55.669702+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -160,11 +160,17 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
           "limits": "varies per model",
-          "params_b": 7.0
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 20.0
         },
         {
           "id": "groq/compound-mini",
@@ -187,49 +193,11 @@
           "params_b": 120.0
         },
         {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
           "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ],
-          "params_b": 17.0
-        },
-        {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 20.0
+          "params_b": 7.0
         },
         {
           "id": "llama-3.3-70b-versatile",
@@ -252,6 +220,38 @@
             "tool_choice"
           ],
           "params_b": 8.0
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
+          "params_b": 17.0
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
+        },
+        {
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
         }
       ],
       "error": null
@@ -260,6 +260,18 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
+        {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
+        },
         {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
@@ -272,18 +284,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
         }
       ],
       "error": null
@@ -594,7 +594,22 @@
     "together": {
       "name": "Together AI",
       "url": "https://api.together.ai",
-      "models": [],
+      "models": [
+        {
+          "id": "zai-org/GLM-4.7-FP8",
+          "name": "Glm 4.7 Fp8",
+          "context": 202752,
+          "limits": "free",
+          "params_b": null
+        },
+        {
+          "id": "zai-org/GLM-5-FP4",
+          "name": "GLM 5 Fp4",
+          "context": 202752,
+          "limits": "free",
+          "params_b": null
+        }
+      ],
       "error": null
     },
     "nvidia": {
