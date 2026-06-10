@@ -1,15 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-15T11:38:04.629909+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "zai-org/GLM-4.6-FP8"
-      ],
-      "removed": []
-    },
-    {
       "timestamp": "2026-05-15T14:46:46.335621+00:00",
       "provider": "huggingface",
       "provider_label": "HuggingFace",
@@ -8303,6 +8294,16 @@
         "deepseek-v4-flash"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-10T07:22:06.467116+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [],
+      "removed": [
+        "deepseek-v3.1:671b-terminus",
+        "deepseek-v4-flash"
+      ]
     }
   ]
 }
