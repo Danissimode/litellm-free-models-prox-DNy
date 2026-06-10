@@ -210,8 +210,8 @@ def fetch_openrouter(api_key, community_ids=None):
         free = [
             m["id"]
             for m in data.get("data", [])
-            if float((m.get("pricing") or {}).get("prompt", 1)) == 0
-            and float((m.get("pricing") or {}).get("completion", 1)) == 0
+            if float((m.get("pricing") or {}).get("prompt") if (m.get("pricing") or {}).get("prompt") is not None else 1) == 0
+            and float((m.get("pricing") or {}).get("completion") if (m.get("pricing") or {}).get("completion") is not None else 1) == 0
         ]
         if community_ids:
             free = list(set(free) | set(community_ids))
@@ -291,7 +291,7 @@ def fetch_together(api_key):
             mid = m.get("id", "")
             p = m.get("pricing") or {}
             if (
-                (float(p.get("input", 1)) == 0 and float(p.get("output", 1)) == 0)
+                (float(p.get("input") if p.get("input") is not None else 1) == 0 and float(p.get("output") if p.get("output") is not None else 1) == 0)
                 or "-Free" in mid
                 or "-free" in mid
             ):
