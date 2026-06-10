@@ -2,16 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T18:29:07.956214+00:00",
-      "provider": "cloudflare",
-      "provider_label": "Cloudflare AI",
-      "added": [
-        "@cf/tiiuae/falcon-7b-instruct",
-        "@hf/thebloke/zephyr-7b-beta-awq"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T18:29:07.956214+00:00",
       "provider": "llm7",
       "provider_label": "LLM7",
       "added": [
@@ -8273,6 +8263,16 @@
         "google/diffusiongemma-26b-a4b-it"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-10T21:38:54.408464+00:00",
+      "provider": "pollinations",
+      "provider_label": "Pollinations",
+      "added": [],
+      "removed": [
+        "gpt-5.5",
+        "midijourney-large"
+      ]
     }
   ]
 }
