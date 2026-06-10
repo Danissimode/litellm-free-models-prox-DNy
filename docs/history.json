@@ -2,16 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T18:29:07.956214+00:00",
-      "provider": "github",
-      "provider_label": "GitHub Models",
-      "added": [
-        "azureml://registries/azure-openai/models/gpt-4o-mini/versions/1",
-        "azureml://registries/azure-openai/models/gpt-4o/versions/2"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T18:29:07.956214+00:00",
       "provider": "cloudflare",
       "provider_label": "Cloudflare AI",
       "added": [
@@ -8274,6 +8264,15 @@
         "Llama-4-Maverick-17B-128E-Instruct",
         "gemma-3-12b-it"
       ]
+    },
+    {
+      "timestamp": "2026-06-10T19:46:46.562438+00:00",
+      "provider": "nvidia",
+      "provider_label": "NVIDIA NIM",
+      "added": [
+        "google/diffusiongemma-26b-a4b-it"
+      ],
+      "removed": []
     }
   ]
 }
