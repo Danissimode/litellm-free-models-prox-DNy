@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T23:26:41.632202+00:00",
+  "updated": "2026-06-10T00:30:34.421216+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -55,15 +55,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -224,13 +224,6 @@
       "name": "Cohere",
       "url": "https://cohere.com",
       "models": [
-        {
-          "id": "command-a-03-2025",
-          "name": "command-a-03-2025",
-          "context": 288000,
-          "limits": "20 req/min · 1000 req/month",
-          "params_b": null
-        },
         {
           "id": "command-a-reasoning-08-2025",
           "name": "command-a-reasoning-08-2025",
@@ -467,6 +460,25 @@
           "name": "z-ai/glm-5.1",
           "context": null,
           "limits": "40 req/min",
+          "params_b": null
+        }
+      ],
+      "error": null
+    },
+    "mistral": {
+      "name": "Mistral",
+      "url": "https://console.mistral.ai",
+      "models": [
+        {
+          "id": "mistral-medium-2505",
+          "name": "mistral-medium-2505",
+          "context": 131072,
+          "limits": "1 req/s · 1B tok/month",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema"
+          ],
           "params_b": null
         }
       ],
