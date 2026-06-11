@@ -2,58 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T19:29:49.848202+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "MiniMaxAI/MiniMax-M1-80k",
-        "Qwen/Qwen3-VL-8B-Instruct",
-        "meta-llama/Llama-4-Maverick-17B-128E-Instruct"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T19:29:49.848202+00:00",
-      "provider": "github",
-      "provider_label": "GitHub Models",
-      "added": [
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-405B-Instruct/versions/1",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/1"
-      ],
-      "removed": [
-        "azureml://registries/azure-openai/models/gpt-4o-mini/versions/1",
-        "azureml://registries/azure-openai/models/gpt-4o/versions/2"
-      ]
-    },
-    {
-      "timestamp": "2026-05-15T19:29:49.848202+00:00",
-      "provider": "cloudflare",
-      "provider_label": "Cloudflare AI",
-      "added": [
-        "@cf/deepseek-ai/deepseek-math-7b-instruct",
-        "@cf/fblgit/una-cybertron-7b-v2-bf16",
-        "@cf/meta/llama-3.2-11b-vision-instruct",
-        "@cf/openchat/openchat-3.5-0106",
-        "@cf/qwen/qwen1.5-0.5b-chat",
-        "@cf/qwen/qwen1.5-1.8b-chat",
-        "@cf/qwen/qwen1.5-14b-chat-awq",
-        "@cf/qwen/qwen1.5-7b-chat-awq",
-        "@cf/thebloke/discolm-german-7b-v1-awq",
-        "@cf/tinyllama/tinyllama-1.1b-chat-v1.0",
-        "@hf/nexusflow/starling-lm-7b-beta",
-        "@hf/thebloke/deepseek-coder-6.7b-base-awq",
-        "@hf/thebloke/deepseek-coder-6.7b-instruct-awq",
-        "@hf/thebloke/llama-2-13b-chat-awq",
-        "@hf/thebloke/mistral-7b-instruct-v0.1-awq",
-        "@hf/thebloke/neural-chat-7b-v3-1-awq",
-        "@hf/thebloke/openhermes-2.5-mistral-7b-awq"
-      ],
-      "removed": [
-        "@cf/tiiuae/falcon-7b-instruct",
-        "@hf/thebloke/zephyr-7b-beta-awq"
-      ]
-    },
-    {
-      "timestamp": "2026-05-15T19:29:49.848202+00:00",
       "provider": "llm7",
       "provider_label": "LLM7",
       "added": [
@@ -8048,6 +7996,33 @@
         "rime-labs/rime-mist-v3",
         "rime-labs/rime-mist-v3-omni"
       ]
+    },
+    {
+      "timestamp": "2026-06-11T18:55:38.325641+00:00",
+      "provider": "gemini",
+      "provider_label": "Gemini",
+      "added": [
+        "gemini-3.1-flash-image"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-11T18:55:38.325641+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [],
+      "removed": [
+        "alibaba/happyhorse-1.0-r2v"
+      ]
+    },
+    {
+      "timestamp": "2026-06-11T18:55:38.325641+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [
+        "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4"
+      ],
+      "removed": []
     }
   ]
 }
