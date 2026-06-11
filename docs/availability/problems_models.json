@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T23:29:16.570575+00:00",
+  "updated": "2026-06-11T00:32:20.882461+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -96,6 +96,13 @@
             "prompt_caching"
           ],
           "params_b": null
+        },
+        {
+          "id": "gemma-4-26b-a4b-it",
+          "name": "Gemma 4 26B A4B IT",
+          "context": 262144,
+          "limits": "varies — see AI Studio",
+          "params_b": 26.0
         },
         {
           "id": "gemma-4-31b-it",
@@ -392,13 +399,6 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": 120.0
-        },
-        {
-          "id": "qwen/qwen3-coder-480b-a35b-instruct",
-          "name": "qwen/qwen3-coder-480b-a35b-instruct",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 480.0
         },
         {
           "id": "qwen/qwen3-next-80b-a3b-instruct",
