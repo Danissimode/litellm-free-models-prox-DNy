@@ -2,22 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T19:29:49.848202+00:00",
-      "provider": "gemini",
-      "provider_label": "Gemini",
-      "added": [
-        "gemini-2.0-flash",
-        "gemini-2.0-flash-lite",
-        "gemini-2.0-flash-lite-001",
-        "gemini-2.5-flash-image",
-        "gemini-3.1-flash-image-preview"
-      ],
-      "removed": [
-        "gemini-2.0-flash-001",
-        "gemma-4-26b-a4b-it"
-      ]
-    },
-    {
-      "timestamp": "2026-05-15T19:29:49.848202+00:00",
       "provider": "sambanova",
       "provider_label": "SambaNova",
       "added": [
@@ -8264,6 +8248,15 @@
         "rime-labs/rime-mist-v3-omni"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-11T05:30:49.981079+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [],
+      "removed": [
+        "Qwen/Qwen3.5-35B-A3B-Lora"
+      ]
     }
   ]
 }

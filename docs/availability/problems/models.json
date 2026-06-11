@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T03:02:44.644930+00:00",
+  "updated": "2026-06-11T05:30:49.975225+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -146,71 +146,11 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 120.0
-        },
-        {
           "id": "groq/compound-mini",
           "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 20.0
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
         },
         {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
@@ -226,6 +166,37 @@
           "params_b": 17.0
         },
         {
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 120.0
+        },
+        {
           "id": "allam-2-7b",
           "name": "allam-2-7b",
           "context": 4096,
@@ -233,11 +204,40 @@
           "params_b": 7.0
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
-          "params_b": null
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 20.0
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 70.0
         }
       ],
       "error": null
@@ -595,13 +595,6 @@
           "context": 448,
           "limits": "free",
           "params_b": null
-        },
-        {
-          "id": "Qwen/Qwen3.5-35B-A3B-Lora",
-          "name": "Qwen3.5 35B A3b LoRa",
-          "context": 262144,
-          "limits": "free",
-          "params_b": 35.0
         }
       ],
       "error": null
