@@ -2,26 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T20:24:29.402572+00:00",
-      "provider": "groq",
-      "provider_label": "Groq",
-      "added": [
-        "canopylabs/orpheus-arabic-saudi",
-        "canopylabs/orpheus-v1-english"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T20:24:29.402572+00:00",
-      "provider": "gemini",
-      "provider_label": "Gemini",
-      "added": [
-        "gemini-2.0-flash-001",
-        "gemma-4-26b-a4b-it"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T20:24:29.402572+00:00",
       "provider": "together",
       "provider_label": "Together AI",
       "added": [
@@ -8018,6 +7998,25 @@
       "removed": [
         "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4"
       ]
+    },
+    {
+      "timestamp": "2026-06-11T23:29:20.466068+00:00",
+      "provider": "nvidia",
+      "provider_label": "NVIDIA NIM",
+      "added": [
+        "google/gemma-3-12b-it",
+        "google/gemma-3-4b-it"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-11T23:29:20.466068+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [
+        "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4"
+      ],
+      "removed": []
     }
   ]
 }
