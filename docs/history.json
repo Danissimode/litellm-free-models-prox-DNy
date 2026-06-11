@@ -1,19 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-15T19:29:49.848202+00:00",
-      "provider": "llm7",
-      "provider_label": "LLM7",
-      "added": [
-        "codestral-latest",
-        "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
-      ],
-      "removed": [
-        "GLM-4.6V-Flash",
-        "ministral-8b-2512"
-      ]
-    },
-    {
       "timestamp": "2026-05-15T20:24:29.402572+00:00",
       "provider": "openrouter",
       "provider_label": "OpenRouter",
@@ -8021,6 +8008,15 @@
       "provider_label": "HuggingFace",
       "added": [
         "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-11T21:38:50.155512+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [
+        "nvidia/nemotron-3.5-asr-streaming-0.6b"
       ],
       "removed": []
     }

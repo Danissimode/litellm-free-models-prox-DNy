@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T20:45:20.029177+00:00",
+  "updated": "2026-06-11T21:38:50.149104+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -392,6 +392,13 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": 550.0
+        },
+        {
+          "id": "nvidia/nemotron-content-safety-reasoning-4b",
+          "name": "nvidia/nemotron-content-safety-reasoning-4b",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 4.0
         },
         {
           "id": "qwen/qwen3-next-80b-a3b-instruct",
