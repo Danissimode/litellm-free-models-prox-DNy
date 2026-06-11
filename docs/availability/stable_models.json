@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T21:38:50.149104+00:00",
+  "updated": "2026-06-11T22:32:50.154479+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -11,6 +11,13 @@
           "context": 128000,
           "limits": "20 req/min · 50 req/day",
           "params_b": null
+        },
+        {
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "NVIDIA: Nemotron 3 Ultra (free)",
+          "context": 1000000,
+          "limits": "20 req/min · 50 req/day",
+          "params_b": 550.0
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -118,6 +125,13 @@
       "url": "https://console.groq.com",
       "models": [
         {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model",
+          "params_b": 7.0
+        },
+        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -141,6 +155,17 @@
           "params_b": 8.0
         },
         {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 70.0
+        },
+        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
           "context": 131072,
@@ -152,13 +177,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model",
-          "params_b": 7.0
         },
         {
           "id": "openai/gpt-oss-20b",
@@ -185,17 +203,6 @@
             "vision"
           ],
           "params_b": 17.0
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
         }
       ],
       "error": null
@@ -515,13 +522,6 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": null
-        },
-        {
-          "id": "nvidia/nemotron-mini-4b-instruct",
-          "name": "nvidia/nemotron-mini-4b-instruct",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 4.0
         },
         {
           "id": "nvidia/nemotron-nano-12b-v2-vl",

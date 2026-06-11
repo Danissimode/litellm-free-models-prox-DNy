@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T21:38:50.149104+00:00",
+  "updated": "2026-06-11T22:32:50.154479+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -11,13 +11,6 @@
           "context": 262144,
           "limits": "20 req/min · 50 req/day",
           "params_b": null
-        },
-        {
-          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
-          "name": "NVIDIA: Nemotron 3 Ultra (free)",
-          "context": 1000000,
-          "limits": "20 req/min · 50 req/day",
-          "params_b": 550.0
         },
         {
           "id": "openrouter/owl-alpha",
@@ -396,6 +389,13 @@
         {
           "id": "nvidia/nemotron-content-safety-reasoning-4b",
           "name": "nvidia/nemotron-content-safety-reasoning-4b",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 4.0
+        },
+        {
+          "id": "nvidia/nemotron-mini-4b-instruct",
+          "name": "nvidia/nemotron-mini-4b-instruct",
           "context": null,
           "limits": "40 req/min",
           "params_b": 4.0

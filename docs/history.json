@@ -2,16 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T20:24:29.402572+00:00",
-      "provider": "openrouter",
-      "provider_label": "OpenRouter",
-      "added": [
-        "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-        "meta-llama/llama-3.3-70b-instruct:free"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T20:24:29.402572+00:00",
       "provider": "groq",
       "provider_label": "Groq",
       "added": [
@@ -8019,6 +8009,15 @@
         "nvidia/nemotron-3.5-asr-streaming-0.6b"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-11T22:32:50.160429+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4"
+      ]
     }
   ]
 }

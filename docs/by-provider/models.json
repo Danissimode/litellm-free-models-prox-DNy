@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T21:38:50.149104+00:00",
+  "updated": "2026-06-11T22:32:50.154479+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -146,6 +146,13 @@
       "url": "https://console.groq.com",
       "models": [
         {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model",
+          "params_b": 7.0
+        },
+        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -156,6 +163,13 @@
             "reasoning"
           ],
           "params_b": 32.0
+        },
+        {
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
         },
         {
           "id": "llama-3.1-8b-instant",
@@ -169,18 +183,15 @@
           "params_b": 8.0
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 70.0
         },
         {
           "id": "openai/gpt-oss-120b",
@@ -196,11 +207,11 @@
           "params_b": 120.0
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
           "limits": "varies per model",
-          "params_b": 7.0
+          "params_b": null
         },
         {
           "id": "openai/gpt-oss-20b",
@@ -227,17 +238,6 @@
             "vision"
           ],
           "params_b": 17.0
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
         }
       ],
       "error": null
@@ -1001,15 +1001,7 @@
     "huggingface": {
       "name": "HuggingFace",
       "url": "https://huggingface.co",
-      "models": [
-        {
-          "id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
-          "name": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
-          "context": null,
-          "limits": "free credits/month",
-          "params_b": 550.0
-        }
-      ],
+      "models": [],
       "error": null
     },
     "mistral": {
