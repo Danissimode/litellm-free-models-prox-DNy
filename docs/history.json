@@ -2,27 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T23:17:41.403971+00:00",
-      "provider": "github",
-      "provider_label": "GitHub Models",
-      "added": [],
-      "removed": [
-        "azureml://registries/azure-openai/models/gpt-4o-mini/versions/1",
-        "azureml://registries/azure-openai/models/gpt-4o/versions/2",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-405B-Instruct/versions/1",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/1"
-      ]
-    },
-    {
-      "timestamp": "2026-05-15T23:17:41.403971+00:00",
-      "provider": "cloudflare",
-      "provider_label": "Cloudflare AI",
-      "added": [],
-      "removed": [
-        "@cf/meta/llama-3.2-11b-vision-instruct"
-      ]
-    },
-    {
-      "timestamp": "2026-05-15T23:17:41.403971+00:00",
       "provider": "pollinations",
       "provider_label": "Pollinations",
       "added": [],
@@ -7746,6 +7725,27 @@
       "added": [],
       "removed": [
         "minimax-m2.7"
+      ]
+    },
+    {
+      "timestamp": "2026-06-12T21:30:56.127219+00:00",
+      "provider": "pollinations",
+      "provider_label": "Pollinations",
+      "added": [
+        "perplexity",
+        "perplexity-deep"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-12T21:30:56.127219+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [
+        "minimax-m2.7"
+      ],
+      "removed": [
+        "kimi-k2.6"
       ]
     }
   ]
