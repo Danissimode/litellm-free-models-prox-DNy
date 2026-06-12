@@ -2,16 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-15T20:24:29.402572+00:00",
-      "provider": "github",
-      "provider_label": "GitHub Models",
-      "added": [
-        "azureml://registries/azure-openai/models/gpt-4o-mini/versions/1",
-        "azureml://registries/azure-openai/models/gpt-4o/versions/2"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T20:24:29.402572+00:00",
       "provider": "cloudflare",
       "provider_label": "Cloudflare AI",
       "added": [],
@@ -7989,6 +7979,15 @@
         "MiniMaxAI/MiniMax-M2.5-FP4"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-12T01:46:01.223876+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4"
+      ]
     }
   ]
 }
