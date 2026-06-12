@@ -1,39 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-15T21:21:27.230422+00:00",
-      "provider": "pollinations",
-      "provider_label": "Pollinations",
-      "added": [],
-      "removed": [
-        "qwen-vision-pro"
-      ]
-    },
-    {
-      "timestamp": "2026-05-15T22:17:19.050918+00:00",
-      "provider": "together",
-      "provider_label": "Together AI",
-      "added": [
-        "Qwen/Qwen2.5-32B-Instruct",
-        "Qwen/Qwen3-14B",
-        "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
-        "Qwen/Qwen3-32B",
-        "allenai/Molmo-7B-D-0924",
-        "google/gemma-3-1b-pt",
-        "google/medgemma-27b-text-it"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-15T22:17:19.050918+00:00",
-      "provider": "nvidia",
-      "provider_label": "NVIDIA NIM",
-      "added": [
-        "nvidia/vila"
-      ],
-      "removed": []
-    },
-    {
       "timestamp": "2026-05-15T22:17:19.050918+00:00",
       "provider": "mistral",
       "provider_label": "Mistral",
@@ -7971,6 +7938,41 @@
         "kimi-k2.6"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-12T14:59:51.827027+00:00",
+      "provider": "nvidia",
+      "provider_label": "NVIDIA NIM",
+      "added": [
+        "minimaxai/minimax-m3"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-12T14:59:51.827027+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [
+        "MiniMaxAI/MiniMax-M3",
+        "moonshotai/Kimi-K2.7-Code"
+      ],
+      "removed": [
+        "CohereLabs/c4ai-command-r7b-12-2024",
+        "meta-llama/Llama-4-Scout-17B-16E-Instruct"
+      ]
+    },
+    {
+      "timestamp": "2026-06-12T14:59:51.827027+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [],
+      "removed": [
+        "codestral-latest",
+        "devstral-small-2:24b",
+        "kimi-k2.6",
+        "mistral-small-3.2",
+        "qwen3-235b"
+      ]
     }
   ]
 }
