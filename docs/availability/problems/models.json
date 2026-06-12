@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T17:45:20.585578+00:00",
+  "updated": "2026-06-12T18:35:45.645285+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -146,31 +146,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
+            "tool_choice"
           ],
-          "params_b": 20.0
+          "params_b": 8.0
         },
         {
           "id": "openai/gpt-oss-120b",
@@ -186,27 +170,35 @@
           "params_b": 120.0
         },
         {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model",
+          "params_b": 7.0
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 20.0
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice"
           ],
-          "params_b": 8.0
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
+          "params_b": 70.0
         },
         {
           "id": "meta-llama/llama-4-scout-17b-16e-instruct",
@@ -222,22 +214,30 @@
           "params_b": 17.0
         },
         {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
           "limits": "varies per model",
-          "params_b": 7.0
+          "params_b": null
         },
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
-            "tool_choice"
+            "tool_choice",
+            "reasoning"
           ],
-          "params_b": 70.0
+          "params_b": 32.0
         }
       ],
       "error": null
@@ -1763,6 +1763,20 @@
           "params_b": null
         },
         {
+          "id": "perplexity-deep",
+          "name": "perplexity-deep",
+          "context": 128000,
+          "limits": "free tier — token from enter.pollinations.ai",
+          "params_b": null
+        },
+        {
+          "id": "perplexity",
+          "name": "perplexity",
+          "context": 200000,
+          "limits": "free tier — token from enter.pollinations.ai",
+          "params_b": null
+        },
+        {
           "id": "kimi",
           "name": "kimi",
           "context": 262000,
@@ -1886,8 +1900,51 @@
     "llm7": {
       "name": "LLM7",
       "url": "https://llm7.io",
-      "models": [],
-      "error": "GET https://api.llm7.io/v1/models → HTTP Error 500: Internal Server Error"
+      "models": [
+        {
+          "id": "qwen3-235b",
+          "name": "qwen3-235b",
+          "context": 240000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": 235.0
+        },
+        {
+          "id": "kimi-k2.6",
+          "name": "kimi-k2.6",
+          "context": 240000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
+        {
+          "id": "minimax-m2.7",
+          "name": "minimax-m2.7",
+          "context": 180000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
+        {
+          "id": "mistral-small-3.2",
+          "name": "mistral-small-3.2",
+          "context": null,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
+        {
+          "id": "codestral-latest",
+          "name": "codestral-latest",
+          "context": 32000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
+        {
+          "id": "devstral-small-2:24b",
+          "name": "devstral-small-2:24b",
+          "context": null,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": 24.0
+        }
+      ],
+      "error": null
     },
     "zai": {
       "name": "Z.ai (GLM)",
