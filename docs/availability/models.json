@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T23:29:20.460201+00:00",
+  "updated": "2026-06-12T00:32:07.297565+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -159,30 +159,6 @@
           "params_b": 17.0
         },
         {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 120.0
-        },
-        {
           "id": "qwen/qwen3-32b",
           "name": "qwen/qwen3-32b",
           "context": 131072,
@@ -202,29 +178,15 @@
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model",
-          "params_b": 7.0
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
           "context": 131072,
           "limits": "varies per model",
           "capabilities": [
             "function_calling",
             "tool_choice"
           ],
-          "params_b": 8.0
+          "params_b": 70.0
         },
         {
           "id": "openai/gpt-oss-20b",
@@ -238,6 +200,44 @@
             "reasoning"
           ],
           "params_b": 20.0
+        },
+        {
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "name": "openai/gpt-oss-120b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 120.0
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model",
+          "params_b": 7.0
         }
       ],
       "error": null
@@ -246,6 +246,18 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
+        {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
+        },
         {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
@@ -258,18 +270,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
         }
       ],
       "error": null
@@ -402,13 +402,6 @@
             "reasoning",
             "prompt_caching"
           ],
-          "params_b": null
-        },
-        {
-          "id": "gemini-3.1-flash-image",
-          "name": "Nano Banana 2",
-          "context": 65536,
-          "limits": "varies — see AI Studio",
           "params_b": null
         },
         {
@@ -581,6 +574,13 @@
           "context": 448,
           "limits": "free",
           "params_b": 0.6
+        },
+        {
+          "id": "MiniMaxAI/MiniMax-M2.5-FP4",
+          "name": "MiniMax M2.5 FP4",
+          "context": 8192,
+          "limits": "free",
+          "params_b": null
         }
       ],
       "error": null
