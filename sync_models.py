@@ -23,7 +23,7 @@ import time
 import urllib.error
 import urllib.request
 
-from common import _opener
+from common import _opener, _is_free
 
 logging.basicConfig(
     level=logging.INFO,
@@ -198,16 +198,6 @@ def fetch_community_free_models():
 
 
 # ── Provider fetchers ──────────────────────────────────────────────────────────
-
-
-def _is_free(p, key):
-    val = p.get(key)
-    if val is None:
-        return False
-    try:
-        return float(val) == 0
-    except (ValueError, TypeError):
-        return False
 
 
 def fetch_openrouter(api_key, community_ids=None):

@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 
-from common import _opener
+from common import _opener, _is_free
 
 OUT_DIR = Path(__file__).parent / "docs"
 OUT_DIR.mkdir(exist_ok=True)
@@ -74,16 +74,6 @@ def _get(url, headers=None, timeout=20):
 
 
 # ── Provider fetchers (same logic as sync_models.py) ─────────────────────────
-
-
-def _is_free(p, key):
-    val = p.get(key)
-    if val is None:
-        return False
-    try:
-        return float(val) == 0
-    except (ValueError, TypeError):
-        return False
 
 
 def fetch_openrouter(key):

@@ -20,3 +20,13 @@ class SafeRedirectHandler(urllib.request.HTTPRedirectHandler):
 
 
 _opener = urllib.request.build_opener(SafeRedirectHandler())
+
+
+def _is_free(p, key):
+    val = p.get(key)
+    if val is None:
+        return False
+    try:
+        return float(val) == 0
+    except (ValueError, TypeError):
+        return False
