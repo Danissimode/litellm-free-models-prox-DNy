@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T11:34:37.349985+00:00",
+  "updated": "2026-06-13T12:30:36.707155+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -139,19 +139,6 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 20.0
-        },
-        {
           "id": "llama-3.1-8b-instant",
           "name": "llama-3.1-8b-instant",
           "context": 131072,
@@ -161,6 +148,18 @@
             "tool_choice"
           ],
           "params_b": 8.0
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
         },
         {
           "id": "openai/gpt-oss-120b",
@@ -176,6 +175,19 @@
           "params_b": 120.0
         },
         {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 20.0
+        },
+        {
           "id": "llama-3.3-70b-versatile",
           "name": "llama-3.3-70b-versatile",
           "context": 131072,
@@ -185,18 +197,6 @@
             "tool_choice"
           ],
           "params_b": 70.0
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
         },
         {
           "id": "allam-2-7b",
@@ -366,6 +366,13 @@
           "id": "command-a-plus-05-2026",
           "name": "command-a-plus-05-2026",
           "context": 436000,
+          "limits": "20 req/min · 1000 req/month",
+          "params_b": null
+        },
+        {
+          "id": "command-a-reasoning-08-2025",
+          "name": "command-a-reasoning-08-2025",
+          "context": 288768,
           "limits": "20 req/min · 1000 req/month",
           "params_b": null
         },
