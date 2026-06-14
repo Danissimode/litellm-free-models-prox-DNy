@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T03:02:57.061943+00:00",
+  "updated": "2026-06-14T05:30:46.591898+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -187,6 +187,13 @@
           "id": "command-a-reasoning-08-2025",
           "name": "command-a-reasoning-08-2025",
           "context": 288768,
+          "limits": "20 req/min · 1000 req/month",
+          "params_b": null
+        },
+        {
+          "id": "command-r-plus-08-2024",
+          "name": "command-r-plus-08-2024",
+          "context": 128000,
           "limits": "20 req/min · 1000 req/month",
           "params_b": null
         }
