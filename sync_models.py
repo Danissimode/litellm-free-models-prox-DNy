@@ -23,7 +23,7 @@ import time
 import urllib.error
 import urllib.request
 
-from common import _opener, _is_free
+from common import _is_free, _opener
 
 logging.basicConfig(
     level=logging.INFO,

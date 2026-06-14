@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 
-from common import _opener, _is_free
+from common import _is_free, _opener
 
 OUT_DIR = Path(__file__).parent / "docs"
 OUT_DIR.mkdir(exist_ok=True)
