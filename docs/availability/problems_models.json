@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T09:02:41.992033+00:00",
+  "updated": "2026-06-14T10:55:56.950950+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -183,6 +183,20 @@
       "name": "Cohere",
       "url": "https://cohere.com",
       "models": [
+        {
+          "id": "c4ai-aya-expanse-32b",
+          "name": "c4ai-aya-expanse-32b",
+          "context": 128000,
+          "limits": "20 req/min · 1000 req/month",
+          "params_b": 32.0
+        },
+        {
+          "id": "c4ai-aya-vision-32b",
+          "name": "c4ai-aya-vision-32b",
+          "context": 16384,
+          "limits": "20 req/min · 1000 req/month",
+          "params_b": 32.0
+        },
         {
           "id": "command-a-03-2025",
           "name": "command-a-03-2025",
