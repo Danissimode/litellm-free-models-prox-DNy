@@ -1,10 +1,17 @@
 {
-  "updated": "2026-06-14T14:44:05.745444+00:00",
+  "updated": "2026-06-14T15:32:08.300041+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
       "url": "https://openrouter.ai",
       "models": [
+        {
+          "id": "openrouter/owl-alpha",
+          "name": "Owl Alpha",
+          "context": 1048756,
+          "limits": "20 req/min · 50 req/day",
+          "params_b": null
+        },
         {
           "id": "openai/gpt-oss-20b:free",
           "name": "OpenAI: gpt-oss-20b (free)",
@@ -20,15 +27,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
