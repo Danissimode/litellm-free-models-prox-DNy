@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T07:30:00.460727+00:00",
+  "updated": "2026-06-14T09:02:41.992033+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -152,6 +152,49 @@
           "params_b": 120.0
         },
         {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
+          "params_b": 17.0
+        },
+        {
+          "id": "qwen/qwen3-32b",
+          "name": "qwen/qwen3-32b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 32.0
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 70.0
+        },
+        {
+          "id": "allam-2-7b",
+          "name": "allam-2-7b",
+          "context": 4096,
+          "limits": "varies per model",
+          "params_b": 7.0
+        },
+        {
           "id": "llama-3.1-8b-instant",
           "name": "llama-3.1-8b-instant",
           "context": 131072,
@@ -174,49 +217,6 @@
             "reasoning"
           ],
           "params_b": 20.0
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ],
-          "params_b": 17.0
-        },
-        {
-          "id": "allam-2-7b",
-          "name": "allam-2-7b",
-          "context": 4096,
-          "limits": "varies per model",
-          "params_b": 7.0
-        },
-        {
-          "id": "qwen/qwen3-32b",
-          "name": "qwen/qwen3-32b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": 32.0
         }
       ],
       "error": null
@@ -354,41 +354,6 @@
           "context": 16384,
           "limits": "20 req/min · 1000 req/month",
           "params_b": 32.0
-        },
-        {
-          "id": "command-a-translate-08-2025",
-          "name": "command-a-translate-08-2025",
-          "context": 8992,
-          "limits": "20 req/min · 1000 req/month",
-          "params_b": null
-        },
-        {
-          "id": "command-a-vision-07-2025",
-          "name": "command-a-vision-07-2025",
-          "context": 128000,
-          "limits": "20 req/min · 1000 req/month",
-          "params_b": null
-        },
-        {
-          "id": "command-r-08-2024",
-          "name": "command-r-08-2024",
-          "context": 128000,
-          "limits": "20 req/min · 1000 req/month",
-          "params_b": null
-        },
-        {
-          "id": "command-r7b-12-2024",
-          "name": "command-r7b-12-2024",
-          "context": 132000,
-          "limits": "20 req/min · 1000 req/month",
-          "params_b": null
-        },
-        {
-          "id": "command-r7b-arabic-02-2025",
-          "name": "command-r7b-arabic-02-2025",
-          "context": 128000,
-          "limits": "20 req/min · 1000 req/month",
-          "params_b": null
         }
       ],
       "error": null
