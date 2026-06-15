@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T01:46:41.522415+00:00",
+  "updated": "2026-06-15T03:03:12.333143+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -27,15 +27,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
