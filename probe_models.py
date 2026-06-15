@@ -299,26 +299,12 @@ def load_recent_statuses(path, lookback_runs=WATCH_LIST_FAILS, max_lines=200_000
 
     for line in tail_lines:
         try:
-            provider_idx = line.find('"provider": "')
-            if provider_idx == -1:
+            data = json.loads(line)
+            provider = data.get("provider")
+            model = data.get("model")
+            status = data.get("status")
+            if not provider or not model or not status:
                 continue
-            provider_start = provider_idx + 13
-            provider_end = line.find('"', provider_start)
-            provider = line[provider_start:provider_end]
-
-            model_idx = line.find('"model": "')
-            if model_idx == -1:
-                continue
-            model_start = model_idx + 10
-            model_end = line.find('"', model_start)
-            model = line[model_start:model_end]
-
-            status_idx = line.find('"status": "')
-            if status_idx == -1:
-                continue
-            status_start = status_idx + 11
-            status_end = line.find('"', status_start)
-            status = line[status_start:status_end]
         except Exception:
             continue
         key = (provider, model)
