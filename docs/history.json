@@ -1,30 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-21T17:39:44.600836+00:00",
-      "provider": "sambanova",
-      "provider_label": "SambaNova",
-      "added": [
-        "DeepSeek-V3.1",
-        "DeepSeek-V3.2",
-        "Llama-4-Maverick-17B-128E-Instruct",
-        "Meta-Llama-3.3-70B-Instruct",
-        "gemma-3-12b-it",
-        "gpt-oss-120b"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-21T22:27:19.518631+00:00",
-      "provider": "nvidia",
-      "provider_label": "NVIDIA NIM",
-      "added": [],
-      "removed": [
-        "google/gemma-3-12b-it",
-        "google/gemma-3-4b-it"
-      ]
-    },
-    {
       "timestamp": "2026-05-22T17:32:15.252090+00:00",
       "provider": "pollinations",
       "provider_label": "Pollinations",
@@ -8273,6 +8249,26 @@
       "added": [
         "zai-org/GLM-4.7-FP8",
         "zai-org/GLM-5.2"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-16T19:09:14.425053+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [
+        "zai-org/GLM-4.7-FP8",
+        "zai-org/GLM-5-FP4"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-16T19:09:14.425053+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [
+        "Qwen/Qwen3.6-27B",
+        "zai-org/GLM-5.2-FP8"
       ],
       "removed": []
     }
