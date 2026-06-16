@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T22:40:42.231272+00:00",
+  "updated": "2026-06-16T23:29:05.971814+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -34,15 +34,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -475,6 +475,13 @@
         {
           "id": "@cf/moonshotai/kimi-k2.6",
           "name": "@cf/moonshotai/kimi-k2.6",
+          "context": null,
+          "limits": "10k neurons/day",
+          "params_b": null
+        },
+        {
+          "id": "@cf/zai-org/glm-5.2",
+          "name": "@cf/zai-org/glm-5.2",
           "context": null,
           "limits": "10k neurons/day",
           "params_b": null
