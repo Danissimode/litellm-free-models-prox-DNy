@@ -2,22 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-22T21:23:58.984837+00:00",
-      "provider": "openrouter",
-      "provider_label": "OpenRouter",
-      "added": [
-        "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-        "google/lyria-3-clip-preview",
-        "google/lyria-3-pro-preview",
-        "meta-llama/llama-3.2-3b-instruct:free",
-        "meta-llama/llama-3.3-70b-instruct:free",
-        "nousresearch/hermes-3-llama-3.1-405b:free",
-        "qwen/qwen3-coder:free",
-        "qwen/qwen3-next-80b-a3b-instruct:free"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-22T21:23:58.984837+00:00",
       "provider": "groq",
       "provider_label": "Groq",
       "added": [
@@ -8271,6 +8255,15 @@
       "removed": [
         "mistral-ocr-3",
         "mistral-ocr-3-0"
+      ]
+    },
+    {
+      "timestamp": "2026-06-16T21:57:11.884512+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "zai-org/GLM-4.7-FP8"
       ]
     }
   ]
