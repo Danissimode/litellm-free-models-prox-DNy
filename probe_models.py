@@ -366,11 +366,11 @@ def aggregate_and_rotate(probes_path, keep_days=30):
 
     with probes_path.open() as f:
         for line in f:
-            ts_idx = line.find('"ts": "')
-            if ts_idx == -1:
-                continue
-            ts_str = line[ts_idx + 7 : line.find('"', ts_idx + 7)]
             try:
+                data = json.loads(line)
+                ts_str = data.get("ts", "")
+                if not ts_str:
+                    continue
                 ts = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
             except Exception:
                 continue
@@ -381,42 +381,13 @@ def aggregate_and_rotate(probes_path, keep_days=30):
 
             keep_lines.append(line)
 
-            try:
-                provider_idx = line.find('"provider": "')
-                if provider_idx == -1:
-                    continue
-                provider_start = provider_idx + 13
-                provider_end = line.find('"', provider_start)
-                provider = line[provider_start:provider_end]
-
-                model_idx = line.find('"model": "')
-                if model_idx == -1:
-                    continue
-                model_start = model_idx + 10
-                model_end = line.find('"', model_start)
-                model = line[model_start:model_end]
-
-                status_idx = line.find('"status": "')
-                if status_idx == -1:
-                    continue
-                status_start = status_idx + 11
-                status_end = line.find('"', status_start)
-                status = line[status_start:status_end]
-
-                latency_ms = None
-                latency_idx = line.find('"latency_ms": ')
-                if latency_idx != -1:
-                    latency_start = latency_idx + 14
-                    latency_end = line.find(",", latency_start)
-                    if latency_end == -1:
-                        latency_end = line.find("}", latency_start)
-                    if latency_end != -1:
-                        try:
-                            latency_ms = int(line[latency_start:latency_end])
-                        except ValueError:
-                            pass
-            except Exception:
+            provider = data.get("provider")
+            model = data.get("model")
+            status = data.get("status")
+            if not provider or not model or not status:
                 continue
+
+            latency_ms = data.get("latency_ms")
 
             key = (provider, model)
             b = bucket[key]
