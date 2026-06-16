@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T13:32:50.934862+00:00",
+  "updated": "2026-06-16T15:37:05.608249+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -463,25 +463,6 @@
           "name": "z-ai/glm-5.1",
           "context": null,
           "limits": "40 req/min",
-          "params_b": null
-        }
-      ],
-      "error": null
-    },
-    "mistral": {
-      "name": "Mistral",
-      "url": "https://console.mistral.ai",
-      "models": [
-        {
-          "id": "mistral-medium-2505",
-          "name": "mistral-medium-2505",
-          "context": 131072,
-          "limits": "1 req/s · 1B tok/month",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema"
-          ],
           "params_b": null
         }
       ],
