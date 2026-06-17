@@ -2,18 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-22T21:23:58.984837+00:00",
-      "provider": "github",
-      "provider_label": "GitHub Models",
-      "added": [
-        "azureml://registries/azure-openai/models/gpt-4o-mini/versions/1",
-        "azureml://registries/azure-openai/models/gpt-4o/versions/2",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-405B-Instruct/versions/1",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/1"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-22T21:23:58.984837+00:00",
       "provider": "cloudflare",
       "provider_label": "Cloudflare AI",
       "added": [
@@ -8053,6 +8041,19 @@
         "midijourney"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-17T09:31:42.326375+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [
+        "glm-5.2",
+        "gpt-5.4-mini"
+      ],
+      "removed": [
+        "deepseek-v3.1:671b-terminus",
+        "deepseek-v4-flash"
+      ]
     }
   ]
 }
