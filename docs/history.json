@@ -2,21 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-22T23:21:56.807764+00:00",
-      "provider": "together",
-      "provider_label": "Together AI",
-      "added": [
-        "Qwen/Qwen2.5-32B-Instruct",
-        "Qwen/Qwen3-14B",
-        "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
-        "Qwen/Qwen3-32B",
-        "allenai/Molmo-7B-D-0924",
-        "google/gemma-3-1b-pt",
-        "google/medgemma-27b-text-it"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-22T23:21:56.807764+00:00",
       "provider": "nvidia",
       "provider_label": "NVIDIA NIM",
       "added": [
@@ -8064,6 +8049,15 @@
         "minimax-m3",
         "mistral-4"
       ]
+    },
+    {
+      "timestamp": "2026-06-17T22:31:43.806647+00:00",
+      "provider": "openrouter",
+      "provider_label": "OpenRouter",
+      "added": [
+        "cohere/north-mini-code:free"
+      ],
+      "removed": []
     }
   ]
 }
