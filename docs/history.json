@@ -1,29 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-23T11:24:49.229995+00:00",
-      "provider": "openrouter",
-      "provider_label": "OpenRouter",
-      "added": [],
-      "removed": [
-        "baidu/cobuddy:free"
-      ]
-    },
-    {
-      "timestamp": "2026-05-24T14:29:05.647554+00:00",
-      "provider": "sambanova",
-      "provider_label": "SambaNova",
-      "added": [],
-      "removed": [
-        "DeepSeek-V3.1",
-        "DeepSeek-V3.2",
-        "Llama-4-Maverick-17B-128E-Instruct",
-        "Meta-Llama-3.3-70B-Instruct",
-        "gemma-3-12b-it",
-        "gpt-oss-120b"
-      ]
-    },
-    {
       "timestamp": "2026-05-24T15:23:00.959617+00:00",
       "provider": "sambanova",
       "provider_label": "SambaNova",
@@ -7806,6 +7783,25 @@
         "qwen3-235b"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-18T22:36:13.084038+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [
+        "nvidia/nemotron-3.5-asr-streaming-0.6b"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-18T22:36:13.084038+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "google/gemma-3-12b-it",
+        "google/gemma-3-4b-it"
+      ]
     }
   ]
 }
