@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T11:20:24.794913+00:00",
+  "updated": "2026-06-18T13:01:55.382974+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -503,6 +503,13 @@
       "name": "Pollinations",
       "url": "https://pollinations.ai",
       "models": [
+        {
+          "id": "deepseek",
+          "name": "deepseek",
+          "context": 1048576,
+          "limits": "free tier — token from enter.pollinations.ai",
+          "params_b": null
+        },
         {
           "id": "kimi",
           "name": "kimi",
