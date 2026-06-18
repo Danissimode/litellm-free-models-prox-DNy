@@ -2,37 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-23T01:33:08.648250+00:00",
-      "provider": "github",
-      "provider_label": "GitHub Models",
-      "added": [],
-      "removed": [
-        "azureml://registries/azure-openai/models/gpt-4o-mini/versions/1",
-        "azureml://registries/azure-openai/models/gpt-4o/versions/2",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-405B-Instruct/versions/1",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/1"
-      ]
-    },
-    {
-      "timestamp": "2026-05-23T01:33:08.648250+00:00",
-      "provider": "cloudflare",
-      "provider_label": "Cloudflare AI",
-      "added": [],
-      "removed": [
-        "@cf/meta/llama-3.2-11b-vision-instruct"
-      ]
-    },
-    {
-      "timestamp": "2026-05-23T01:33:08.648250+00:00",
-      "provider": "pollinations",
-      "provider_label": "Pollinations",
-      "added": [],
-      "removed": [
-        "openai",
-        "openai-audio"
-      ]
-    },
-    {
-      "timestamp": "2026-05-23T01:33:08.648250+00:00",
       "provider": "kluster",
       "provider_label": "Kluster AI",
       "added": [],
@@ -7815,6 +7784,33 @@
       "provider_label": "HuggingFace",
       "added": [
         "stepfun-ai/Step-3.7-Flash"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-18T09:26:41.241288+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [],
+      "removed": [
+        "Qwen/Qwen3.5-35B-A3B-Lora"
+      ]
+    },
+    {
+      "timestamp": "2026-06-18T09:26:41.241288+00:00",
+      "provider": "nvidia",
+      "provider_label": "NVIDIA NIM",
+      "added": [],
+      "removed": [
+        "mistralai/mistral-7b-instruct-v0.3"
+      ]
+    },
+    {
+      "timestamp": "2026-06-18T09:26:41.241288+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [
+        "XiaomiMiMo/MiMo-V2.5-Pro"
       ],
       "removed": []
     }
