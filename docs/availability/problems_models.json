@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T00:33:09.052719+00:00",
+  "updated": "2026-06-18T01:48:13.356124+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -34,15 +34,15 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
+          "id": "groq/compound",
+          "name": "groq/compound",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
         },
         {
-          "id": "groq/compound",
-          "name": "groq/compound",
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
           "context": 131072,
           "limits": "varies per model",
           "params_b": null
@@ -131,6 +131,25 @@
             "prompt_caching"
           ],
           "params_b": null
+        }
+      ],
+      "error": null
+    },
+    "sambanova": {
+      "name": "SambaNova",
+      "url": "https://cloud.sambanova.ai",
+      "models": [
+        {
+          "id": "gpt-oss-120b",
+          "name": "gpt-oss-120b",
+          "context": 131072,
+          "limits": "free tier",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": 120.0
         }
       ],
       "error": null
