@@ -2,16 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-23T01:33:08.648250+00:00",
-      "provider": "llm7",
-      "provider_label": "LLM7",
-      "added": [],
-      "removed": [
-        "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
-        "ministral-8b-2512"
-      ]
-    },
-    {
-      "timestamp": "2026-05-23T01:33:08.648250+00:00",
       "provider": "zai",
       "provider_label": "Z.ai (GLM)",
       "added": [],
@@ -7812,6 +7802,19 @@
       "added": [],
       "removed": [
         "google/gemma-3-27b-it"
+      ]
+    },
+    {
+      "timestamp": "2026-06-18T15:00:49.939284+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [
+        "alibaba/happyhorse-1.0-r2v"
+      ],
+      "removed": [
+        "openai/gpt-image-2",
+        "rime-labs/rime-mist-v3",
+        "rime-labs/rime-mist-v3-omni"
       ]
     }
   ]
