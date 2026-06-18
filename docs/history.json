@@ -1,20 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-24T15:23:00.959617+00:00",
-      "provider": "sambanova",
-      "provider_label": "SambaNova",
-      "added": [
-        "DeepSeek-V3.1",
-        "DeepSeek-V3.2",
-        "Llama-4-Maverick-17B-128E-Instruct",
-        "Meta-Llama-3.3-70B-Instruct",
-        "gemma-3-12b-it",
-        "gpt-oss-120b"
-      ],
-      "removed": []
-    },
-    {
       "timestamp": "2026-05-24T20:18:09.509522+00:00",
       "provider": "huggingface",
       "provider_label": "HuggingFace",
@@ -7801,6 +7787,15 @@
       "removed": [
         "google/gemma-3-12b-it",
         "google/gemma-3-4b-it"
+      ]
+    },
+    {
+      "timestamp": "2026-06-18T23:31:23.724141+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4"
       ]
     }
   ]
