@@ -1,33 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-23T07:46:54.993172+00:00",
-      "provider": "together",
-      "provider_label": "Together AI",
-      "added": [],
-      "removed": [
-        "google/gemma-3-27b-it-lora"
-      ]
-    },
-    {
-      "timestamp": "2026-05-23T07:46:54.993172+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [],
-      "removed": [
-        "pearl-ai/Gemma-4-31B-it-pearl"
-      ]
-    },
-    {
-      "timestamp": "2026-05-23T09:32:17.897556+00:00",
-      "provider": "nvidia",
-      "provider_label": "NVIDIA NIM",
-      "added": [],
-      "removed": [
-        "nvidia/vila"
-      ]
-    },
-    {
       "timestamp": "2026-05-23T11:24:49.229995+00:00",
       "provider": "openrouter",
       "provider_label": "OpenRouter",
@@ -7803,6 +7776,36 @@
         "mistral-small-3.2",
         "qwen3-235b"
       ]
+    },
+    {
+      "timestamp": "2026-06-18T21:39:07.078639+00:00",
+      "provider": "cerebras",
+      "provider_label": "Cerebras",
+      "added": [],
+      "removed": [
+        "llama3.1-8b-rollout-test"
+      ]
+    },
+    {
+      "timestamp": "2026-06-18T21:39:07.078639+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [
+        "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-18T21:39:07.078639+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [
+        "codestral-latest",
+        "devstral-small-2:24b",
+        "mistral-small-3.2",
+        "qwen3-235b"
+      ],
+      "removed": []
     }
   ]
 }

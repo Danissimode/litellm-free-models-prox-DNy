@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T20:46:09.447969+00:00",
+  "updated": "2026-06-18T21:39:07.072720+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -294,13 +294,6 @@
           "params_b": null
         },
         {
-          "id": "google/diffusiongemma-26b-a4b-it",
-          "name": "google/diffusiongemma-26b-a4b-it",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 26.0
-        },
-        {
           "id": "google/gemma-4-31b-it",
           "name": "google/gemma-4-31b-it",
           "context": null,
@@ -537,6 +530,41 @@
           "context": 262144,
           "limits": "free tier — token from enter.pollinations.ai",
           "params_b": null
+        }
+      ],
+      "error": null
+    },
+    "llm7": {
+      "name": "LLM7",
+      "url": "https://llm7.io",
+      "models": [
+        {
+          "id": "qwen3-235b",
+          "name": "qwen3-235b",
+          "context": 240000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": 235.0
+        },
+        {
+          "id": "mistral-small-3.2",
+          "name": "mistral-small-3.2",
+          "context": null,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
+        {
+          "id": "codestral-latest",
+          "name": "codestral-latest",
+          "context": 32000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
+        {
+          "id": "devstral-small-2:24b",
+          "name": "devstral-small-2:24b",
+          "context": null,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": 24.0
         }
       ],
       "error": null
