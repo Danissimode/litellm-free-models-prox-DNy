@@ -8,7 +8,6 @@ import concurrent.futures
 import json
 import os
 import re
-import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from html import escape

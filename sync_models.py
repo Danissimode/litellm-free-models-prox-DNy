@@ -20,7 +20,6 @@ import logging
 import os
 import re
 import time
-import urllib.error
 import urllib.request
 
 from common import _is_free, _opener
