@@ -1,52 +1,6 @@
 {
   "entries": [
     {
-      "timestamp": "2026-05-25T13:02:15.704170+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "Qwen/Qwen2.5-VL-72B-Instruct"
-      ],
-      "removed": [
-        "swiss-ai/Apertus-70B-Instruct-2509"
-      ]
-    },
-    {
-      "timestamp": "2026-05-25T14:59:55.642554+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "Qwen/Qwen2.5-72B-Instruct",
-        "Qwen/Qwen3-VL-235B-A22B-Thinking",
-        "utter-project/EuroLLM-22B-Instruct-2512"
-      ],
-      "removed": [
-        "MiniMaxAI/MiniMax-M2",
-        "baidu/ERNIE-4.5-VL-424B-A47B-Base-PT",
-        "deepseek-ai/DeepSeek-V3.1",
-        "deepseek-ai/DeepSeek-V3.2-Exp",
-        "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-        "moonshotai/Kimi-K2-Instruct-0905",
-        "zai-org/GLM-4.5",
-        "zai-org/GLM-4.6-FP8"
-      ]
-    },
-    {
-      "timestamp": "2026-05-25T16:01:46.448519+00:00",
-      "provider": "huggingface",
-      "provider_label": "HuggingFace",
-      "added": [
-        "CohereLabs/c4ai-command-r7b-12-2024",
-        "Qwen/Qwen3-VL-30B-A3B-Instruct",
-        "Sao10K/L3-8B-Stheno-v3.2",
-        "aisingapore/Gemma-SEA-LION-v4-27B-IT",
-        "meta-llama/Llama-3.1-70B-Instruct",
-        "swiss-ai/Apertus-8B-Instruct-2509",
-        "zai-org/AutoGLM-Phone-9B-Multilingual"
-      ],
-      "removed": []
-    },
-    {
       "timestamp": "2026-05-25T17:30:57.646807+00:00",
       "provider": "cohere",
       "provider_label": "Cohere",
@@ -7776,6 +7730,47 @@
         "gemini-search-large",
         "llama-maverick",
         "qwen-coder-large"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-19T15:00:23.067694+00:00",
+      "provider": "together",
+      "provider_label": "Together AI",
+      "added": [
+        "ideogram/ideogram-4.0"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-19T15:00:23.067694+00:00",
+      "provider": "pollinations",
+      "provider_label": "Pollinations",
+      "added": [],
+      "removed": [
+        "claude",
+        "claude-fast",
+        "claude-large",
+        "claude-opus-4.6",
+        "claude-opus-4.7",
+        "gemini",
+        "gemini-3-flash",
+        "gemini-fast",
+        "gemini-flash-lite-3.1",
+        "gemini-large",
+        "gemini-search",
+        "gemini-search-fast",
+        "gemini-search-large",
+        "llama-maverick",
+        "qwen-coder-large"
+      ]
+    },
+    {
+      "timestamp": "2026-06-19T15:00:23.067694+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [
+        "kimi-k2.6"
       ],
       "removed": []
     }
