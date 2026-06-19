@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T18:32:09.927340+00:00",
+  "updated": "2026-06-19T19:31:07.513064+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -357,6 +357,13 @@
           "params_b": null
         },
         {
+          "id": "mistralai/mistral-large-3-675b-instruct-2512",
+          "name": "mistralai/mistral-large-3-675b-instruct-2512",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 675.0
+        },
+        {
           "id": "mistralai/mistral-medium-3.5-128b",
           "name": "mistralai/mistral-medium-3.5-128b",
           "context": null,
@@ -411,13 +418,6 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": 4.0
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "name": "openai/gpt-oss-120b",
-          "context": null,
-          "limits": "40 req/min",
-          "params_b": 120.0
         },
         {
           "id": "qwen/qwen3-next-80b-a3b-instruct",
