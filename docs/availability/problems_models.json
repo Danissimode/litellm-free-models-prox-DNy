@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T09:31:07.390394+00:00",
+  "updated": "2026-06-19T11:29:18.808421+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -18,13 +18,6 @@
           "context": 128000,
           "limits": "20 req/min · 50 req/day",
           "params_b": 12.0
-        },
-        {
-          "id": "openai/gpt-oss-20b:free",
-          "name": "OpenAI: gpt-oss-20b (free)",
-          "context": 131072,
-          "limits": "20 req/min · 50 req/day",
-          "params_b": 20.0
         }
       ],
       "error": null
