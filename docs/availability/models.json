@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T22:17:36.220638+00:00",
+  "updated": "2026-06-19T23:19:48.491740+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -153,55 +153,6 @@
       "url": "https://console.groq.com",
       "models": [
         {
-          "id": "openai/gpt-oss-20b",
-          "name": "openai/gpt-oss-20b",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "reasoning"
-          ],
-          "params_b": 20.0
-        },
-        {
-          "id": "groq/compound-mini",
-          "name": "groq/compound-mini",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "llama-3.1-8b-instant",
-          "name": "llama-3.1-8b-instant",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 8.0
-        },
-        {
-          "id": "groq/compound",
-          "name": "groq/compound",
-          "context": 131072,
-          "limits": "varies per model",
-          "params_b": null
-        },
-        {
-          "id": "llama-3.3-70b-versatile",
-          "name": "llama-3.3-70b-versatile",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice"
-          ],
-          "params_b": 70.0
-        },
-        {
           "id": "openai/gpt-oss-120b",
           "name": "openai/gpt-oss-120b",
           "context": 131072,
@@ -213,19 +164,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-          "context": 131072,
-          "limits": "varies per model",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "response_schema",
-            "vision"
-          ],
-          "params_b": 17.0
         },
         {
           "id": "qwen/qwen3-32b",
@@ -247,11 +185,73 @@
           "params_b": 7.0
         },
         {
+          "id": "llama-3.3-70b-versatile",
+          "name": "llama-3.3-70b-versatile",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 70.0
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "reasoning"
+          ],
+          "params_b": 20.0
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "llama-3.1-8b-instant",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice"
+          ],
+          "params_b": 8.0
+        },
+        {
           "id": "qwen/qwen3.6-27b",
           "name": "qwen/qwen3.6-27b",
           "context": 131072,
           "limits": "varies per model",
           "params_b": 27.0
+        },
+        {
+          "id": "groq/compound-mini",
+          "name": "groq/compound-mini",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
+        },
+        {
+          "id": "groq/compound",
+          "name": "groq/compound",
+          "context": 131072,
+          "limits": "varies per model",
+          "params_b": null
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "context": 131072,
+          "limits": "varies per model",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "response_schema",
+            "vision"
+          ],
+          "params_b": 17.0
         }
       ],
       "error": null
@@ -260,6 +260,18 @@
       "name": "Cerebras",
       "url": "https://cloud.cerebras.ai",
       "models": [
+        {
+          "id": "zai-glm-4.7",
+          "name": "zai-glm-4.7",
+          "context": 128000,
+          "limits": "1M tokens/day",
+          "capabilities": [
+            "function_calling",
+            "tool_choice",
+            "reasoning"
+          ],
+          "params_b": null
+        },
         {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
@@ -272,18 +284,6 @@
             "reasoning"
           ],
           "params_b": 120.0
-        },
-        {
-          "id": "zai-glm-4.7",
-          "name": "zai-glm-4.7",
-          "context": 128000,
-          "limits": "1M tokens/day",
-          "capabilities": [
-            "function_calling",
-            "tool_choice",
-            "reasoning"
-          ],
-          "params_b": null
         }
       ],
       "error": null
@@ -1754,6 +1754,20 @@
           "params_b": null
         },
         {
+          "id": "perplexity-deep",
+          "name": "perplexity-deep",
+          "context": 128000,
+          "limits": "free tier — token from enter.pollinations.ai",
+          "params_b": null
+        },
+        {
+          "id": "perplexity",
+          "name": "perplexity",
+          "context": 200000,
+          "limits": "free tier — token from enter.pollinations.ai",
+          "params_b": null
+        },
+        {
           "id": "kimi",
           "name": "kimi",
           "context": 262000,
@@ -1893,9 +1907,9 @@
           "params_b": 235.0
         },
         {
-          "id": "kimi-k2.6",
-          "name": "kimi-k2.6",
-          "context": 240000,
+          "id": "minimax-m2.7",
+          "name": "minimax-m2.7",
+          "context": 180000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": null
         },
