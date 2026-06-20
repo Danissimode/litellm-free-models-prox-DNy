@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T20:25:38.705965+00:00",
+  "updated": "2026-06-20T21:26:49.450413+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
@@ -404,6 +404,13 @@
           "context": null,
           "limits": "40 req/min",
           "params_b": 4.0
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "name": "openai/gpt-oss-20b",
+          "context": null,
+          "limits": "40 req/min",
+          "params_b": 20.0
         },
         {
           "id": "qwen/qwen3-next-80b-a3b-instruct",
