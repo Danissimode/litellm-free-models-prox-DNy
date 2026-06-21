@@ -2,18 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-29T22:29:36.450415+00:00",
-      "provider": "github",
-      "provider_label": "GitHub Models",
-      "added": [
-        "azureml://registries/azure-openai/models/gpt-4o-mini/versions/1",
-        "azureml://registries/azure-openai/models/gpt-4o/versions/2",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-405B-Instruct/versions/1",
-        "azureml://registries/azureml-meta/models/Meta-Llama-3.1-8B-Instruct/versions/1"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-29T22:29:36.450415+00:00",
       "provider": "cloudflare",
       "provider_label": "Cloudflare AI",
       "added": [
@@ -7689,6 +7677,16 @@
         "command-r-plus-08-2024",
         "command-r7b-12-2024",
         "command-r7b-arabic-02-2025"
+      ]
+    },
+    {
+      "timestamp": "2026-06-21T01:46:52.932830+00:00",
+      "provider": "cohere",
+      "provider_label": "Cohere",
+      "added": [],
+      "removed": [
+        "c4ai-aya-expanse-32b",
+        "c4ai-aya-vision-32b"
       ]
     }
   ]
