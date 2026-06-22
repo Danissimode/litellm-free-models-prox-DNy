@@ -1,10 +1,17 @@
 {
-  "updated": "2026-06-22T07:50:40.408196+00:00",
+  "updated": "2026-06-22T09:56:19.156933+00:00",
   "providers": {
     "openrouter": {
       "name": "OpenRouter",
       "url": "https://openrouter.ai",
       "models": [
+        {
+          "id": "nex-agi/nex-n2-pro:free",
+          "name": "Nex AGI: Nex-N2-Pro (free)",
+          "context": 262144,
+          "limits": "20 req/min · 50 req/day",
+          "params_b": null
+        },
         {
           "id": "nvidia/nemotron-nano-12b-v2-vl:free",
           "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
