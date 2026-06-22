@@ -2,31 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-30T00:25:42.653231+00:00",
-      "provider": "sambanova",
-      "provider_label": "SambaNova",
-      "added": [
-        "DeepSeek-V3.1",
-        "DeepSeek-V3.2",
-        "Llama-4-Maverick-17B-128E-Instruct",
-        "Meta-Llama-3.3-70B-Instruct",
-        "MiniMax-M2.7",
-        "gemma-3-12b-it",
-        "gemma-4-31B-it",
-        "gpt-oss-120b"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-30T00:25:42.653231+00:00",
-      "provider": "nvidia",
-      "provider_label": "NVIDIA NIM",
-      "added": [
-        "nvidia/vila"
-      ],
-      "removed": []
-    },
-    {
-      "timestamp": "2026-05-30T00:25:42.653231+00:00",
       "provider": "pollinations",
       "provider_label": "Pollinations",
       "added": [],
@@ -7677,6 +7652,24 @@
       "provider_label": "HuggingFace",
       "added": [
         "Qwen/Qwen3-235B-A22B-Thinking-2507"
+      ],
+      "removed": []
+    },
+    {
+      "timestamp": "2026-06-22T07:50:40.413907+00:00",
+      "provider": "huggingface",
+      "provider_label": "HuggingFace",
+      "added": [],
+      "removed": [
+        "Qwen/Qwen3-235B-A22B-Thinking-2507"
+      ]
+    },
+    {
+      "timestamp": "2026-06-22T07:50:40.413907+00:00",
+      "provider": "pollinations",
+      "provider_label": "Pollinations",
+      "added": [
+        "perplexity-fast"
       ],
       "removed": []
     }
