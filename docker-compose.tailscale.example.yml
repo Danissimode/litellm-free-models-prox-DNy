@@ -1,0 +1,26 @@
+# =============================================================================
+# docker-compose.tailscale.example.yml  —  OPT-IN REMOTE BIND
+# =============================================================================
+# Copy to docker-compose.tailscale.yml and edit before use:
+#   cp docker-compose.tailscale.example.yml docker-compose.tailscale.yml
+#
+# Run together with the base file:
+#   docker compose -f docker-compose.yml -f docker-compose.tailscale.yml up -d
+#
+# *** WARNING ***
+# This publishes LiteLLM on an additional interface reachable outside
+# 127.0.0.1. Only use on a network you trust (e.g. your own Tailscale tailnet)
+# AND after creating per-agent virtual keys (scripts/create-agent-keys.sh).
+# Never bind directly to 0.0.0.0.
+#
+# Find your Tailscale IPv4:
+#   tailscale ip -4
+# =============================================================================
+
+services:
+  litellm:
+    # Note: because compose *merges* (not replaces) the `ports` list from the
+    # base file, the 127.0.0.1:4000 binding from docker-compose.yml is kept
+    # automatically. The line below ADDS the Tailscale interface.
+    ports:
+      - "100.x.y.z:4000:4000"   # ← replace with your real tailscale ip -4

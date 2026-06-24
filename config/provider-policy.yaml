@@ -1,0 +1,49 @@
+# =============================================================================
+# provider-policy.yaml — FREE_ONLY admission rules
+# =============================================================================
+# Controls which models auto-discovery (sync_models.py) is allowed to register.
+# Loaded by sync_models.py at runtime. When FREE_ONLY=true (default in .env),
+# BOTH the provider's own free marker AND these rules must pass.
+#
+# Allow if ANY of:
+#   - provider's API explicitly marks the model free (pricing == 0, ":free"
+#     suffix, "-Free" suffix, etc. — see sync_models.py fetch_*)
+#   - model id matches a regex in model-allowlist.yaml
+# Deny if ANY of:
+#   - pricing is unknown / ambiguous (unless allowlisted)
+#   - model id matches a regex in model-denylist.yaml
+#   - model is marked deprecated/unstable by the provider
+#   - provider is in the paid_providers list AND model is not allowlisted
+# =============================================================================
+
+# Providers whose /models APIs do NOT expose pricing, so every model is
+# ambiguous unless explicitly allowlisted. For these we trust the curated
+# fetch_* logic in sync_models.py (which already filters to free tiers).
+pricing_unknown_providers:
+  - groq
+  - cerebras
+  - sambanova
+  - nvidia_nim
+  - mistral
+  - github
+  - cloudflare
+  - huggingface
+  - cohere
+  - pollinations
+  - kluster
+  - llm7
+  - zai
+
+# Providers that are almost always PAID unless a model is explicitly marked
+# free. Auto-discovery must NOT add these by default; allow only via
+# model-allowlist.yaml or an explicit ":free"/"-Free" marker.
+paid_providers:
+  - openai          # OPENAI_API_KEY is paid; leave blank unless paid fallback is explicitly enabled
+  - anthropic
+  - perplexity
+  - together_ai     # only -Free / pricing==0 variants are free
+  - openrouter      # only :free variants are free (enforced by fetch_openrouter)
+
+# Hard rule: never auto-register paid/credit-card-gated providers unless the
+# operator explicitly opts into paid fallback via env.
+block_paid_by_default: true

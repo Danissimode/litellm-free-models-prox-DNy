@@ -1,52 +1,109 @@
+# =============================================================================
+# Aion Model Gateway — local-only docker-compose
+# =============================================================================
+# Self-contained: brings up litellm + postgres + model-sync on a single local
+# network. LiteLLM binds ONLY to 127.0.0.1:4000 by default.
+#
+# For remote / Tailscale access, see docker-compose.tailscale.example.yml and
+# the "Remote access / Tailscale warning" section of README.md.
+#
+# Before first run:
+#   cp .env.example .env
+#   # set LITELLM_MASTER_KEY (must start with sk-, not a demo value)
+#   # set POSTGRES_PASSWORD
+#   ./scripts/preflight.sh        # validates env before booting
+#   docker compose up -d
+# =============================================================================
+
 services:
+  postgres:
+    # Local persistence for model configs + usage logs. NOT published to the
+    # host by default (no `ports:`) — only reachable inside the compose network.
+    image: postgres:16-alpine
+    container_name: aion-gateway-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-litellm}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-litellm}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-litellm} -d ${POSTGRES_DB:-litellm}"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - aion-model-gateway
+
   litellm:
-    image: ghcr.io/berriai/litellm:main-v1.84.0-rc.1
-    container_name: litellm
+    # LiteLLM proxy. Pinned to a specific stable tag — update deliberately,
+    # never use `:main-latest` or an `-rc` tag in production (see README
+    # "Updating from upstream"). Latest stable as of this pin: v1.83.14.
+    image: ghcr.io/berriai/litellm:main-v1.83.14-stable
+    container_name: aion-gateway-litellm
     restart: unless-stopped
     ports:
+      # LOCAL ONLY. Do not change to "4000:4000" or "0.0.0.0:4000:4000".
+      # Remote bind is opt-in via docker-compose.tailscale.example.yml.
       - "127.0.0.1:4000:4000"
-      - "100.87.39.48:4000:4000"
     env_file:
       - .env
+    environment:
+      # Run the preflight env check before LiteLLM boots; non-zero exit aborts.
+      PREFLIGHT: "1"
     volumes:
       - ./config.yaml:/app/config.yaml:ro
-    command:
-      - "--config"
-      - "/app/config.yaml"
-      - "--port"
-      - "4000"
-      - "--num_workers"
-      - "2"
+      - ./scripts/preflight.sh:/app/preflight.sh:ro
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        /app/preflight.sh || exit 1
+        exec litellm --config /app/config.yaml --port 4000 --num_workers 2
+    depends_on:
+      postgres:
+        condition: service_healthy
     networks:
-      - postgres_default
-      - langfuse_default
+      - aion-model-gateway
     healthcheck:
       test: ["CMD", "python3", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:4000/health/liveliness', timeout=3).status==200 else 1)"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 60s
+      start_period: 90s
 
   model-sync:
+    # Auto-discovery of free models every 8h via LiteLLM Management API.
+    # Adds named model routes (or/..., groq/..., etc.) — never modifies the
+    # manual routing groups (smart/fast/reasoning/coder/long/vision/aion-*).
     image: python:3.12-slim
-    container_name: litellm-model-sync
+    container_name: aion-gateway-model-sync
     restart: unless-stopped
     env_file:
       - .env
     environment:
       LITELLM_BASE_URL: http://litellm:4000
-      SYNC_INTERVAL_HOURS: "8"
-      STARTUP_DELAY_SECONDS: "60"
+      SYNC_INTERVAL_HOURS: ${SYNC_INTERVAL_HOURS:-8}
+      STARTUP_DELAY_SECONDS: ${STARTUP_DELAY_SECONDS:-60}
+      FREE_ONLY: ${FREE_ONLY:-true}
     volumes:
       - ./sync_models.py:/app/sync_models.py:ro
+      - ./common.py:/app/common.py:ro
+      - ./config:/app/config:ro
     command: python /app/sync_models.py
-    networks:
-      - postgres_default
     depends_on:
-      - litellm
+      litellm:
+        condition: service_healthy
+    networks:
+      - aion-model-gateway
 
 networks:
-  postgres_default:
-    external: true
-  langfuse_default:
-    external: true
+  aion-model-gateway:
+    name: aion-model-gateway
+    driver: bridge
+
+volumes:
+  postgres-data:
+    name: aion-gateway-postgres-data
