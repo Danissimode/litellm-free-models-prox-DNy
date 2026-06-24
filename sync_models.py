@@ -14,11 +14,15 @@ Does NOT touch routing groups (smart/fast/etc.) — only adds named routes
 like or/llama-3.3-70b, groq/llama-3.3-70b-versatile, etc.
 """
 
+import argparse
 import concurrent.futures
+import datetime
 import json
 import logging
 import os
+import pathlib
 import re
+import sys
 import time
 import urllib.request
 
@@ -40,6 +44,12 @@ CLEANUP_STALE = os.environ.get("CLEANUP_STALE_MODELS", "").lower() in (
     "true",
     "yes",
 )
+# FREE_ONLY=true (default): only register models the provider marks free or
+# that are explicitly allowlisted (see config/provider-policy.yaml).
+FREE_ONLY = os.environ.get("FREE_ONLY", "true").lower() in ("1", "true", "yes")
+
+CONFIG_DIR = pathlib.Path(os.environ.get("CONFIG_DIR", "/app/config"))
+SNAPSHOT_DIR = pathlib.Path(os.environ.get("SNAPSHOT_DIR", "/app/snapshots"))
 
 # Community-maintained list of free LLM APIs (auto-generated, updated frequently).
 CHEAHJS_README_URL = (
@@ -47,6 +57,35 @@ CHEAHJS_README_URL = (
     "/refs/heads/main/README.md"
 )
 
+# Manual routing groups that auto-sync must NEVER create or delete via the
+# Management API. These live in config.yaml and are curated by hand.
+PROTECTED_GROUP_NAMES = frozenset(
+    {
+        "smart",
+        "fast",
+        "reasoning",
+        "coder",
+        "long",
+        "vision",
+        "aion-architect",
+        "aion-programmer",
+        "aion-reviewer",
+        "aion-fast",
+    }
+)
+
+# Name prefixes that indicate a model is a routing group rather than a
+# discovered route. sync never adds/deletes these.
+GROUP_NAME_PREFIXES = (
+    "smart",
+    "fast",
+    "reasoning",
+    "coder",
+    "long",
+    "vision",
+    "aion-",
+    "inbox-zero",
+)
 
 # ── HTTP helpers (stdlib only) ────────────────────────────────────────────────
 
@@ -91,6 +130,114 @@ def _get_litellm(path):
         f"{LITELLM_BASE}{path}",
         headers={"Authorization": f"Bearer {LITELLM_KEY}"},
     )
+
+
+# ── Policy: allowlist / denylist / free-only ─────────────────────────────────
+# config/model-allowlist.yaml, model-denylist.yaml, provider-policy.yaml are
+# intentionally simple (lists of regex / string scalars under one key). We parse
+# them with a tiny hand-rolled reader so sync stays dependency-free and runs in
+# the stock python:3.12-slim image.
+
+
+def _load_policy_list(path, key):
+    """Read a single-key list-of-scalars YAML file. Returns a list of strings."""
+    if not path.exists():
+        return []
+    items = []
+    in_section = False
+    for raw in path.read_text().splitlines():
+        line = raw.split("#", 1)[0].rstrip()
+        if not line.strip():
+            continue
+        stripped = line.strip()
+        if not line.startswith(" ") and not line.startswith("\t") and stripped.endswith(":"):
+            in_section = stripped[:-1] == key
+            continue
+        if in_section and stripped.startswith("- "):
+            val = stripped[2:].strip().strip('"').strip("'")
+            if val:
+                items.append(val)
+    return items
+
+
+def _compile(patterns):
+    return [re.compile(p) for p in patterns]
+
+
+_ALLOW = _compile(_load_policy_list(CONFIG_DIR / "model-allowlist.yaml", "allow"))
+_DENY = _compile(_load_policy_list(CONFIG_DIR / "model-denylist.yaml", "deny"))
+_PAID_PROVIDERS = set(
+    _load_policy_list(CONFIG_DIR / "provider-policy.yaml", "paid_providers")
+)
+
+
+def _matches_any(model_str, compiled_patterns):
+    return any(p.search(model_str) for p in compiled_patterns)
+
+
+def admission_decision(litellm_model, provider_paid, free_marker):
+    """
+    Decide whether a discovered model may be registered.
+
+    Returns (admit: bool, reason: str).
+      litellm_model: e.g. 'openrouter/x:free' or 'openai/gpt-4'
+      provider_paid: True if this provider is in provider-policy.paid_providers
+      free_marker:   True if the fetcher already verified the model is free
+                     (pricing==0, ':free' suffix, curated free-tier list, etc.)
+    """
+    # Deny always wins.
+    if _matches_any(litellm_model, _DENY):
+        return False, "denylisted"
+    # Explicit allowlist admits regardless of ambiguity.
+    if _matches_any(litellm_model, _ALLOW):
+        return True, "allowlisted"
+    # FREE_ONLY policy:
+    if FREE_ONLY:
+        if provider_paid and not free_marker:
+            return False, "paid provider, not marked free"
+        if not free_marker:
+            # Pricing unknown / ambiguous and not allowlisted → quarantine,
+            # do NOT silently register (would risk routing to paid models).
+            return False, "ambiguous pricing (quarantined)"
+        return True, "free-confirmed"
+    # FREE_ONLY=false: operator opted into broader admission; denylist still
+    # applies above.
+    return True, "free-only disabled"
+
+
+def is_protected_route_name(model_name):
+    """True for names that belong to manual routing groups (never sync these)."""
+    return model_name in PROTECTED_GROUP_NAMES or model_name.startswith(
+        GROUP_NAME_PREFIXES
+    )
+
+
+# ── Snapshots ────────────────────────────────────────────────────────────────
+
+
+def snapshot_existing_models(existing):
+    """Persist a JSON snapshot of current LiteLLM model entries before mutating.
+
+    Capped retention: keep the last 10 snapshots. Failures here are non-fatal —
+    they must not block a sync run, only warn.
+    """
+    try:
+        SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        stamp = datetime.datetime.now(datetime.timezone.utc).strftime(
+            "%Y%m%dT%H%M%SZ"
+        )
+        path = SNAPSHOT_DIR / f"models-{stamp}.json"
+        path.write_text(json.dumps(list(existing.keys()), indent=2))
+        # Retain only the 10 most recent.
+        snaps = sorted(SNAPSHOT_DIR.glob("models-*.json"))
+        for old in snaps[:-10]:
+            old.unlink()
+        log.info(f"[snapshot] saved {path.name} ({len(existing)} models)")
+    except Exception as e:  # pragma: no cover - defensive
+        log.warning(f"[snapshot] could not save snapshot: {e}")
+
+
+
 
 
 # ── LiteLLM state ─────────────────────────────────────────────────────────────
@@ -734,8 +881,19 @@ PROVIDERS = [
 # ── Main sync ─────────────────────────────────────────────────────────────────
 
 
-def sync():
-    log.info("=== Model sync started ===")
+def sync(dry_run=False, validate_only=False):
+    """
+    Discover and register free models.
+
+    Modes:
+      dry_run (default False): compute the add/delete plan but do NOT call the
+        Management API. Prints what *would* change.
+      validate_only (default False): run the discovery + policy admission, then
+        exit without touching LiteLLM at all (not even snapshot). Useful as a
+        CI / preflight check: "would sync produce any paid/ambiguous routes?"
+    """
+    mode = "VALIDATE-ONLY" if validate_only else ("DRY-RUN" if dry_run else "LIVE")
+    log.info(f"=== Model sync started [{mode}] FREE_ONLY={FREE_ONLY} ===")
     if CLEANUP_STALE:
         log.info("Stale model cleanup enabled (CLEANUP_STALE_MODELS=true)")
 
@@ -745,7 +903,8 @@ def sync():
     existing_set = set(existing.keys())
     log.info(f"Currently {len(existing_set)} litellm model entries registered")
 
-    added = skipped = errors = deleted = 0
+    added = skipped = errors = deleted = quarantined = 0
+    failed_providers = []
     to_delete = []
     to_add = []
 
@@ -769,8 +928,16 @@ def sync():
         # To maintain deterministic behavior and avoid race conditions with existing_set,
         # we process the results sequentially after they are fetched.
         for future in futures:
-            provider, models = future.result()
+            try:
+                provider, models = future.result()
+            except Exception as e:
+                # A single provider blowing up must not abort the whole sync.
+                log.error(f"[fetch] provider failed during discovery: {e}")
+                failed_providers.append(str(e)[:120])
+                continue
             fetched_results.append((provider, models))
+            if models is None:
+                failed_providers.append(f"{provider['name']}: no result (skipped)")
 
     for provider, models in fetched_results:
         if models is None:
@@ -783,14 +950,25 @@ def sync():
             else provider.get("api_base")
         )
 
-        # Remove models that are no longer offered by this provider
-        if CLEANUP_STALE and models is not None:
+        # Is this provider one we treat as paid-by-default? (provider-policy.yaml)
+        provider_paid = _provider_is_paid(provider)
+
+        # Remove models that are no longer offered by this provider.
+        # IMPORTANT: never delete protected group routes (smart/fast/aion-* …).
+        if CLEANUP_STALE and models is not None and not validate_only:
             expected_key = f"os.environ/{provider['env_key']}"
             current = {provider["litellm_fmt"](mid) for mid in models}
             for model_str, info in list(existing.items()):
-                if info["api_key"] == expected_key and model_str not in current:
-                    to_delete.append((model_str, info["id"]))
-                    existing_set.discard(model_str)
+                if info["api_key"] != expected_key or model_str in current:
+                    continue
+                if is_protected_route_name(model_str):
+                    log.info(
+                        f"  ⛔ refusing to delete protected group route "
+                        f"{model_str} (manual)"
+                    )
+                    continue
+                to_delete.append((model_str, info["id"]))
+                existing_set.discard(model_str)
 
         for mid in models:
             litellm_model = provider["litellm_fmt"](mid)
@@ -799,6 +977,20 @@ def sync():
                 continue
 
             model_name = provider["name_fmt"](mid)
+            # Admission policy (free-only / allow / deny / quarantine).
+            admit, reason = admission_decision(
+                litellm_model=litellm_model,
+                provider_paid=provider_paid,
+                free_marker=True,  # fetch_* already filtered to free tier
+            )
+            if not admit:
+                if reason == "ambiguous pricing (quarantined)":
+                    quarantined += 1
+                    log.info(f"  ⏸  quarantine: {litellm_model} ({reason})")
+                else:
+                    log.info(f"  ✋ skip {litellm_model}: {reason}")
+                continue
+
             to_add.append(
                 {
                     "model_name": model_name,
@@ -806,10 +998,35 @@ def sync():
                     "api_key_env": provider["env_key"],
                     "rpm": provider["rpm"],
                     "api_base": api_base,
+                    "reason": reason,
                 }
             )
             existing_set.add(litellm_model)
 
+    # --- validate-only: report and stop, no writes --------------------------
+    if validate_only:
+        log.info(
+            f"[validate-only] would add {len(to_add)}, "
+            f"quarantine {quarantined}, delete {len(to_delete)} "
+            f"(no changes applied)"
+        )
+        _emit_report(0, 0, skipped, quarantined, errors, failed_providers)
+        return
+
+    # --- snapshot before mutating (defensive, non-fatal) --------------------
+    if not dry_run:
+        snapshot_existing_models(existing)
+
+    # --- dry-run: report the plan and stop ----------------------------------
+    if dry_run:
+        for item in to_add:
+            log.info(f"  [would add] {item['model_name']} ({item['litellm_model']})")
+        for model_str, _mid in to_delete:
+            log.info(f"  [would del] {model_str}")
+        _emit_report(len(to_add), len(to_delete), skipped, quarantined, errors, failed_providers)
+        return
+
+    # --- live apply ---------------------------------------------------------
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         future_to_delete = {
             executor.submit(delete_model, model_id): model_str
@@ -854,10 +1071,32 @@ def sync():
                 )
                 errors += 1
 
+    _emit_report(added, deleted, skipped, quarantined, errors, failed_providers)
+
+
+def _provider_is_paid(provider):
+    """
+    Map a provider entry to its LiteLLM model-string prefix and check whether
+    that prefix is listed under provider-policy.yaml::paid_providers.
+    """
+    # Build one representative litellm_model string from the provider's
+    # litellm_fmt, then check if its first path segment is a paid provider.
+    sample = provider["litellm_fmt"]("__probe__")
+    first = sample.split("/")[0]
+    return first in _PAID_PROVIDERS
+
+
+def _emit_report(added, deleted, skipped, quarantined, errors, failed_providers):
     log.info(
         f"=== Done: +{added} added, -{deleted} removed, "
-        f"{skipped} already existed, {errors} errors ==="
+        f"{skipped} already existed, {quarantined} quarantined, "
+        f"{errors} errors ==="
     )
+    if failed_providers:
+        log.warning(
+            f"Failed/unreachable providers ({len(failed_providers)}): "
+            + "; ".join(sorted(set(failed_providers)))
+        )
 
 
 def wait_for_litellm():
@@ -873,8 +1112,56 @@ def wait_for_litellm():
     log.warning("LiteLLM did not become ready in time — proceeding anyway.")
 
 
+def _parse_args(argv):
+    p = argparse.ArgumentParser(
+        description="Aion Model Gateway — free-model auto-discovery sync.",
+    )
+    p.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Compute add/delete plan and print it, but do not change LiteLLM.",
+    )
+    p.add_argument(
+        "--validate-only",
+        action="store_true",
+        help=(
+            "Run discovery + policy admission and exit. No snapshot, no writes. "
+            "Use as a preflight: exit 0 means no paid/ambiguous models would be "
+            "registered."
+        ),
+    )
+    p.add_argument(
+        "--once",
+        action="store_true",
+        help="Run a single sync pass and exit (skip the wait-for-ready + loop).",
+    )
+    p.add_argument(
+        "--no-wait",
+        action="store_true",
+        help="Skip the LiteLLM readiness wait (use with --once in CI).",
+    )
+    return p.parse_args(argv)
+
+
 if __name__ == "__main__":
-    wait_for_litellm()
+    args = _parse_args(sys.argv[1:])
+
+    # validate-only and dry-run are single-pass by nature.
+    single_pass = args.once or args.dry_run or args.validate_only
+
+    if single_pass:
+        if not args.no_wait and not args.dry_run and not args.validate_only:
+            wait_for_litellm()
+        try:
+            sync(dry_run=args.dry_run, validate_only=args.validate_only)
+        except Exception as e:
+            log.error(f"Sync failed: {e}")
+            sys.exit(1)
+        sys.exit(0)
+
+    # Long-running daemon mode (the docker compose `model-sync` service).
+    if not args.no_wait:
+        wait_for_litellm()
     while True:
         try:
             sync()

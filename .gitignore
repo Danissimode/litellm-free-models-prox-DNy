@@ -1,4 +1,49 @@
+# ── Secrets / env ────────────────────────────────────────────────────────────
 .env
+.env.*
+!.env.example
+!.env.*.example
+secrets/
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+
+# ── Data & runtime artifacts ─────────────────────────────────────────────────
 *.log
+logs/
+tmp/
+.cache/
+postgres-data/
+data/
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# ── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# ── Docker override / local compose variants ────────────────────────────────
+docker-compose.override.yml
+docker-compose.tailscale.yml
+docker-compose.local.yml
+# Keep the example checked in:
+!docker-compose.tailscale.example.yml
+
+# ── OS / editor ──────────────────────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,24 @@
+# =============================================================================
+# model-allowlist.yaml — manual free-model overrides
+# =============================================================================
+# Regexes matched against the LiteLLM-side model string
+# (e.g. "openrouter/meta-llama/llama-3.3-70b-instruct:free"). Any match
+# ADMITS a model even if its pricing is ambiguous — use only for models you
+# have verified are genuinely free.
+#
+# A model matched by BOTH allowlist and denylist is DENIED (deny wins).
+# Keep entries anchored where possible to avoid accidental over-matching.
+# =============================================================================
+
+allow:
+  # OpenRouter :free variants are guaranteed free by OpenRouter's pricing API.
+  - 'openrouter/.*:free$'
+
+  # Together AI -Free suffix variants.
+  - 'together_ai/.*-Free$'
+
+  # GitHub Models: the whole catalog is on a free (rate-limited) tier.
+  - '^github/.+$'
+
+  # Add your own verified-free overrides below, e.g.:
+  # - '^groq/llama-3.3-70b-versatile$'

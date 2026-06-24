@@ -1,0 +1,36 @@
+# =============================================================================
+# model-denylist.yaml — never auto-register these models
+# =============================================================================
+# Regexes matched against the LiteLLM-side model string. A match ALWAYS blocks
+# registration, even if the same model is allowlisted. Use for:
+#   - models known to require credit-card / paid billing
+#   - deprecated or unstable models
+#   - non-chat models that leak through provider filters (whisper/tts/embed)
+# =============================================================================
+
+deny:
+  # Paid / credit-card-gated families (OpenAI).
+  - '^openai/gpt-4$'
+  - '^openai/gpt-4-turbo$'
+  - '^openai/gpt-4o$'
+  - '^openai/o1$'
+  - '^openai/o3$'
+  - '^openai/gpt-5$'
+  - '^openai/gpt-5\..*$'
+
+  # Anthropic (paid unless explicitly marked free upstream).
+  - '^anthropic/.*$'
+
+  # Non-chat modalities that sometimes leak through /models endpoints.
+  - 'embed'
+  - 'whisper'
+  - 'tts'
+  - 'rerank'
+  - 'guard'
+  - 'moderation'
+  - 'stable-diffusion'
+  - 'dall-e'
+  - 'cogview'
+
+  # Add known-unstable or deprecated models here, e.g.:
+  # - '^groq/old-experimental-model$'
