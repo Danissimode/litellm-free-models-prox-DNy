@@ -381,107 +381,107 @@ model_list:
     litellm_params:
       model: openai/openai/gpt-5
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/gpt-5-mini
     litellm_params:
       model: openai/openai/gpt-5-mini
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/gpt-5-nano
     litellm_params:
       model: openai/openai/gpt-5-nano
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/gpt-4.1
     litellm_params:
       model: openai/openai/gpt-4.1
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/gpt-4.1-mini
     litellm_params:
       model: openai/openai/gpt-4.1-mini
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/gpt-4o
     litellm_params:
       model: openai/openai/gpt-4o
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/gpt-4o-mini
     litellm_params:
       model: openai/openai/gpt-4o-mini
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/o3
     litellm_params:
       model: openai/openai/o3
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/o3-mini
     litellm_params:
       model: openai/openai/o3-mini
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/o4-mini
     litellm_params:
       model: openai/openai/o4-mini
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/o1
     litellm_params:
       model: openai/openai/o1
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/grok-3
     litellm_params:
       model: openai/xai/grok-3
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/grok-3-mini
     litellm_params:
       model: openai/xai/grok-3-mini
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/deepseek-r1
     litellm_params:
       model: openai/deepseek/deepseek-r1
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/deepseek-v3
     litellm_params:
       model: openai/deepseek/deepseek-v3-0324
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/codestral-2501
     litellm_params:
       model: openai/mistral-ai/codestral-2501
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/mistral-medium
     litellm_params:
       model: openai/mistral-ai/mistral-medium-2505
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/phi-4
     litellm_params:
       model: openai/microsoft/phi-4
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/cohere-command-a
     litellm_params:
       model: openai/cohere/cohere-command-a
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/llama-3.1-405b
     litellm_params:
       model: openai/meta/meta-llama-3.1-405b-instruct
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: gh/mai-ds-r1
     litellm_params:
       model: openai/microsoft/mai-ds-r1
       api_base: https://models.github.ai/inference
-      api_key: os.environ/GITHUB_API_KEY
+      api_key: os.environ/GH_MODELS_TOKEN
   - model_name: oa/gpt-5-nano
     litellm_params:
       model: openai/gpt-5-nano

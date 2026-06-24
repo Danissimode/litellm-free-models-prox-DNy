@@ -70,6 +70,45 @@ def test_config_has_no_literal_api_keys():
         ), f"literal api_key in config.yaml: {m.group(0)!r}"
 
 
+def test_config_env_vars_match_env_example():
+    """Every os.environ/XXX in config.yaml should have a matching XXX= in .env.example."""
+    # Extract env var names from config.yaml (pattern: os.environ/VARNAME)
+    config_text = CONFIG.read_text()
+    config_vars = set()
+    for part in config_text.split("os.environ/"):
+        # Take only word chars immediately after os.environ/
+        m = re.match(r"(\w+)", part)
+        if m:
+            config_vars.add(m.group(1))
+
+    env_text = ENV_EXAMPLE.read_text()
+    env_vars = set()
+    for m in re.finditer(r"^([A-Z_][A-Z0-9_]*)\s*=", env_text, re.M):
+        env_vars.add(m.group(1))
+
+    # Env vars intentionally absent from .env.example (commented out or special).
+    intentionally_absent = {
+        "OPENAI_API_KEY",  # paid — intentionally commented out
+        "INBOX_ZERO_MAIN_MODEL",
+        "INBOX_ZERO_ECONOMY_MODEL",
+        "INBOX_ZERO_CHAT_MODEL",
+        "INBOX_ZERO_DRAFT_MODEL",
+        "INBOX_ZERO_NANO_MODEL",
+        "INBOX_ZERO_MAIN_FALLBACK_MODEL",
+        # Optional second keys for load balancing (documented as comments in .env.example).
+        "GROQ_API_KEY_2",
+        "GEMINI_API_KEY_2",
+        "GEMINI_API_KEY_3",
+        "GEMINI_API_KEY_7",
+        "GEMINI_API_KEY_8",
+    }
+
+    missing = config_vars - env_vars - intentionally_absent
+    assert not missing, (
+        f"config.yaml references env vars not in .env.example: {sorted(missing)}"
+    )
+
+
 def test_no_real_provider_keys_committed():
     """Scan repo (minus docs/, .git, .env.example) for real-looking keys."""
     patterns = [

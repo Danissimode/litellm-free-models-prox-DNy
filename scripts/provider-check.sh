@@ -101,6 +101,14 @@ else
   echo "  [SKIPPED]  Cloudflare (CLOUDFLARE_API_KEY/ACCOUNT_ID not set)"; SKIPPED=$((SKIPPED+1))
 fi
 
+probe Pollinations  "https://gen.pollinations.ai/v1/models"        ""                                            POLLINATIONS_API_KEY optional
+probe Kluster       "https://api.kluster.ai/v1/models"            "Authorization: Bearer $KLUSTER_API_KEY"       KLUSTER_API_KEY
+probe LLM7          "https://api.llm7.io/v1/models"               ""                                            LLM7_API_KEY         optional
+probe "Z.ai"        "https://open.bigmodel.cn/api/paas/v4/models" "Authorization: Bearer $ZAI_API_KEY"           ZAI_API_KEY
+probe Perplexity    "https://api.perplexity.ai/models"             "Authorization: Bearer $PERPLEXITY_API_KEY"    PERPLEXITY_API_KEY
+probe Codestral     "https://codestral.mistral.ai/v1/models"      "Authorization: Bearer $CODESTRAL_API_KEY"     CODESTRAL_API_KEY
+probe PublicAI      "https://api.publicai.co/v1/models"           "Authorization: Bearer $PUBLICAI_API_KEY"      PUBLICAI_API_KEY
+
 echo
 echo "== provider result: OK=$OK SKIPPED=$SKIPPED AUTH=$AUTH RATE=$RATE UNREACHABLE=$UNREACH SERVER=$SERVER =="
 rm -f /tmp/aion_prov.json
