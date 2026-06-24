@@ -364,9 +364,28 @@ def aggregate_and_rotate(probes_path, keep_days=30):
     keep_lines = []
     archive_lines = defaultdict(list)  # "YYYY-MM" → [lines]
 
+    cutoff_keep_str = cutoff_keep.isoformat()
+
     with probes_path.open() as f:
         for line in f:
             try:
+                # Fast path for archiving: skip JSON parse if line is obviously old
+                # Check for {"ts":" or {"ts": "
+                ts_start_idx = -1
+                if line.startswith('{"ts":"'):
+                    ts_start_idx = 7
+                elif line.startswith('{"ts": "'):
+                    ts_start_idx = 8
+
+                if ts_start_idx != -1:
+                    end_quote = line.find('"', ts_start_idx)
+                    if end_quote != -1:
+                        ts_str_fast = line[ts_start_idx:end_quote]
+                        if ts_str_fast < cutoff_keep_str:
+                            ym = ts_str_fast[:7] if len(ts_str_fast) >= 7 else cutoff_keep.strftime("%Y-%m")
+                            archive_lines[ym].append(line)
+                            continue
+
                 data = json.loads(line)
                 ts_str = data.get("ts", "")
                 if not ts_str:
