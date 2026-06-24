@@ -1,0 +1,4 @@
+## 2024-06-24 - Case-sensitive header leak on HTTP redirects
+**Vulnerability:** SafeRedirectHandler in common.py stripped "Authorization" and "x-goog-api-key" headers on cross-host redirects, but the checks against `req.unredirected_hdrs` and `req.headers` were case-sensitive for the header names added to `unredirected_hdrs`, or used `.title()` which isn't sufficient for arbitrary case manipulation.
+**Learning:** Python's urllib.request.Request headers dictionaries preserve the original casing in some instances (like `unredirected_hdrs`), meaning a header added as `AUTHORIZATION` or `x-GOOG-api-KEY` could bypass the stripping logic.
+**Prevention:** Always use case-insensitive key comparison (e.g. converting both sides to lowercase or using case-insensitive dictionaries) when removing sensitive HTTP headers from requests to avoid leaking credentials.
