@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T11:03:32.958354+00:00",
+  "updated": "2026-06-25T12:19:19.606202+00:00",
   "providers": {
     "nvidia": {
       "abacusai/dracarys-llama-3.1-70b-instruct": {
@@ -35771,13 +35771,13 @@
     },
     "llm7": {
       "codestral-latest": {
-        "uptime_7d": 0.9186,
-        "uptime_30d": 0.6925,
+        "uptime_7d": 0.9195,
+        "uptime_30d": 0.6931,
         "rate_limited_7d": 4,
         "down_reason_7d": "rate_limited",
-        "samples_7d": 86,
-        "samples_30d": 504,
-        "p50_latency_ms": 2157,
+        "samples_7d": 87,
+        "samples_30d": 505,
+        "p50_latency_ms": 2159,
         "p95_latency_ms": 3924,
         "hourly_uptime": [
           {
@@ -35829,8 +35829,8 @@
             "total": 4
           },
           {
-            "ok": 4,
-            "total": 4
+            "ok": 5,
+            "total": 5
           },
           {
             "ok": 2,
@@ -35877,7 +35877,7 @@
             "total": 6
           }
         ],
-        "last_probe_ts": "2026-06-25T11:03:32.373369+00:00",
+        "last_probe_ts": "2026-06-25T12:19:19.056817+00:00",
         "last_status": "ok"
       },
       "gpt-oss-20b": {
@@ -36981,12 +36981,12 @@
         "last_status": "bad_response"
       },
       "qwen3-235b": {
-        "uptime_7d": 0.4419,
-        "uptime_30d": 0.6247,
-        "rate_limited_7d": 9,
+        "uptime_7d": 0.4368,
+        "uptime_30d": 0.6232,
+        "rate_limited_7d": 10,
         "down_reason_7d": "timeout",
-        "samples_7d": 86,
-        "samples_30d": 405,
+        "samples_7d": 87,
+        "samples_30d": 406,
         "p50_latency_ms": 7882,
         "p95_latency_ms": 13676,
         "hourly_uptime": [
@@ -37040,7 +37040,7 @@
           },
           {
             "ok": 2,
-            "total": 4
+            "total": 5
           },
           {
             "ok": 1,
@@ -37087,7 +37087,7 @@
             "total": 6
           }
         ],
-        "last_probe_ts": "2026-06-25T11:03:32.024459+00:00",
+        "last_probe_ts": "2026-06-25T12:19:18.471497+00:00",
         "last_status": "rate_limited"
       },
       "mistral-small-2506": {
@@ -37201,12 +37201,12 @@
         "last_status": "rate_limited"
       },
       "devstral-small-2:24b": {
-        "uptime_7d": 0.1047,
-        "uptime_30d": 0.2949,
-        "rate_limited_7d": 8,
+        "uptime_7d": 0.1034,
+        "uptime_30d": 0.2941,
+        "rate_limited_7d": 9,
         "down_reason_7d": "quota_exhausted",
-        "samples_7d": 86,
-        "samples_30d": 356,
+        "samples_7d": 87,
+        "samples_30d": 357,
         "p50_latency_ms": 2599,
         "p95_latency_ms": 14562,
         "hourly_uptime": [
@@ -37260,7 +37260,7 @@
           },
           {
             "ok": 0,
-            "total": 4
+            "total": 5
           },
           {
             "ok": 0,
@@ -37307,7 +37307,7 @@
             "total": 6
           }
         ],
-        "last_probe_ts": "2026-06-25T11:03:31.861220+00:00",
+        "last_probe_ts": "2026-06-25T12:19:17.922434+00:00",
         "last_status": "rate_limited"
       },
       "gpt-5.4-mini": {
@@ -38633,10 +38633,10 @@
       "claude-opus-4-6": {
         "uptime_7d": 0.0,
         "uptime_30d": 0.0,
-        "rate_limited_7d": 0,
+        "rate_limited_7d": 1,
         "down_reason_7d": "auth_error",
-        "samples_7d": 2,
-        "samples_30d": 2,
+        "samples_7d": 3,
+        "samples_30d": 3,
         "p50_latency_ms": null,
         "p95_latency_ms": null,
         "hourly_uptime": [
@@ -38690,7 +38690,7 @@
           },
           {
             "ok": 0,
-            "total": 0
+            "total": 1
           },
           {
             "ok": 0,
@@ -38737,8 +38737,8 @@
             "total": 0
           }
         ],
-        "last_probe_ts": "2026-06-25T11:03:31.357800+00:00",
-        "last_status": "auth_error"
+        "last_probe_ts": "2026-06-25T12:19:17.418305+00:00",
+        "last_status": "rate_limited"
       }
     },
     "openrouter": {
