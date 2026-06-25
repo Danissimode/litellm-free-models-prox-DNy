@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T12:52:54.819764+00:00",
+  "updated": "2026-06-25T13:45:01.911645+00:00",
   "providers": {
     "llm7": {
       "name": "LLM7",
@@ -25,6 +25,13 @@
           "context": 384000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": 24.0
+        },
+        {
+          "id": "glm-5.2",
+          "name": "glm-5.2",
+          "context": 203000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
         },
         {
           "id": "qwen3-235b",
