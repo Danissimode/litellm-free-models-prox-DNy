@@ -2,22 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-30T05:05:10.917563+00:00",
-      "provider": "openrouter",
-      "provider_label": "OpenRouter",
-      "added": [],
-      "removed": [
-        "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-        "google/lyria-3-clip-preview",
-        "google/lyria-3-pro-preview",
-        "meta-llama/llama-3.2-3b-instruct:free",
-        "meta-llama/llama-3.3-70b-instruct:free",
-        "nousresearch/hermes-3-llama-3.1-405b:free",
-        "qwen/qwen3-coder:free",
-        "qwen/qwen3-next-80b-a3b-instruct:free"
-      ]
-    },
-    {
-      "timestamp": "2026-05-30T05:05:10.917563+00:00",
       "provider": "groq",
       "provider_label": "Groq",
       "added": [],
@@ -7692,6 +7676,15 @@
         "grok-420-fast"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-25T22:34:18.593114+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [],
+      "removed": [
+        "qwen3-235b"
+      ]
     }
   ]
 }
