@@ -8,6 +8,8 @@ http://127.0.0.1:4000/v1
 
 This is a fork of [litellm-free-models-proxy](https://github.com/cheahjs/litellm-free-models-proxy), reworked for local security, reproducible startup, role-based aliases for AI coding agents, and a strict free-only admission policy.
 
+> **Fork status:** All upstream author-specific traces have been removed. The repository is stabilized — CI passes, tests cover policy/config invariants, and the security posture is enforced by `preflight.sh` + `security-check.sh`. Contributions welcome.
+
 ## What this is
 
 - A single OpenAI-compatible endpoint for many free/trial LLM providers (OpenRouter, Groq, Cerebras, SambaNova, NVIDIA NIM, Cohere, Gemini, HuggingFace, Mistral, GitHub Models, Cloudflare Workers AI, …).
