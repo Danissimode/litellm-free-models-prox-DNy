@@ -1,10 +1,17 @@
 {
-  "updated": "2026-06-25T07:18:19.808565+00:00",
+  "updated": "2026-06-25T09:12:03.337719+00:00",
   "providers": {
     "llm7": {
       "name": "LLM7",
       "url": "https://llm7.io",
       "models": [
+        {
+          "id": "claude-opus-4-6",
+          "name": "claude-opus-4-6",
+          "context": 1000000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
         {
           "id": "codestral-latest",
           "name": "codestral-latest",
