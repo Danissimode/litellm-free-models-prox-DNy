@@ -2,15 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-30T03:01:12.272661+00:00",
-      "provider": "nvidia",
-      "provider_label": "NVIDIA NIM",
-      "added": [],
-      "removed": [
-        "nvidia/vila"
-      ]
-    },
-    {
-      "timestamp": "2026-05-30T03:01:12.272661+00:00",
       "provider": "huggingface",
       "provider_label": "HuggingFace",
       "added": [
@@ -7691,6 +7682,16 @@
         "glm-5.2"
       ],
       "removed": []
+    },
+    {
+      "timestamp": "2026-06-25T15:03:39.069456+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [],
+      "removed": [
+        "claude-opus-4-6",
+        "glm-5.2"
+      ]
     }
   ]
 }

@@ -1,17 +1,10 @@
 {
-  "updated": "2026-06-25T13:45:01.911645+00:00",
+  "updated": "2026-06-25T15:03:39.067926+00:00",
   "providers": {
     "llm7": {
       "name": "LLM7",
       "url": "https://llm7.io",
       "models": [
-        {
-          "id": "claude-opus-4-6",
-          "name": "claude-opus-4-6",
-          "context": 1000000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
         {
           "id": "codestral-latest",
           "name": "codestral-latest",
@@ -25,13 +18,6 @@
           "context": 384000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": 24.0
-        },
-        {
-          "id": "glm-5.2",
-          "name": "glm-5.2",
-          "context": 203000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
         },
         {
           "id": "qwen3-235b",
