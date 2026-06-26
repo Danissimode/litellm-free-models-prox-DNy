@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T11:29:31.405559+00:00",
+  "updated": "2026-06-26T12:22:12.515237+00:00",
   "providers": {
     "cerebras": {
       "qwen-3-235b-a22b-instruct-2507": {
@@ -38521,12 +38521,12 @@
     },
     "llm7": {
       "codestral-latest": {
-        "uptime_7d": 0.8556,
-        "uptime_30d": 0.6805,
-        "rate_limited_7d": 8,
+        "uptime_7d": 0.8462,
+        "uptime_30d": 0.6791,
+        "rate_limited_7d": 9,
         "down_reason_7d": "rate_limited",
-        "samples_7d": 90,
-        "samples_30d": 507,
+        "samples_7d": 91,
+        "samples_30d": 508,
         "p50_latency_ms": 1865,
         "p95_latency_ms": 3641,
         "hourly_uptime": [
@@ -38580,7 +38580,7 @@
           },
           {
             "ok": 4,
-            "total": 4
+            "total": 5
           },
           {
             "ok": 2,
@@ -38627,8 +38627,8 @@
             "total": 6
           }
         ],
-        "last_probe_ts": "2026-06-26T11:29:30.848554+00:00",
-        "last_status": "timeout"
+        "last_probe_ts": "2026-06-26T12:22:05.333311+00:00",
+        "last_status": "rate_limited"
       },
       "gpt-oss-20b": {
         "uptime_7d": null,
@@ -39621,14 +39621,14 @@
         "last_status": "rate_limited"
       },
       "devstral-small-2:24b": {
-        "uptime_7d": 0.0778,
-        "uptime_30d": 0.2872,
+        "uptime_7d": 0.0879,
+        "uptime_30d": 0.2891,
         "rate_limited_7d": 24,
         "down_reason_7d": "quota_exhausted",
-        "samples_7d": 90,
-        "samples_30d": 376,
-        "p50_latency_ms": 1630,
-        "p95_latency_ms": 5797,
+        "samples_7d": 91,
+        "samples_30d": 377,
+        "p50_latency_ms": 1634,
+        "p95_latency_ms": 7207,
         "hourly_uptime": [
           {
             "ok": 0,
@@ -39679,8 +39679,8 @@
             "total": 4
           },
           {
-            "ok": 0,
-            "total": 4
+            "ok": 1,
+            "total": 5
           },
           {
             "ok": 0,
@@ -39727,8 +39727,8 @@
             "total": 6
           }
         ],
-        "last_probe_ts": "2026-06-26T11:29:25.697257+00:00",
-        "last_status": "rate_limited"
+        "last_probe_ts": "2026-06-26T12:22:11.984000+00:00",
+        "last_status": "ok"
       },
       "deepseek-v4-flash": {
         "uptime_7d": 0.0,
