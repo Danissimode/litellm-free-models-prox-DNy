@@ -2,20 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-30T05:05:10.917563+00:00",
-      "provider": "gemini",
-      "provider_label": "Gemini",
-      "added": [],
-      "removed": [
-        "gemini-2.0-flash",
-        "gemini-2.0-flash-001",
-        "gemini-2.0-flash-lite",
-        "gemini-2.0-flash-lite-001",
-        "gemini-2.5-flash-image",
-        "gemini-3.1-flash-image-preview"
-      ]
-    },
-    {
-      "timestamp": "2026-05-30T05:05:10.917563+00:00",
       "provider": "together",
       "provider_label": "Together AI",
       "added": [],
@@ -7684,6 +7670,16 @@
       "removed": [
         "grok-420-fast"
       ]
+    },
+    {
+      "timestamp": "2026-06-26T20:37:52.744478+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [
+        "gemma3:27b",
+        "ministral-3:8b"
+      ],
+      "removed": []
     }
   ]
 }
