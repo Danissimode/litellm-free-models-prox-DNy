@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T17:28:41.153468+00:00",
+  "updated": "2026-06-27T17:55:32.593176+00:00",
   "providers": {
     "cerebras": {
       "zai-glm-4.7": {
@@ -39183,13 +39183,13 @@
         "last_status": "rate_limited"
       },
       "codestral-latest": {
-        "uptime_7d": 0.837,
-        "uptime_30d": 0.6796,
+        "uptime_7d": 0.8387,
+        "uptime_30d": 0.6802,
         "rate_limited_7d": 10,
         "down_reason_7d": "rate_limited",
-        "samples_7d": 92,
-        "samples_30d": 515,
-        "p50_latency_ms": 1377,
+        "samples_7d": 93,
+        "samples_30d": 516,
+        "p50_latency_ms": 1317,
         "p95_latency_ms": 3513,
         "hourly_uptime": [
           {
@@ -39261,8 +39261,8 @@
             "total": 4
           },
           {
-            "ok": 4,
-            "total": 5
+            "ok": 5,
+            "total": 6
           },
           {
             "ok": 4,
@@ -39289,7 +39289,7 @@
             "total": 5
           }
         ],
-        "last_probe_ts": "2026-06-27T17:28:40.405692+00:00",
+        "last_probe_ts": "2026-06-27T17:55:32.100648+00:00",
         "last_status": "ok"
       },
       "GLM-4.6V-Flash": {
@@ -39953,12 +39953,12 @@
         "last_status": "rate_limited"
       },
       "devstral-small-2:24b": {
-        "uptime_7d": 0.0978,
-        "uptime_30d": 0.2716,
-        "rate_limited_7d": 50,
+        "uptime_7d": 0.0968,
+        "uptime_30d": 0.2709,
+        "rate_limited_7d": 51,
         "down_reason_7d": "rate_limited",
-        "samples_7d": 92,
-        "samples_30d": 405,
+        "samples_7d": 93,
+        "samples_30d": 406,
         "p50_latency_ms": 1630,
         "p95_latency_ms": 7207,
         "hourly_uptime": [
@@ -40032,7 +40032,7 @@
           },
           {
             "ok": 1,
-            "total": 5
+            "total": 6
           },
           {
             "ok": 1,
@@ -40059,7 +40059,7 @@
             "total": 5
           }
         ],
-        "last_probe_ts": "2026-06-27T17:28:40.158988+00:00",
+        "last_probe_ts": "2026-06-27T17:55:31.495000+00:00",
         "last_status": "rate_limited"
       },
       "deepseek-v4-flash": {
@@ -42047,8 +42047,8 @@
         "uptime_30d": 0.0,
         "rate_limited_7d": 1,
         "down_reason_7d": "auth_error",
-        "samples_7d": 3,
-        "samples_30d": 3,
+        "samples_7d": 4,
+        "samples_30d": 4,
         "p50_latency_ms": null,
         "p95_latency_ms": null,
         "hourly_uptime": [
@@ -42122,7 +42122,7 @@
           },
           {
             "ok": 0,
-            "total": 1
+            "total": 2
           },
           {
             "ok": 0,
@@ -42149,7 +42149,7 @@
             "total": 0
           }
         ],
-        "last_probe_ts": "2026-06-27T17:28:40.628728+00:00",
+        "last_probe_ts": "2026-06-27T17:55:31.912569+00:00",
         "last_status": "auth_error"
       }
     },
