@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T00:53:25.160869+00:00",
+  "updated": "2026-06-27T01:43:17.186659+00:00",
   "providers": {
     "llm7": {
       "name": "LLM7",
@@ -18,20 +18,6 @@
           "context": 384000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": 24.0
-        },
-        {
-          "id": "gemma3:27b",
-          "name": "gemma3:27b",
-          "context": 131000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 27.0
-        },
-        {
-          "id": "ministral-3:8b",
-          "name": "ministral-3:8b",
-          "context": 256000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": 8.0
         }
       ],
       "error": null
