@@ -1,10 +1,17 @@
 {
-  "updated": "2026-07-01T07:36:39.365420+00:00",
+  "updated": "2026-07-01T09:13:57.515241+00:00",
   "providers": {
     "llm7": {
       "name": "LLM7",
       "url": "https://llm7.io",
       "models": [
+        {
+          "id": "claude-sonnet-5",
+          "name": "claude-sonnet-5",
+          "context": 1000000,
+          "limits": "anonymous · 30 req/min with token",
+          "params_b": null
+        },
         {
           "id": "codestral-latest",
           "name": "codestral-latest",
