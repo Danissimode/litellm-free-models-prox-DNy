@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T13:29:05.719852+00:00",
+  "updated": "2026-07-01T14:25:45.398370+00:00",
   "providers": {
     "huggingface": {
       "zai-org/GLM-4.7-Flash": {
@@ -40939,12 +40939,12 @@
         "last_status": "rate_limited"
       },
       "codestral-latest": {
-        "uptime_7d": 0.831,
-        "uptime_30d": 0.7802,
-        "rate_limited_7d": 21,
+        "uptime_7d": 0.8252,
+        "uptime_30d": 0.7786,
+        "rate_limited_7d": 22,
         "down_reason_7d": "rate_limited",
-        "samples_7d": 142,
-        "samples_30d": 514,
+        "samples_7d": 143,
+        "samples_30d": 515,
         "p50_latency_ms": 627,
         "p95_latency_ms": 3912,
         "hourly_uptime": [
@@ -41006,7 +41006,7 @@
           },
           {
             "ok": 4,
-            "total": 5
+            "total": 6
           },
           {
             "ok": 6,
@@ -41045,8 +41045,8 @@
             "total": 10
           }
         ],
-        "last_probe_ts": "2026-07-01T13:29:05.300337+00:00",
-        "last_status": "ok"
+        "last_probe_ts": "2026-07-01T14:25:43.977250+00:00",
+        "last_status": "rate_limited"
       },
       "mistral-small-2506": {
         "uptime_7d": null,
@@ -41379,12 +41379,12 @@
         "last_status": "quota_exhausted"
       },
       "devstral-small-2:24b": {
-        "uptime_7d": 0.1268,
-        "uptime_30d": 0.2474,
+        "uptime_7d": 0.1329,
+        "uptime_30d": 0.249,
         "rate_limited_7d": 120,
         "down_reason_7d": "rate_limited",
-        "samples_7d": 142,
-        "samples_30d": 485,
+        "samples_7d": 143,
+        "samples_30d": 486,
         "p50_latency_ms": 1730,
         "p95_latency_ms": 6002,
         "hourly_uptime": [
@@ -41445,8 +41445,8 @@
             "total": 7
           },
           {
-            "ok": 0,
-            "total": 5
+            "ok": 1,
+            "total": 6
           },
           {
             "ok": 0,
@@ -41485,8 +41485,8 @@
             "total": 10
           }
         ],
-        "last_probe_ts": "2026-07-01T13:29:05.300922+00:00",
-        "last_status": "rate_limited"
+        "last_probe_ts": "2026-07-01T14:25:44.987121+00:00",
+        "last_status": "ok"
       },
       "deepseek-v4-flash": {
         "uptime_7d": 0.0,
@@ -43913,8 +43913,8 @@
         "uptime_30d": 0.0,
         "rate_limited_7d": 0,
         "down_reason_7d": "auth_error",
-        "samples_7d": 4,
-        "samples_30d": 4,
+        "samples_7d": 5,
+        "samples_30d": 5,
         "p50_latency_ms": null,
         "p95_latency_ms": null,
         "hourly_uptime": [
@@ -43976,7 +43976,7 @@
           },
           {
             "ok": 0,
-            "total": 0
+            "total": 1
           },
           {
             "ok": 0,
@@ -44015,7 +44015,7 @@
             "total": 0
           }
         ],
-        "last_probe_ts": "2026-07-01T13:29:04.902009+00:00",
+        "last_probe_ts": "2026-07-01T14:25:43.989102+00:00",
         "last_status": "auth_error"
       }
     },
