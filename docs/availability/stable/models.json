@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T01:45:52.701685+00:00",
+  "updated": "2026-07-02T03:11:04.778337+00:00",
   "providers": {
     "llm7": {
       "name": "LLM7",
@@ -13,60 +13,11 @@
           "params_b": null
         },
         {
-          "id": "deepseek-v4-flash",
-          "name": "deepseek-v4-flash",
-          "context": 1000000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
           "id": "devstral-small-2:24b",
           "name": "devstral-small-2:24b",
           "context": 384000,
           "limits": "anonymous · 30 req/min with token",
           "params_b": 24.0
-        },
-        {
-          "id": "gemini-2.5-flash",
-          "name": "gemini-2.5-flash",
-          "context": 1048576,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "gpt-5.3-codex-spark",
-          "name": "gpt-5.3-codex-spark",
-          "context": 400000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "gpt-5.4",
-          "name": "gpt-5.4",
-          "context": 1050000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "gpt-5.4-mini",
-          "name": "gpt-5.4-mini",
-          "context": 400000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "gpt-5.5",
-          "name": "gpt-5.5",
-          "context": 1050000,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
-        },
-        {
-          "id": "grok-3",
-          "name": "grok-3",
-          "context": null,
-          "limits": "anonymous · 30 req/min with token",
-          "params_b": null
         }
       ],
       "error": null
