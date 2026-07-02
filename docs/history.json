@@ -2,15 +2,6 @@
   "entries": [
     {
       "timestamp": "2026-05-30T09:35:04.291658+00:00",
-      "provider": "together",
-      "provider_label": "Together AI",
-      "added": [],
-      "removed": [
-        "google/gemma-3-27b-it-lora"
-      ]
-    },
-    {
-      "timestamp": "2026-05-30T09:35:04.291658+00:00",
       "provider": "huggingface",
       "provider_label": "HuggingFace",
       "added": [],
@@ -7463,6 +7454,21 @@
         "gpt-5.5",
         "grok-3"
       ]
+    },
+    {
+      "timestamp": "2026-07-02T05:22:51.401213+00:00",
+      "provider": "llm7",
+      "provider_label": "LLM7",
+      "added": [
+        "deepseek-v4-flash",
+        "gemini-2.5-flash",
+        "gpt-5.3-codex-spark",
+        "gpt-5.4",
+        "gpt-5.4-mini",
+        "gpt-5.5",
+        "grok-3"
+      ],
+      "removed": []
     }
   ]
 }
